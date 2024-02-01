@@ -1,103 +1,40 @@
-import streamlit as st
+ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Set the page configuration
+# Set the page configuration to wide mode with a dark theme
 st.set_page_config(layout="wide")
 
-# Custom CSS to style the app
+# Custom CSS to incorporate the design from the image and FontAwesome for icons
 st.markdown("""
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-/* Define your custom styles here */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
-    line-height: 1.6;
-}
-
-h1, h2, .big-font, .medium-font, .small-font {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-h2, .medium-font {
-    background-color: #f2f2f2;
-    color: #333;
-}
-
-.project-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 20px;
-}
-
-.project-card-status {
+.big-font {
+    font-size:50px !important;
     font-weight: bold;
+    color: white;
 }
-
-.project-card-objective {
-    font-style: italic;
+.medium-font {
+    font-size:35px !important;
+    color: white;
 }
-
-.company-link {
-    color: #0077cc;
-    text-decoration: underline;
+.small-font {
+    font-size:25px !important;
+    color: white;
 }
-
-.interactive-list {
-    list-style-type: disc;
-    padding-left: 20px;
+.reportview-container .main {
+    background-color: #1E1E1E;
 }
-
-.accent-bg {
-    background-color: #0077cc;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 3px;
+.sidebar .sidebar-content {
+    background-color: #262730;
+    color: white;
 }
-
-.primary-bg {
-    background-color: #ff9900;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 3px;
+.fa {
+    padding-right: 5px;
 }
 </style>
 """, unsafe_allow_html=True)
-
-# Header and subheader
-st.markdown('<h1 class="big-font">JASON CHANG</h1>', unsafe_allow_html=True)
-st.markdown('<h2 class="medium-font">PROJECT PORTFOLIO</h2>', unsafe_allow_html=True)
-st.markdown('<h2 class="small-font">SENIOR DATA ANALYST</h2>', unsafe_allow_html=True)
-
-# Sidebar navigation
-with st.sidebar:
-    st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
-    page = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", 
-                         "Dashboard / Executive Business Insights", 
-                         "Data Analysis / Warehouse & GL Account Optimization", 
-                         "Process Automation / Quarterly Royalty Management", 
-                         "Scope of Skills", "Certifications", "Contact"])
-
-# Load and process the dataset (place this part where it is used in your app)
-@st.cache
-def load_data(url):
-    data = pd.read_csv(url, parse_dates=['Date'])
-    return data
-
-data_url = "https://github.com/jasonchang0102/Streamlit0102/raw/main/RAWBliz.csv"
-data = load_data(data_url)
-
-# Check if data is loaded properly
-if data.empty:
-    st.error("No data loaded. Please check the data source.")
 
 # Header and subheader
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
@@ -374,6 +311,3 @@ elif page == "Contact":
         <i class="fa fa-linkedin"></i> <a href="https://linkedin.com/in/jchang0102" target="_blank">linkedin.com/in/jchang0102</a>
     </div>
     """, unsafe_allow_html=True)
-
-
-
