@@ -1,3 +1,11 @@
+import streamlit as st
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Set the page configuration to wide mode with a dark theme
+st.set_page_config(layout="wide")
+
 # Custom CSS to incorporate the design from the image and FontAwesome for icons
 st.markdown("""
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -117,8 +125,6 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
     plt.tight_layout()
 
 
-    # Show the KDE plots in Streamlit
-    st.pyplot(fig)
 
 
 # Main content based on the navigation
@@ -342,5 +348,6 @@ elif page == "Contact":
         <i class="fa fa-linkedin"></i> <a href="https://linkedin.com/in/jchang0102" target="_blank">linkedin.com/in/jchang0102</a>
     </div>
     """, unsafe_allow_html=True)
+
 
 
