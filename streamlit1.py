@@ -51,6 +51,7 @@ with st.sidebar:
                          "Scope of Skills", "Certifications", "Contact"])
 
 
+
 # Main content based on the navigation
 if page == "Data Analytics / Engagement & Monetization Strategies":
     st.header("Data Analytics / Engagement & Monetization Strategies")
@@ -124,10 +125,9 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
     # Adjust the layout
     plt.tight_layout()
 
+    # Show the plot
+    st.pyplot(fig)
 
-
-
-# Main content based on the navigation
 if page == "Welcome":
     st.markdown("### Welcome to my page")
     
@@ -159,44 +159,7 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
 
 # ... [Previous Streamlit setup and Project 1 code] ...
 
-elif page == "Dashboard / Executive Business Insights":
-    st.header("Dashboard / Executive Business Insights")
-    st.subheader("Executive Summary/Business Objective:")
-    st.write("""
-    Post-merger, the goal is to optimize financial performance by developing a 
-    unified data ecosystem in SSMS. This aims to enhance strategic decision-making 
-    and stakeholder value, focusing on creating a seamless data environment for dynamic 
-    business intelligence.
-    """)
 
-
-    st.subheader("Findings/Strategic Implications:")
-    st.write("""
-    Analysis uncovers divisions and accounts with promising performance post-merger, 
-    indicating opportunities for strategic realignment and efficiencies, leading to 
-    potential resource reprioritization to maximize margins and cut costs.
-    """)
-
-    st.subheader("Background:")
-    st.write("""
-    Faced with the challenge of integrating disparate data systems from four pre-merger 
-    companies, the aim was to combine these to maintain operational continuity and 
-    capitalize on a unified market presence.
-    """)
-
-    st.subheader("Research Question/Data Exploration:")
-    st.write("""
-    Investigates how the merged data environment impacts financial health and 
-    efficiency, involving a deep dive into Reverse Schema Building and analysis of 
-    combined sales and operational data.
-    """)
-
-    st.subheader("Methodology/Analytical Proficiency:")
-    st.write("""
-    Utilizes advanced data analysis techniques with Python and SQL, and employs 
-    Power BI's interactivity for real-time insights, focusing on reverse engineering 
-    the data schema in the consolidated analytics platform.
-    """)
 
 # ... [Previous Streamlit setup and Project 2 code] ...
 
