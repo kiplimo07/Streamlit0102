@@ -136,24 +136,7 @@ if page == "Welcome":
     As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights, positioning me ideally for a Full Stack Senior Data Analyst or Data Scientist role. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.
     """)
 
-elif page == "Data Analytics / Engagement & Monetization Strategies":
-    st.header("Data Analytics / Engagement & Monetization Strategies")
-    st.subheader("Executive Summary/Business Objective:")
-    st.write("""
-    Emphasized maximizing revenue and enhancing player engagement and satisfaction by analyzing behavior and spending patterns during Warcraft's two in-game events.
-    """)
-    st.subheader("Findings/Strategic Implications:")
-    st.write("""
-    Identified high-spending segments, especially in Platform 3, Region 1, signaling a priority for future promotions. Observed low spending in Platform 1, Region 5, highlighting the necessity for further research and adjustments to the strategy.
-    """)
-    st.subheader("Research Question/Data Exploration:")
-    st.write("""
-    Conducted exploratory data analysis to understand player spending behavior, emphasizing games played, skill levels, dollars spent, and items crafted.
-    """)
-    st.subheader("Methodology/Analytical Proficiency:")
-    st.write("""
-    Leveraged Python, K-Means Clustering, and heatmap analysis for an in-depth comparative study of player engagement and spending. Implemented segmentation based on in-game behavior for a comprehensive analysis.
-    """)
+
     st.subheader("Heatmap: Platform & Region x Player Engagement on Average Dollar Spending")
     # Summary of the Heatmap analysis
 
