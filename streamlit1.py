@@ -128,6 +128,8 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
     # Show the plot
     st.pyplot(fig)
 
+    st.subheader("Heatmap: Platform & Region x Player Engagement on Average Dollar Spending")
+
 if page == "Welcome":
     st.markdown("### Welcome to my page")
     
@@ -137,7 +139,7 @@ if page == "Welcome":
     """)
 
 
-    st.subheader("Heatmap: Platform & Region x Player Engagement on Average Dollar Spending")
+
     # Summary of the Heatmap analysis
 
 # ... [Previous Streamlit setup and Project 1 code] ...
