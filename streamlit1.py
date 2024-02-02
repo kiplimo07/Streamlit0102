@@ -39,7 +39,7 @@ st.markdown("""
 # Header and subheader
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<p class="medium-font">PROJECT PORTFOLIO</p>', unsafe_allow_html=True)
-st.markdown('<p class="small-font">SENIOR DATA ANALYST</p>', unsafe_allow_html=True)
+st.markdown('<p class="small-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
 # Sidebar navigation
 with st.sidebar:
