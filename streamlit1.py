@@ -127,7 +127,9 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
 
     # Show the plot
     st.pyplot(fig)
-
+    st.subheader(" ")
+    st.subheader(" ")
+    st.subheader(" ")
     st.subheader("Heatmap: Platform & Region x Player Engagement on Average Dollar Spending")
     st.subheader(" ")
     st.subheader(" ")
