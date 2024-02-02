@@ -96,7 +96,7 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
     sns.set_style("whitegrid")
 
     # Create figure for all four distributions
-    fig, axes = plt.subplots(1, 1, figsize=(10, 8))
+    fig, axes = plt.subplots(2, 2, figsize=(10, 8))
 
     # Kernel Density Estimate plot for Games Played
     sns.kdeplot(event_1_data['games_played'], color="skyblue", shade=True, label="Event 1", ax=axes[0, 0])
