@@ -37,8 +37,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header and subheader
-st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
-st.markdown('<p class="medium-font">PROJECT PORTFOLIO</p>', unsafe_allow_html=True)
+st.markdown('<p class="big-font"> JASON CHANG</p>', unsafe_allow_html=True)
+st.markdown('<p class="medium-font">       PORTFOLIO</p>', unsafe_allow_html=True)
 st.markdown('<p class="small-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
 # Sidebar navigation
@@ -131,7 +131,7 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
     st.subheader("Heatmap: Platform & Region x Player Engagement on Average Dollar Spending")
 
 if page == "Welcome":
-    st.markdown("### Welcome to my page")
+    st.markdown("### Welcome to my Portfolio")
     
     # Your professional introduction
     st.write("""
