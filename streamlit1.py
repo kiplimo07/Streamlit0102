@@ -17,17 +17,17 @@ st.markdown("""
 }
 .medium-font {
     font-size:35px !important;
-    color: white;
+    color: #a47321;
 }
 .small-font {
     font-size:25px !important;
     color: white;
 }
 .reportview-container .main {
-    background-color: #1E1E1E;
+    background-color: #1d262f;
 }
 .sidebar .sidebar-content {
-    background-color: #262730;
+    background-color: #1d262f;
     color: white;
 }
 .fa {
