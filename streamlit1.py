@@ -129,7 +129,7 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
     st.pyplot(fig)
 
     st.subheader("Heatmap: Platform & Region x Player Engagement on Average Dollar Spending")
-
+    st.subheader(" ")
 if page == "Welcome":
     st.markdown("### Welcome to my Portfolio")
     
