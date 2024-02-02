@@ -148,6 +148,7 @@ def assign_correct_bucket(games_played):
 
 # Load the dataset
 data_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/RAWBliz.csv"
+data = load_data(data_url)
 
 
 # Apply the function to create a new column for the games played bucket
