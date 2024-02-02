@@ -130,6 +130,10 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
 
     st.subheader("Heatmap: Platform & Region x Player Engagement on Average Dollar Spending")
     st.subheader(" ")
+    st.subheader(" ")
+    st.subheader(" ")
+
+
 if page == "Welcome":
     st.markdown("### Welcome to my Portfolio")
     
