@@ -179,15 +179,22 @@ elif page == "Certifications":
 
 elif page == "Contact":
     st.header("Contact Information")
+
+    # Inspirational Quote
     st.markdown("""
-    Feel free to connect with me for any inquiries or opportunities.
-    
-    - **Phone:** (626) 203 – 3319
-    - **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)
-    - **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)
+    <p style="font-style: italic;">
+        "In God we trust; for all else, we turn to the validation of data. With data science as our compass, we're set to reveal hidden insights that our data is just dying to tell."
+    </p>
     """, unsafe_allow_html=True)
 
-
-
+    # Contact Details with Icons
+    st.markdown("""
+    <div style="font-size: 20px;">
+        <i class="fa fa-phone"></i> (626) 203 – 3319<br>
+        <i class="fa fa-envelope"></i> <a href="mailto:jason.chang01022021@gmail.com">jason.chang01022021@gmail.com</a><br>
+        <i class="fa fa-home"></i> Irvine, CA<br>
+        <i class="fa fa-linkedin"></i> <a href="https://linkedin.com/in/jchang0102" target="_blank">linkedin.com/in/jchang0102</a>
+    </div>
+    """, unsafe_allow_html=True)
 
 
