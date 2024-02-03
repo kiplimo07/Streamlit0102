@@ -3,55 +3,54 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Set the page configuration for your Streamlit app
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
-
-# Include custom CSS for styling the app
-st.markdown("""
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+st.markdown(
+    """
     <style>
-        .big-font { 
-            font-size:60px !important; 
-            font-weight: bold; 
-            color: white; 
-        }
-        .medium-font { 
-            font-size:45px !important; 
-            color: #a47321; 
-        }
-        .small-font { 
-            font-size:25px !important; 
-            color: white; 
-        }
-        .reportview-container .main { 
-            background-color: #1d262f; 
-        }
-        .sidebar .sidebar-content { 
-            background-color: #1d262f; 
-            color: white; 
-        }
-        .fa { 
-            padding-right: 5px; 
-        }
-        /* Adjust top padding of the main container for all pages */
-        .reportview-container .main .block-container {
-            padding-top: 1rem; /* Adjust to move content up */
-        }
+    /* Custom CSS */
     </style>
-""", unsafe_allow_html=True)
-
-# Sidebar navigation setup
-page = st.sidebar.selectbox(
-    "Navigation",
-    ["Welcome", "Data Analytics / Engagement & Monetization Strategies", "Dashboard / Executive Business Insights", "Data Analysis / Warehouse & GL Account Optimization", "Process Automation / Quarterly Royalty Management", "Scope of Skills", "Certifications", "Contact"]
+    """,
+    unsafe_allow_html=True,
 )
 
-# Define a function to load your data
+# Sidebar setup
+page = st.sidebar.selectbox(
+    "Navigation",
+    ["Welcome", "Data Analytics / Engagement & Monetization Strategies", "Dashboard / Executive Business Insights", "..."]
+)
+
+# Custom CSS to incorporate the design from the image and FontAwesome for icons, and adjust top padding
+st.markdown("""
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.big-font { font-size:60px !important; font-weight: bold; color: white; }
+.medium-font { font-size:60px !important; color: #a47321; }
+.small-font { font-size:25px !important; color: white; }
+.reportview-container .main { background-color: #1d262f; }
+.sidebar .sidebar-content { background-color: #1d262f; color: white; }
+.fa { padding-right: 5px; }
+/* Adjust top padding of the main container for all pages */
+.reportview-container .main .block-container {
+    padding-top: 1rem; /* Reduced padding to move content up */
+}
+</style>
+
+""", unsafe_allow_html=True)
+
+# Header and sidebar setup
+st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
+st.markdown('<p class="medium-font">PORTFOLIO</p>', unsafe_allow_html=True)
+st.markdown('<p class="small-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
+
+with st.sidebar:
+    st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
+    page = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", "Dashboard / Executive Business Insights", "Data Analysis / Warehouse & GL Account Optimization", "Process Automation / Quarterly Royalty Management", "Scope of Skills", "Certifications", "Contact"])
+
+# Data loading and preprocessing
 @st.cache
 def load_data(url):
     data = pd.read_csv(url)
     data['Date'] = pd.to_datetime(data['Date'])
-    # Assume 'games_played' is a column in your dataset
     data['games_played_bucket'] = data['games_played'].apply(assign_correct_bucket)
     return data
 
@@ -70,20 +69,20 @@ def assign_correct_bucket(games_played):
 data_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/RAWBliz.csv"
 data = load_data(data_url)
 
-# Display header specifically for the Welcome page
+# Main content based on the navigation
 if page == "Welcome":
-    st.markdown('<div class="big-font">JASON CHANG</div>', unsafe_allow_html=True)
-    st.markdown('<div class="medium-font">PORTFOLIO</div>', unsafe_allow_html=True)
-    st.markdown('<div class="small-font">Full Stack Senior Data Analyst</div>', unsafe_allow_html=True)
-    
-    # Welcome page content
-    st.write("""
-        As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, 
-        I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights, 
-        positioning me ideally for a Full Stack Senior Data Analyst or Data Scientist role. Committed to pioneering data-driven research, 
-        I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence 
-        for business growth and collaborative leadership.
-    """)
+    st.title("Welcome to my Portfolio")
+    # Using columns to push content up
+    col1, col2 = st.columns([1, 5])  # Adjust ratio as needed
+    with col2:
+        st.markdown("### JASON CHANG")
+        st.markdown("#### Full Stack Senior Data Analyst")
+        st.markdown(
+            """
+            As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, 
+            I have evolved from intricate statistical analysis to advanced predictive modeling...
+            """
+        )
 
 
 elif page == "Data Analytics / Engagement & Monetization Strategies":
