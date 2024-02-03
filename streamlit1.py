@@ -34,6 +34,7 @@ st.markdown("""
     padding-top: 1rem; /* Reduced padding to move content up */
 }
 </style>
+
 """, unsafe_allow_html=True)
 
 # Header and sidebar setup
