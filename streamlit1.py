@@ -99,12 +99,21 @@ def create_header():
 # Call the function to display the header
 create_header()
 
-# Sidebar setup with navigation
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
     page = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", "Dashboard / Executive Business Insights", "Data Analysis / Warehouse & GL Account Optimization", "Process Automation / Quarterly Royalty Management", "Scope of Skills", "Certifications", "Contact"])
 
-
+# Main content based on the navigation
+if page == "Welcome":
+    create_header()
+    st.markdown("""
+    ### Welcome to My Portfolio
+    As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, 
+    I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights, 
+    positioning me ideally for a Full Stack Senior Data Analyst or Data Scientist role. Committed to pioneering data-driven research, 
+    I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence 
+    for business growth and collaborative leadership.
+    """, unsafe_allow_html=True)
 
 elif page == "Data Analytics / Engagement & Monetization Strategies":
     st.header("Data Analytics / Engagement & Monetization Strategies")
