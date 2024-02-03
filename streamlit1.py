@@ -312,3 +312,4 @@ elif page == "Contact":
         <i class="fa fa-home"></i> Irvine, CA<br>
         <i class="fa fa-linkedin"></i> <a href="https://linkedin.com/in/jchang0102" target="_blank">linkedin.com/in/jchang0102</a>
     </div>
+    """, unsafe_allow_html=True)
