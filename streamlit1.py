@@ -22,98 +22,37 @@ st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<p class="medium-font">PORTFOLIO</p>', unsafe_allow_html=True)
 st.markdown('<p class="small-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
-# Set the page configuration and custom CSS
-st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
-
-# Custom CSS to style the app similar to the image provided
-st.markdown("""
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-
-/* Apply font from Google Fonts */
-body, .reportview-container .main .block-container { font-family: 'Open Sans', sans-serif; }
-
-.header {
-    background-color: #1d262f;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.header h1 {
-    font-size: 60px; /* Large font size for name */
-    font-weight: 700;
-    margin-bottom: 0px;
-}
-
-.header h2 {
-    font-size: 30px; /* Medium font size for portfolio text */
-    font-weight: 600;
-    margin-top: 0px;
-}
-
-.header h3 {
-    font-size: 25px; /* Smaller font size for role */
-    font-weight: 400;
-    margin-top: 0px;
-    color: #ff3b30; /* Red color for the active status dot */
-}
-
-.header .line {
-    height: 5px;
-    width: 50%;
-    background-color: white;
-    margin: 10px 0px;
-}
-
-.header .dot {
-    height: 15px;
-    width: 15px;
-    background-color: #ff3b30; /* Red color for the active status dot */
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.sidebar .sidebar-content {
-    background-color: #1d262f;
-    color: white;
-}
-
-/* Hide default Streamlit headers and footers */
-header { display: none; }
-footer { display: none; }
-</style>
-""", unsafe_allow_html=True)
-
-# Define a custom function to display the header section similar to the uploaded image
-def create_header():
-    st.markdown("""
-    <div class="header">
-        <h1>JASON CHANG</h1>
-        <div class="line"></div>
-        <h2>PROJECT PORTFOLIO</h2>
-        <h3>SENIOR DATA ANALYST <span class="dot"></span></h3>
-    </div>
-    """, unsafe_allow_html=True)
-
-# Call the function to display the header
-create_header()
-
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
     page = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", "Dashboard / Executive Business Insights", "Data Analysis / Warehouse & GL Account Optimization", "Process Automation / Quarterly Royalty Management", "Scope of Skills", "Certifications", "Contact"])
 
+# Data loading and preprocessing
+@st.cache
+def load_data(url):
+    data = pd.read_csv(url)
+    data['Date'] = pd.to_datetime(data['Date'])
+    data['games_played_bucket'] = data['games_played'].apply(assign_correct_bucket)
+    return data
+
+def assign_correct_bucket(games_played):
+    if games_played >= 1 and games_played <= 3:
+        return 'Very Low'
+    elif games_played >= 4 and games_played <= 5:
+        return 'Low'
+    elif games_played >= 6 and games_played <= 9:
+        return 'Medium'
+    elif games_played >= 10 and games_played <= 68:
+        return 'High'
+    else:
+        return 'Unknown'
+
+data_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/RAWBliz.csv"
+data = load_data(data_url)
+
 # Main content based on the navigation
 if page == "Welcome":
-    create_header()
-    st.markdown("""
-    ### Welcome to My Portfolio
-    As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, 
-    I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights, 
-    positioning me ideally for a Full Stack Senior Data Analyst or Data Scientist role. Committed to pioneering data-driven research, 
-    I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence 
-    for business growth and collaborative leadership.
-    """, unsafe_allow_html=True)
+    st.markdown("### Welcome Message and Introduction")
+    # Welcome page content here
 
 elif page == "Data Analytics / Engagement & Monetization Strategies":
     st.header("Data Analytics / Engagement & Monetization Strategies")
@@ -238,22 +177,15 @@ elif page == "Certifications":
 
 elif page == "Contact":
     st.header("Contact Information")
-
-    # Inspirational Quote
     st.markdown("""
-    <p style="font-style: italic;">
-        "In God we trust; for all else, we turn to the validation of data. With data science as our compass, we're set to reveal hidden insights that our data is just dying to tell."
-    </p>
+    Feel free to connect with me for any inquiries or opportunities.
+    
+    - **Phone:** (626) 203 – 3319
+    - **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)
+    - **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)
     """, unsafe_allow_html=True)
 
-    # Contact Details with Icons
-    st.markdown("""
-    <div style="font-size: 20px;">
-        <i class="fa fa-phone"></i> (626) 203 – 3319<br>
-        <i class="fa fa-envelope"></i> <a href="mailto:jason.chang01022021@gmail.com">jason.chang01022021@gmail.com</a><br>
-        <i class="fa fa-home"></i> Irvine, CA<br>
-        <i class="fa fa-linkedin"></i> <a href="https://linkedin.com/in/jchang0102" target="_blank">linkedin.com/in/jchang0102</a>
-    </div>
-    """, unsafe_allow_html=True)
+
+
 
 
