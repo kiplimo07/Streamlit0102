@@ -35,7 +35,7 @@ st.markdown("""
         }
         /* Adjust top padding of the main container for all pages */
         .reportview-container .main .block-container {
-            padding-top: 1rem; /* Reduced padding to move content up */
+            padding-top: 1rem; /* Adjust to move content up */
         }
     </style>
 """, unsafe_allow_html=True)
@@ -72,11 +72,11 @@ data = load_data(data_url)
 
 # Display header specifically for the Welcome page
 if page == "Welcome":
-    st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
-    st.markdown('<p class="medium-font">PORTFOLIO</p>', unsafe_allow_html=True)
-    st.markdown('<p class="small-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
-    st.markdown("### Welcome to my Portfolio", unsafe_allow_html=True)
-    # Additional welcome page content
+    st.markdown('<div class="big-font">JASON CHANG</div>', unsafe_allow_html=True)
+    st.markdown('<div class="medium-font">PORTFOLIO</div>', unsafe_allow_html=True)
+    st.markdown('<div class="small-font">Full Stack Senior Data Analyst</div>', unsafe_allow_html=True)
+    
+    # Welcome page content
     st.write("""
         As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, 
         I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights, 
