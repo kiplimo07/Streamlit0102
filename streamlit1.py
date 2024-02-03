@@ -33,10 +33,7 @@ st.markdown("""
 .fa {
     padding-right: 5px;
 }
-/* Adjust the top margin of the main container on all pages */
-.reportview-container .main .block-container {
-    padding-top: 2rem; /* Reduced padding to move content up */
-}
+/* Additional custom styles can go here */
 </style>
 """, unsafe_allow_html=True)
 
@@ -72,14 +69,6 @@ def assign_correct_bucket(games_played):
 data_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/RAWBliz.csv"
 data = load_data(data_url)
 
-with st.sidebar:
-    st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
-    page = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", 
-                         "Dashboard / Executive Business Insights", 
-                         "Data Analysis / Warehouse & GL Account Optimization", 
-                         "Process Automation / Quarterly Royalty Management", 
-                         "Scope of Skills", "Certifications", "Contact"])
-
 # Main content based on the navigation
 if page == "Welcome":
     # Header specifically for the Welcome page
@@ -95,6 +84,9 @@ if page == "Welcome":
     I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence 
     for business growth and collaborative leadership.
     """)
+
+# ... Rest of your Streamlit app code for other pages ...
+
 
 elif page == "Data Analytics / Engagement & Monetization Strategies":
     st.header("Data Analytics / Engagement & Monetization Strategies")
