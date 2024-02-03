@@ -3,8 +3,21 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Set the page configuration to wide mode with a dark theme
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
+st.markdown(
+    """
+    <style>
+    /* Custom CSS */
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+# Sidebar setup
+page = st.sidebar.selectbox(
+    "Navigation",
+    ["Welcome", "Data Analytics / Engagement & Monetization Strategies", "Dashboard / Executive Business Insights", "..."]
+)
 
 # Custom CSS to incorporate the design from the image and FontAwesome for icons, and adjust top padding
 st.markdown("""
@@ -57,15 +70,18 @@ data = load_data(data_url)
 
 # Main content based on the navigation
 if page == "Welcome":
-    # Adjusted welcome page content to appear higher
-    st.markdown("### Welcome to my Portfolio", unsafe_allow_html=True)
-    st.markdown("""
-    As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, 
-    I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights, 
-    positioning me ideally for a Full Stack Senior Data Analyst or Data Scientist role. Committed to pioneering data-driven research, 
-    I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence 
-    for business growth and collaborative leadership.
-    """, unsafe_allow_html=True)
+    st.title("Welcome to my Portfolio")
+    # Using columns to push content up
+    col1, col2 = st.columns([1, 5])  # Adjust ratio as needed
+    with col2:
+        st.markdown("### JASON CHANG")
+        st.markdown("#### Full Stack Senior Data Analyst")
+        st.markdown(
+            """
+            As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, 
+            I have evolved from intricate statistical analysis to advanced predictive modeling...
+            """
+        )
 
 
 elif page == "Data Analytics / Engagement & Monetization Strategies":
