@@ -3,10 +3,8 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Set the page configuration to wide mode with a dark theme
+# Set the page configuration and custom CSS
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
-
-# Custom CSS to incorporate the design from the image and FontAwesome for icons
 st.markdown("""
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -19,22 +17,23 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-
-# Header and subheader
+# Header and sidebar setup
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<p class="medium-font">PORTFOLIO</p>', unsafe_allow_html=True)
 st.markdown('<p class="small-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
-# Sidebar navigation setup
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
-    page = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", 
-                         "Dashboard / Executive Business Insights", 
-                         "Data Analysis / Warehouse & GL Account Optimization", 
-                         "Process Automation / Quarterly Royalty Management", 
-                         "Scope of Skills", "Certifications", "Contact"])
+    page = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", "Dashboard / Executive Business Insights", "Data Analysis / Warehouse & GL Account Optimization", "Process Automation / Quarterly Royalty Management", "Scope of Skills", "Certifications", "Contact"])
 
-# Define the assign_correct_bucket function
+# Data loading and preprocessing
+@st.cache
+def load_data(url):
+    data = pd.read_csv(url)
+    data['Date'] = pd.to_datetime(data['Date'])
+    data['games_played_bucket'] = data['games_played'].apply(assign_correct_bucket)
+    return data
+
 def assign_correct_bucket(games_played):
     if games_played >= 1 and games_played <= 3:
         return 'Very Low'
@@ -47,18 +46,13 @@ def assign_correct_bucket(games_played):
     else:
         return 'Unknown'
 
-# Load the dataset with a corrected approach
-@st.cache
-def load_data(url):
-    data = pd.read_csv(url)
-    data['Date'] = pd.to_datetime(data['Date'])
-    data['games_played_bucket'] = data['games_played'].apply(assign_correct_bucket)
-    # Include any other necessary data processing here
-    return data
-
-# Ensure the corrected URL for raw GitHub content is used
 data_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/RAWBliz.csv"
 data = load_data(data_url)
+
+# Main content based on the navigation
+if page == "Welcome":
+    st.markdown("### Welcome Message and Introduction")
+    # Welcome page content here
 
 elif page == "Data Analytics / Engagement & Monetization Strategies":
     st.header("Data Analytics / Engagement & Monetization Strategies")
@@ -79,62 +73,59 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     Leveraged Python, K-Means Clustering, and heatmap analysis for an in-depth comparative study of player engagement and spending. Implemented segmentation based on in-game behavior for a comprehensive analysis.
     """)
 
-    # Data visualization code for this section should go here
-    # Since the specific visualization code was provided in parts, ensure it's adapted and included here.
+    # Ensure 'data' has been loaded using the load_data function above
+    # Filter data for event periods
+    event_1_start, event_1_end = pd.Timestamp('2017-01-24'), pd.Timestamp('2017-02-14')
+    event_2_start, event_2_end = pd.Timestamp('2017-02-28'), pd.Timestamp('2017-03-21')
 
-# break
+    event_1_data = data[(data['Date'] >= event_1_start) & (data['Date'] <= event_1_end)]
+    event_2_data = data[(data['Date'] >= event_2_start) & (data['Date'] <= event_2_end)]
 
-# Assuming 'data' has already been loaded using the load_data function
+    # Set the aesthetic style of the plots
+    sns.set_style("whitegrid")
 
-# Filter the data for event periods
-event_1_start, event_1_end = pd.Timestamp('2017-01-24'), pd.Timestamp('2017-02-14')
-event_2_start, event_2_end = pd.Timestamp('2017-02-28'), pd.Timestamp('2017-03-21')
+    # Create figure for KDE plots
+    fig, axes = plt.subplots(2, 2, figsize=(12, 10))
 
-event_1_data = data[(data['Date'] >= event_1_start) & (data['Date'] <= event_1_end)]
-event_2_data = data[(data['Date'] >= event_2_start) & (data['Date'] <= event_2_end)]
+    # Kernel Density Estimate plot for Games Played
+    sns.kdeplot(event_1_data['games_played'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 0])
+    sns.kdeplot(event_2_data['games_played'], shade=True, color="salmon", label="Event 2", ax=axes[0, 0])
+    axes[0, 0].set_title('Distribution of Games Played')
+    axes[0, 0].legend()
 
-# Set the aesthetic style of the plots
-sns.set_style("whitegrid")
+    # Kernel Density Estimate plot for Skill Last
+    sns.kdeplot(event_1_data['skill_last'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 1])
+    sns.kdeplot(event_2_data['skill_last'], shade=True, color="salmon", label="Event 2", ax=axes[0, 1])
+    axes[0, 1].set_title('Distribution of Skill Last')
+    axes[0, 1].legend()
 
-# Create figure for KDE plots
-fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+    # Kernel Density Estimate plot for Items Crafted
+    sns.kdeplot(event_1_data['items_crafted'], shade=True, color="skyblue", label="Event 1", ax=axes[1, 0])
+    sns.kdeplot(event_2_data['items_crafted'], shade=True, color="salmon", label="Event 2", ax=axes[1, 0])
+    axes[1, 0].set_title('Distribution of Items Crafted')
+    axes[1, 0].legend()
 
-# Kernel Density Estimate plot for Games Played
-sns.kdeplot(event_1_data['games_played'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 0])
-sns.kdeplot(event_2_data['games_played'], shade=True, color="salmon", label="Event 2", ax=axes[0, 0])
-axes[0, 0].set_title('Distribution of Games Played')
-axes[0, 0].legend()
+    # Kernel Density Estimate plot for Dollars Spent
+    sns.kdeplot(event_1_data['dollars_spent'], shade=True, color="skyblue", label="Event 1", ax=axes[1, 1])
+    sns.kdeplot(event_2_data['dollars_spent'], shade=True, color="salmon", label="Event 2", ax=axes[1, 1])
+    axes[1, 1].set_title('Distribution of Dollars Spent')
+    axes[1, 1].legend()
 
-# Kernel Density Estimate plot for Skill Last
-sns.kdeplot(event_1_data['skill_last'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 1])
-sns.kdeplot(event_2_data['skill_last'], shade=True, color="salmon", label="Event 2", ax=axes[0, 1])
-axes[0, 1].set_title('Distribution of Skill Last')
-axes[0, 1].legend()
+    # Adjust layout and display the plots
+    plt.tight_layout()
+    st.pyplot(fig)
 
-# Kernel Density Estimate plot for Items Crafted
-sns.kdeplot(event_1_data['items_crafted'], shade=True, color="skyblue", label="Event 1", ax=axes[1, 0])
-sns.kdeplot(event_2_data['items_crafted'], shade=True, color="salmon", label="Event 2", ax=axes[1, 0])
-axes[1, 0].set_title('Distribution of Items Crafted')
-axes[1, 0].legend()
-
-# Kernel Density Estimate plot for Dollars Spent
-sns.kdeplot(event_1_data['dollars_spent'], shade=True, color="skyblue", label="Event 1", ax=axes[1, 1])
-sns.kdeplot(event_2_data['dollars_spent'], shade=True, color="salmon", label="Event 2", ax=axes[1, 1])
-axes[1, 1].set_title('Distribution of Dollars Spent')
-axes[1, 1].legend()
-
-# Adjust layout and display the plots
-plt.tight_layout()
-st.pyplot(fig)
+    # Assuming 'data' has relevant columns for region, platform, and dollars_spent
+    # Group data by region and platform for heatmap
+    heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
+    plt.figure(figsize=(10, 8))
+    sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.5)
+    plt.title("Average Dollars Spent per Player by Region and Platform")
+    st.pyplot(plt)
 
 
-# Assuming 'data' has relevant columns for region, platform, and dollars_spent
-# Group data by region and platform for heatmap
-heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
-plt.figure(figsize=(10, 8))
-sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.5)
-plt.title("Average Dollars Spent per Player by Region and Platform")
-st.pyplot(plt)
+
+
 
 elif page == "Dashboard / Executive Business Insights":
     st.header("Dashboard / Executive Business Insights")
