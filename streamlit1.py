@@ -23,8 +23,8 @@ page = st.sidebar.selectbox(
 st.markdown("""
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-.big-font { font-size:100px !important; font-weight: bold; color: white; }
-.medium-font { font-size:35px !important; color: #a47321; }
+.big-font { font-size:60px !important; font-weight: bold; color: white; }
+.medium-font { font-size:60px !important; color: #a47321; }
 .small-font { font-size:25px !important; color: white; }
 .reportview-container .main { background-color: #1d262f; }
 .sidebar .sidebar-content { background-color: #1d262f; color: white; }
