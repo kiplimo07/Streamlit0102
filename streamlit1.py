@@ -174,7 +174,6 @@ elif page == "Certifications":
     - **AWS Cloud Practitioner Essentials** - AWS
     - **Analyzing and Visualizing Data with Power BI** - EdX
     """)
-
 elif page == "Contact":
     st.header("Contact Information")
     st.markdown("""
