@@ -49,14 +49,19 @@ def assign_correct_bucket(games_played):
 data_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/RAWBliz.csv"
 data = load_data(data_url)
 
+
+
 # Main content based on the navigation
 if page == "Jason CHang":
     st.markdown("###Portfolio")
-    st.markdown('<p class="small-font">SENIOR DATA ANALYST</p>', unsafe_allow_html=True)
+    st.markdown("###Full Stack Data Analyst")
     # Welcome page content here
     st.write("""
     As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights, positioning me ideally for a Full Stack Senior Data Analyst or Data Scientist role. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.
     """)
+
+
+
 elif page == "Data Analytics / Engagement & Monetization Strategies":
     st.header("Data Analytics / Engagement & Monetization Strategies")
     st.subheader("Executive Summary/Business Objective:")
