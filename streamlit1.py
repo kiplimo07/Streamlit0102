@@ -1,12 +1,4 @@
-import streamlit as st
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Set the page configuration to wide mode with a dark theme
-st.set_page_config(layout="wide")
-
-import streamlit as st
+ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -41,11 +33,15 @@ st.markdown("""
 .fa {
     padding-right: 5px;
 }
-/* Additional custom styles can go here */
 </style>
 """, unsafe_allow_html=True)
 
-# Sidebar navigation setup
+# Header and subheader
+st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
+st.markdown('<p class="medium-font">PROJECT PORTFOLIO</p>', unsafe_allow_html=True)
+st.markdown('<p class="small-font">SENIOR DATA ANALYST</p>', unsafe_allow_html=True)
+
+# Sidebar navigation
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
     page = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", 
@@ -54,91 +50,92 @@ with st.sidebar:
                          "Process Automation / Quarterly Royalty Management", 
                          "Scope of Skills", "Certifications", "Contact"])
 
-# Data loading and preprocessing
-@st.cache
-def load_data(url):
-    data = pd.read_csv(url)
-    data['Date'] = pd.to_datetime(data['Date'])
-    data['games_played_bucket'] = data['games_played'].apply(assign_correct_bucket)
-    return data
 
-def assign_correct_bucket(games_played):
-    if games_played >= 1 and games_played <= 3:
-        return 'Very Low'
-    elif games_played >= 4 and games_played <= 5:
-        return 'Low'
-    elif games_played >= 6 and games_played <= 9:
-        return 'Medium'
-    elif games_played >= 10 and games_played <= 68:
-        return 'High'
-    else:
-        return 'Unknown'
-
-data_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/RAWBliz.csv"
-data = load_data(data_url)
 
 # Main content based on the navigation
-if page == "Welcome":
-    # Header specifically for the Welcome page
-    st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
-    st.markdown('<p class="medium-font">PROJECT PORTFOLIO</p>', unsafe_allow_html=True)
-    st.markdown('<p class="small-font">SENIOR DATA ANALYST</p>', unsafe_allow_html=True)
-    
-    # Welcome page content here
+if page == "Data Analytics / Engagement & Monetization Strategies":
+    st.header("Data Analytics / Engagement & Monetization Strategies")
+    st.subheader("Executive Summary/Business Objective:")
     st.write("""
-    As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, 
-    I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights, 
-    positioning me ideally for a Full Stack Senior Data Analyst or Data Scientist role. Committed to pioneering data-driven research, 
-    I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence 
-    for business growth and collaborative leadership.
+    Emphasized maximizing revenue and enhancing player engagement and satisfaction by analyzing behavior and spending patterns during Warcraft's two in-game events.
+    """)
+    st.subheader("Findings/Strategic Implications:")
+    st.write("""
+    Identified high-spending segments, especially in Platform 3, Region 1, signaling a priority for future promotions. Observed low spending in Platform 1, Region 5, highlighting the necessity for further research and adjustments to the strategy.
+    """)
+    st.subheader("Research Question/Data Exploration:")
+    st.write("""
+    Conducted exploratory data analysis to understand player spending behavior, emphasizing games played, skill levels, dollars spent, and items crafted.
+    """)
+    st.subheader("Methodology/Analytical Proficiency:")
+    st.write("""
+    Leveraged Python, K-Means Clustering, and heatmap analysis for an in-depth comparative study of player engagement and spending. Implemented segmentation based on in-game behavior for a comprehensive analysis.
     """)
 
-# Sidebar navigation setup
-with st.sidebar:
-    st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
-    page = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", 
-                         "Dashboard / Executive Business Insights", 
-                         "Data Analysis / Warehouse & GL Account Optimization", 
-                         "Process Automation / Quarterly Royalty Management", 
-                         "Scope of Skills", "Certifications", "Contact"])
+    # Load the dataset from the GitHub URL
+    @st.cache
+    def load_data(url):
+        data = pd.read_csv(url)
+        data['Date'] = pd.to_datetime(data['Date'])
+        return data
 
-# Data loading and preprocessing
-@st.cache
-def load_data(url):
-    data = pd.read_csv(url)
-    data['Date'] = pd.to_datetime(data['Date'])
-    data['games_played_bucket'] = data['games_played'].apply(assign_correct_bucket)
-    return data
+    data_url = "https://github.com/jasonchang0102/Streamlit0102/raw/main/RAWBliz.csv"
+    data = load_data(data_url)
 
-def assign_correct_bucket(games_played):
-    if games_played >= 1 and games_played <= 3:
-        return 'Very Low'
-    elif games_played >= 4 and games_played <= 5:
-        return 'Low'
-    elif games_played >= 6 and games_played <= 9:
-        return 'Medium'
-    elif games_played >= 10 and games_played <= 68:
-        return 'High'
-    else:
-        return 'Unknown'
+    # Define the event periods
+    event_1_start = pd.Timestamp('2017-01-24')
+    event_1_end = pd.Timestamp('2017-02-14')
+    event_2_start = pd.Timestamp('2017-02-28')
+    event_2_end = pd.Timestamp('2017-03-21')
 
-data_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/RAWBliz.csv"
-data = load_data(data_url)
+    # Filter the data for each event
+    event_1_data = data[(data['Date'] >= event_1_start) & (data['Date'] <= event_1_end)]
+    event_2_data = data[(data['Date'] >= event_2_start) & (data['Date'] <= event_2_end)]
 
-# Main content based on the navigation
+    # Set the aesthetic style of the plots
+    sns.set_style("whitegrid")
+
+    # Create figure for all four distributions
+    fig, axes = plt.subplots(2, 2, figsize=(16, 12))
+
+    # Kernel Density Estimate plot for Games Played
+    sns.kdeplot(event_1_data['games_played'], color="skyblue", shade=True, label="Event 1", ax=axes[0, 0])
+    sns.kdeplot(event_2_data['games_played'], color="salmon", shade=True, label="Event 2", ax=axes[0, 0])
+    axes[0, 0].set_title('Bell Curve Distribution of Games Played')
+    axes[0, 0].legend()
+
+    # Kernel Density Estimate plot for Skill Last
+    sns.kdeplot(event_1_data['skill_last'], color="skyblue", shade=True, label="Event 1", ax=axes[0, 1])
+    sns.kdeplot(event_2_data['skill_last'], color="salmon", shade=True, label="Event 2", ax=axes[0, 1])
+    axes[0, 1].set_title('Bell Curve Distribution of Skill Last')
+    axes[0, 1].legend()
+
+    # Kernel Density Estimate plot for Items Crafted
+    sns.kdeplot(event_1_data['items_crafted'], color="skyblue", shade=True, label="Event 1", ax=axes[1, 0])
+    sns.kdeplot(event_2_data['items_crafted'], color="salmon", shade=True, label="Event 2", ax=axes[1, 0])
+    axes[1, 0].set_title('Bell Curve Distribution of Items Crafted')
+    axes[1, 0].legend()
+
+    # Kernel Density Estimate plot for Dollars Spent
+    sns.kdeplot(event_1_data['dollars_spent'], color="skyblue", shade=True, label="Event 1", ax=axes[1, 1])
+    sns.kdeplot(event_2_data['dollars_spent'], color="salmon", shade=True, label="Event 2", ax=axes[1, 1])
+    axes[1, 1].set_title('Bell Curve Distribution of Dollars Spent')
+    axes[1, 1].legend()
+
+    # Adjust the layout
+    plt.tight_layout()
+
+    # Show the plot
+    st.pyplot(fig)
+
 if page == "Welcome":
-    # Header specifically for the Welcome page
-    st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
-    st.markdown('<p class="medium-font">PROJECT PORTFOLIO</p>', unsafe_allow_html=True)
-    st.markdown('<p class="small-font">SENIOR DATA ANALYST</p>', unsafe_allow_html=True)
+
+st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
+    st.markdown("### Welcome to my Portfolio")
     
-    # Welcome page content here
+    # Your professional introduction
     st.write("""
-    As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, 
-    I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights, 
-    positioning me ideally for a Full Stack Senior Data Analyst or Data Scientist role. Committed to pioneering data-driven research, 
-    I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence 
-    for business growth and collaborative leadership.
+    As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights, positioning me ideally for a Full Stack Senior Data Analyst or Data Scientist role. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.
     """)
 
 elif page == "Data Analytics / Engagement & Monetization Strategies":
@@ -159,120 +156,160 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     st.write("""
     Leveraged Python, K-Means Clustering, and heatmap analysis for an in-depth comparative study of player engagement and spending. Implemented segmentation based on in-game behavior for a comprehensive analysis.
     """)
+    st.subheader("Heatmap: Platform & Region x Player Engagement on Average Dollar Spending")
+    # Summary of the Heatmap analysis
 
-    # Ensure 'data' has been loaded using the load_data function above
-    # Filter data for event periods
-    event_1_start, event_1_end = pd.Timestamp('2017-01-24'), pd.Timestamp('2017-02-14')
-    event_2_start, event_2_end = pd.Timestamp('2017-02-28'), pd.Timestamp('2017-03-21')
-
-    event_1_data = data[(data['Date'] >= event_1_start) & (data['Date'] <= event_1_end)]
-    event_2_data = data[(data['Date'] >= event_2_start) & (data['Date'] <= event_2_end)]
-
-    # Set the aesthetic style of the plots
-    sns.set_style("whitegrid")
-
-    # Create figure for KDE plots
-    fig, axes = plt.subplots(2, 2, figsize=(12, 10))
-
-    # Kernel Density Estimate plot for Games Played
-    sns.kdeplot(event_1_data['games_played'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 0])
-    sns.kdeplot(event_2_data['games_played'], shade=True, color="salmon", label="Event 2", ax=axes[0, 0])
-    axes[0, 0].set_title('Distribution of Games Played')
-    axes[0, 0].legend()
-
-    # Kernel Density Estimate plot for Skill Last
-    sns.kdeplot(event_1_data['skill_last'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 1])
-    sns.kdeplot(event_2_data['skill_last'], shade=True, color="salmon", label="Event 2", ax=axes[0, 1])
-    axes[0, 1].set_title('Distribution of Skill Last')
-    axes[0, 1].legend()
-
-    # Kernel Density Estimate plot for Items Crafted
-    sns.kdeplot(event_1_data['items_crafted'], shade=True, color="skyblue", label="Event 1", ax=axes[1, 0])
-    sns.kdeplot(event_2_data['items_crafted'], shade=True, color="salmon", label="Event 2", ax=axes[1, 0])
-    axes[1, 0].set_title('Distribution of Items Crafted')
-    axes[1, 0].legend()
-
-    # Kernel Density Estimate plot for Dollars Spent
-    sns.kdeplot(event_1_data['dollars_spent'], shade=True, color="skyblue", label="Event 1", ax=axes[1, 1])
-    sns.kdeplot(event_2_data['dollars_spent'], shade=True, color="salmon", label="Event 2", ax=axes[1, 1])
-    axes[1, 1].set_title('Distribution of Dollars Spent')
-    axes[1, 1].legend()
-
-    # Adjust layout and display the plots
-    plt.tight_layout()
-    st.pyplot(fig)
-
-    # Assuming 'data' has relevant columns for region, platform, and dollars_spent
-    # Group data by region and platform for heatmap
-    heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
-    plt.figure(figsize=(10, 8))
-    sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.5)
-    plt.title("Average Dollars Spent per Player by Region and Platform")
-    st.pyplot(plt)
+# ... [Previous Streamlit setup and Project 1 code] ...
 
 
 
-
-
-elif page == "Dashboard / Executive Business Insights":
-    st.header("Dashboard / Executive Business Insights")
-    st.markdown("""
-    **Objective:** Enhance strategic decision-making through a unified data ecosystem post-merger. Focus on leveraging analytics to drive stakeholder value and operational efficiency.
-    
-    **Findings:** Highlighted divisions and accounts showing promising performance, indicating opportunities for strategic realignment and resource optimization.
-    
-    **Methodology:** Utilized Python for data manipulation and SQL for data querying. Employed Power BI for dynamic dashboards showcasing real-time business intelligence.
-    """)
+# ... [Previous Streamlit setup and Project 2 code] ...
 
 elif page == "Data Analysis / Warehouse & GL Account Optimization":
     st.header("Data Analysis / Warehouse & GL Account Optimization")
-    st.markdown("""
-    **Objective:** Identify cost-saving opportunities across logistics and warehouse operations to impact the bottom line positively.
-    
-    **Findings:** Revealed inefficiencies in 'SKYLAB' and '3PL Logistics', suggesting areas for cost optimization and process improvements.
-    
-    **Methodology:** Analyzed financial data using Python, with a focus on dissecting spending patterns and identifying optimization opportunities.
+    st.subheader("Executive Summary/Business Objective:")
+    st.write("""
+    This project aims to showcase the potential for cost savings and positive impacts 
+    on the bottom line to stakeholders, including the CEO and directors, by optimizing 
+    financial oversight across various operational categories.
     """)
 
+    st.subheader("Findings/Strategic Implications:")
+    st.write("""
+    The analysis revealed significant opportunities for cost optimization. Insights 
+    into departmental spending patterns, especially in areas like 'SKYLAB' and '3PL 
+    Logistics,' led to strategic recommendations for enhanced financial decision-making 
+    and stewardship.
+    """)
+
+    st.subheader("Research Question/Data Exploration:")
+    st.write("""
+    Collaborating with team members, we aimed to gather and probe into the financial 
+    data, revealing the nature of spending and identifying areas for potential savings.
+    """)
+
+    st.subheader("Background:")
+    st.write("""
+    As an extension of the Executive Dashboard, the focus was on dissecting complex 
+    datasets across logistics, freight, and other areas to identify spending trends and 
+    variances, vital for strategic financial planning.
+    """)
+
+    st.subheader("Methodology/Analytical Proficiency:")
+    st.write("""
+    Employed Python for data consolidation and SQL for database management, focusing 
+    on breaking down expenses, conducting comparative analyses, and identifying 
+    outliers and trends.
+    """)
+
+# ... [Previous Streamlit setup and Project 3 code] ...
 elif page == "Process Automation / Quarterly Royalty Management":
     st.header("Process Automation / Quarterly Royalty Management")
-    st.markdown("""
-    **Objective:** Streamline the quarterly royalty management process, reducing time spent by financial analysts from a month-long task to a 2-hour automated process.
-    
-    **Impact:** Achieved an 85% reduction in process time, significantly lowering operational costs and enhancing efficiency and accuracy in royalty management.
-    
-    **Methodology:** Developed a custom Python script for data consolidation and utilized Excel VBA for automating data extraction and report generation.
+    st.subheader("Executive Summary/Business Objective:")
+    st.write("""
+    Automate the quarterly royalty management process to transform a month-long task 
+    for two financial analysts into a 2-hour automated system. This aims to reduce 
+    labor time by 85%, lowering operational costs and increasing efficiency and accuracy.
     """)
 
-elif page == "Scope of Skills":
-    st.header("Scope of Skills")
-    st.markdown("""
-    - **Programming Languages:** Proficient in Python and VBA.
-    - **Data Engineering Tools:** Experienced with ETL processes, SSMS, and Snowflake.
-    - **Data Analysis Libraries:** Skilled in using Pandas, NumPy, Seaborn, and Matplotlib.
-    - **BI Tools:** Proficient in Power BI, Google Analytics, and Data Studio.
-    - **Digital Marketing:** Knowledgeable in campaign management and optimization across platforms like Facebook and Google Ads.
+    st.subheader("Strategic Implications:")
+    st.write("""
+    The implementation of this automation has led to an 85% reduction in processing time, 
+    offering a model for similar improvements across financial processes and potentially 
+    reshaping the organization's fiscal management approach.
     """)
+
+    st.subheader("Background:")
+    st.write("""
+    The project addresses the inefficiencies of manually processing 99 contracts every 
+    quarter, a task that previously occupied two full-time financial analysts for an 
+    entire month and was prone to human error.
+    """)
+
+    st.subheader("Methodology/Analytical Proficiency:")
+    st.write("""
+    Utilized Python for data consolidation and Excel VBA for maintaining the data repository 
+    and processing notifications to vendors, including custom scripts for automating data 
+    extraction and aggregation.
+    """)
+# ... [Previous Streamlit setup and Project 4 code] ...
+
 
 elif page == "Certifications":
     st.header("Certifications")
-    st.markdown("""
-    - **Big Data Technology Fundamentals** - AWS
-    - **AWS Cloud Practitioner Essentials** - AWS
-    - **Analyzing and Visualizing Data with Power BI** - EdX
+
+    # List of certifications
+    st.write("""
+    - **Big Data Technology Fundamentals**  
+      Certified by: AWS (June 2019)
+    
+    - **AWS Cloud Practitioner Essentials**  
+      Certified by: AWS (June 2019)
+    
+    - **Analyzing and Visualizing Data with Power BI**  
+      Certified by: EdX (July 2019)
     """)
+# ... [Previous Streamlit setup and other project codes] ...
+
+elif page == "Scope of Skills":
+    st.header("Scope of Skills")
+
+    # Programming Languages
+    st.subheader("Programming Language:")
+    st.write("Python, VBA")
+
+    # Data Engineering Tools
+    st.subheader("Data Engineering Tools:")
+    st.write("ETL, SSMS, AS400, Snowflakes, Power Query, Integration Analysis")
+
+    # Data Analysis Libraries
+    st.subheader("Data Analysis Libraries:")
+    st.write("Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow")
+
+    # Statistical Analysis
+    st.subheader("Statistical Analysis:")
+    st.write("""
+    Descriptive/Inferential Statistics, A/B Testing, Predictive Modeling, Forecasting, 
+    Regression Analysis, Hypothesis Testing, & Time Series Analysis
+    """)
+
+    # BI Tools
+    st.subheader("BI Tools:")
+    st.write("Power BI, Google Analytics/Data Studio, Excel")
+
+    # Digital Marketing
+    st.subheader("Digital Marketing:")
+    st.write("""
+    Facebook, Google Ads, Shopify, Google Analytics, Data Studio, Campaign 
+    Management, Performance and Content Optimization
+    """)
+
+    # Data Modeling
+    st.subheader("Data Modeling:")
+    st.write("STAR/ER/DAG diagrams, and Normalization")
+
+
+
+
+
+# ... [Previous Streamlit setup and other project codes] ...
 
 elif page == "Contact":
     st.header("Contact Information")
+
+    # Inspirational Quote
     st.markdown("""
-    Feel free to connect with me for any inquiries or opportunities.
-    
-    - **Phone:** (626) 203 – 3319
-    - **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)
-    - **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)
+    <p style="font-style: italic;">
+        "In God we trust; for all else, we turn to the validation of data. With data science as our compass, we're set to reveal hidden insights that our data is just dying to tell."
+    </p>
     """, unsafe_allow_html=True)
 
-
-
-
-
+    # Contact Details with Icons
+    st.markdown("""
+    <div style="font-size: 20px;">
+        <i class="fa fa-phone"></i> (626) 203 – 3319<br>
+        <i class="fa fa-envelope"></i> <a href="mailto:jason.chang01022021@gmail.com">jason.chang01022021@gmail.com</a><br>
+        <i class="fa fa-home"></i> Irvine, CA<br>
+        <i class="fa fa-linkedin"></i> <a href="https://linkedin.com/in/jchang0102" target="_blank">linkedin.com/in/jchang0102</a>
+    </div>
+    """, unsafe_allow_html=True)
