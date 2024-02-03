@@ -3,8 +3,10 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Set the page configuration and custom CSS
+# Set the page configuration to wide mode with a dark theme
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
+
+# Custom CSS to incorporate the design from the image and FontAwesome for icons, and adjust top padding
 st.markdown("""
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -14,6 +16,10 @@ st.markdown("""
 .reportview-container .main { background-color: #1d262f; }
 .sidebar .sidebar-content { background-color: #1d262f; color: white; }
 .fa { padding-right: 5px; }
+/* Adjust top padding of the main container for all pages */
+.reportview-container .main .block-container {
+    padding-top: 1rem; /* Reduced padding to move content up */
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -51,7 +57,15 @@ data = load_data(data_url)
 
 # Main content based on the navigation
 if page == "Welcome":
-    st.markdown("### PORTFOLIO")
+    # Adjusted welcome page content to appear higher
+    st.markdown("### Welcome to my Portfolio", unsafe_allow_html=True)
+    st.markdown("""
+    As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, 
+    I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights, 
+    positioning me ideally for a Full Stack Senior Data Analyst or Data Scientist role. Committed to pioneering data-driven research, 
+    I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence 
+    for business growth and collaborative leadership.
+    """, unsafe_allow_html=True)
 
 
 elif page == "Data Analytics / Engagement & Monetization Strategies":
