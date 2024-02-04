@@ -72,14 +72,24 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     Conducted exploratory data analysis to understand player spending behavior, emphasizing games played, skill levels, dollars spent, and items crafted.
     """)
 
-    # Images from GitHub
-    common_width = 600
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', caption='Distribution of Spending Across Skill Brackets', width=common_width)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=common_width)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=common_width)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', caption='  ',width=common_width)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/555', caption='  ',width=common_width)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', caption='  ',width=common_width)
+# Create two columns for the first two images
+col1, col2 = st.columns(2)
+
+# Use the columns to display the first two images side by side
+with col1:
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', caption='Distribution of Spending Across Skill Brackets', width=400)
+
+with col2:
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=400)
+
+# Display the third image normally
+st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=600)
+
+# Last three images with adjusted widths
+st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', caption='Caption for Image 4', width=900)  # Adjusted caption as placeholder
+st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/555', caption='Caption for Image 5', width=900)  # Adjusted caption as placeholder
+st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', caption='Caption for Image 6', width=900)  # Adjusted caption as placeholder
+
 
 
 
