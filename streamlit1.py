@@ -81,15 +81,23 @@ if page == "Welcome":
 elif page == "Data Analytics / Engagement & Monetization Strategies":
     st.header("Data Analytics / Engagement & Monetization Strategies")
     st.subheader("Executive Summary/Business Objective:")
-    st.write("""
+  st.write("""
     Emphasized maximizing revenue and enhancing player engagement and satisfaction by analyzing behavior and spending patterns during Warcraft's two in-game events.
+    """)
+    st.subheader("Findings/Strategic Implications:")
+    st.write("""
+    Identified high-spending segments, especially in Platform 3, Region 1, signaling a priority for future promotions. Observed low spending in Platform 1, Region 5, highlighting the necessity for further research and adjustments to the strategy.
+    """)
+    st.subheader("Research Question/Data Exploration:")
+    st.write("""
+    Conducted exploratory data analysis to understand player spending behavior, emphasizing games played, skill levels, dollars spent, and items crafted.
     """)
 
     # Include the images from GitHub with specified width
     common_width = 1000
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333.png', caption='Distribution of Spending Across Skill Brackets', width=common_width)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222.png', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=common_width)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111.png', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=common_width)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', caption='Distribution of Spending Across Skill Brackets', width=common_width)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=common_width)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=common_width)
 
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
