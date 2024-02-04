@@ -98,9 +98,9 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
 
     common_width = 600
     # Include the images from GitHub with specified width
-    st.image('https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/222.png', caption='Distribution of Spending Across Skill Brackets', width=common_width)
-    st.image('https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/111.png', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=common_width)
-    st.image('https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/333.png', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=common_width)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', caption='Distribution of Spending Across Skill Brackets', width=common_width)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=common_width)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=common_width)
 
 
 
