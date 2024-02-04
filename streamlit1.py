@@ -18,7 +18,8 @@ st.markdown("""
 .medium-font  {
     font-family: 'Bebas Neue', cursive;
     font-size:40px !important;
-    font-weight: bold;!important; color: Black;}
+    font-weight: bold;!important; color: D09E55;}
+    
 .small-font { font-size:25px !important; color: Black; }
 .reportview-container .main { background-color: #1d262f; }
 .sidebar .sidebar-content { background-color: #1d262f; color: Black; }
