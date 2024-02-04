@@ -37,9 +37,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header and subheader
-st.markdown('<p class="big-font"> JASON CHANG</p>', unsafe_allow_html=True)
-st.markdown('<p class="medium-font">       PORTFOLIO</p>', unsafe_allow_html=True)
-st.markdown('<p class="small-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
+st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
+st.markdown('<p class="medium-font">PROJECT PORTFOLIO</p>', unsafe_allow_html=True)
+st.markdown('<p class="small-font">SENIOR DATA ANALYST</p>', unsafe_allow_html=True)
 
 # Sidebar navigation
 with st.sidebar:
@@ -96,7 +96,7 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
     sns.set_style("whitegrid")
 
     # Create figure for all four distributions
-    fig, axes = plt.subplots(2, 2, figsize=(10, 8))
+    fig, axes = plt.subplots(2, 2, figsize=(16, 12))
 
     # Kernel Density Estimate plot for Games Played
     sns.kdeplot(event_1_data['games_played'], color="skyblue", shade=True, label="Event 1", ax=axes[0, 0])
@@ -127,66 +127,38 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
 
     # Show the plot
     st.pyplot(fig)
-    st.subheader(" ")
-    st.subheader(" ")
-    st.subheader(" ")
-    st.subheader("Heatmap: Platform & Region x Player Engagement on Average Dollar Spending")
-    st.subheader(" ")
-    st.subheader(" ")
-    st.subheader(" ")
-
 
 if page == "Welcome":
-    st.markdown("### Welcome to my Portfolio")
+    st.markdown("### Welcome to my page")
     
     # Your professional introduction
     st.write("""
     As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights, positioning me ideally for a Full Stack Senior Data Analyst or Data Scientist role. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.
     """)
 
-
-
+elif page == "Data Analytics / Engagement & Monetization Strategies":
+    st.header("Data Analytics / Engagement & Monetization Strategies")
+    st.subheader("Executive Summary/Business Objective:")
+    st.write("""
+    Emphasized maximizing revenue and enhancing player engagement and satisfaction by analyzing behavior and spending patterns during Warcraft's two in-game events.
+    """)
+    st.subheader("Findings/Strategic Implications:")
+    st.write("""
+    Identified high-spending segments, especially in Platform 3, Region 1, signaling a priority for future promotions. Observed low spending in Platform 1, Region 5, highlighting the necessity for further research and adjustments to the strategy.
+    """)
+    st.subheader("Research Question/Data Exploration:")
+    st.write("""
+    Conducted exploratory data analysis to understand player spending behavior, emphasizing games played, skill levels, dollars spent, and items crafted.
+    """)
+    st.subheader("Methodology/Analytical Proficiency:")
+    st.write("""
+    Leveraged Python, K-Means Clustering, and heatmap analysis for an in-depth comparative study of player engagement and spending. Implemented segmentation based on in-game behavior for a comprehensive analysis.
+    """)
+    st.subheader("Heatmap: Platform & Region x Player Engagement on Average Dollar Spending")
     # Summary of the Heatmap analysis
 
 # ... [Previous Streamlit setup and Project 1 code] ...
-elif page == "Dashboard / Executive Business Insights":
-    st.header("Dashboard / Executive Business Insights")
-    st.subheader("Executive Summary/Business Objective:")
-    st.write("""
-    Post-merger, the goal is to optimize financial performance by developing a 
-    unified data ecosystem in SSMS. This aims to enhance strategic decision-making 
-    and stakeholder value, focusing on creating a seamless data environment for dynamic 
-    business intelligence.
-    """)
 
-
-    st.subheader("Findings/Strategic Implications:")
-    st.write("""
-    Analysis uncovers divisions and accounts with promising performance post-merger, 
-    indicating opportunities for strategic realignment and efficiencies, leading to 
-    potential resource reprioritization to maximize margins and cut costs.
-    """)
-
-    st.subheader("Background:")
-    st.write("""
-    Faced with the challenge of integrating disparate data systems from four pre-merger 
-    companies, the aim was to combine these to maintain operational continuity and 
-    capitalize on a unified market presence.
-    """)
-
-    st.subheader("Research Question/Data Exploration:")
-    st.write("""
-    Investigates how the merged data environment impacts financial health and 
-    efficiency, involving a deep dive into Reverse Schema Building and analysis of 
-    combined sales and operational data.
-    """)
-
-    st.subheader("Methodology/Analytical Proficiency:")
-    st.write("""
-    Utilizes advanced data analysis techniques with Python and SQL, and employs 
-    Power BI's interactivity for real-time insights, focusing on reverse engineering 
-    the data schema in the consolidated analytics platform.
-    """)
 
 
 # ... [Previous Streamlit setup and Project 2 code] ...
@@ -339,3 +311,5 @@ elif page == "Contact":
         <i class="fa fa-linkedin"></i> <a href="https://linkedin.com/in/jchang0102" target="_blank">linkedin.com/in/jchang0102</a>
     </div>
     """, unsafe_allow_html=True)
+
+
