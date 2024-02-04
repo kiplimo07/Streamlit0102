@@ -10,13 +10,13 @@ st.markdown("""
 .big-font {
     font-family: 'Bebas Neue', cursive;
     font-size:70px !important;
-    font-weight: 400; /* Adjusted weight */
+    font-weight: 100; /* Adjusted weight */
     color: Black;
 }
 .medium-font {
     font-family: 'Bebas Neue', cursive;
     font-size:40px !important;
-    font-weight: bold;
+    font-weight: 400;
     color: #D09E55;
 }
 .small-font {
