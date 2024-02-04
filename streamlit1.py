@@ -93,7 +93,7 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
         st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', width=600)
 
     with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', width=600)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', width=600)
 
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
@@ -105,7 +105,7 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
         st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/777', caption='Distribution of Spending Across Skill Brackets', width=600)
 
     with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=600)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=600)
 
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
