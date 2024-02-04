@@ -73,7 +73,7 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     """)
 
     # Images from GitHub
-    common_width = 1000
+    common_width = 800
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', caption='Distribution of Spending Across Skill Brackets', width=common_width)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=common_width)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=common_width)
@@ -119,7 +119,7 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
 
 
     heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
-    plt.figure(figsize=(13, 8)) # Adjusted for a common width of 1300 pixels
+    plt.figure(figsize=(12, 8)) # Adjusted for a common width of 1000 pixels
     sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.5)
     plt.title("Average Dollars Spent per Player by Region and Platform")
     st.pyplot(plt)
