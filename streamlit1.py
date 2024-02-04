@@ -73,17 +73,17 @@ if page == "Welcome":
 if page == "Data Analytics / Engagement & Monetization Strategies":
  
     st.header("Data Analytics / Engagement & Monetization")
-    st.subheader("Executive Summary/Business Objective:")
+    st.write("Executive Summary/Business Objective:")
     st.write("""
     Emphasized maximizing revenue and enhancing player engagement and satisfaction by analyzing behavior and spending patterns during Warcraft's two in-game events.
     """)
 
-    st.subheader("Findings/Strategic Implications:")
+    st.write("Findings/Strategic Implications:")
     st.write("""
     Identified high-spending segments, especially in Platform 3, Region 1, signaling a priority for future promotions. Observed low spending in Platform 1, Region 5, highlighting the necessity for further research and adjustments to the strategy.
     """)
 
-    st.subheader("Research Question/Data Exploration:")
+    st.write("Research Question/Data Exploration:")
     st.write("""
     Conducted exploratory data analysis to understand player spending behavior, emphasizing games played, skill levels, dollars spent, and items crafted.
     """)
