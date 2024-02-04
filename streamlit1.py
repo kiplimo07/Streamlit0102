@@ -16,13 +16,13 @@ st.markdown(
     }
     .medium-font {
         font-family: 'Bebas Neue', cursive;
-        font-size:40px !important;
+        font-size:55px !important;
         font-weight: bold;
         color: #D09E55;
     }
     .small-font {
         font-family: 'Lato', sans-serif;
-        font-size:25px !important;
+        font-size:30px !important;
         color: Black;
     }
     .reportview-container .main {
