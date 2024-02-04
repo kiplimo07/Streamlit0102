@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-
 # Set the page configuration and custom CSS
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 st.markdown("""
@@ -11,13 +10,13 @@ st.markdown("""
 .big-font {
     font-family: 'Bebas Neue', cursive;
     font-size:70px !important;
-    font-weight: 400; /* 'Bebas Neue' typically doesn't have 'thin', using normal weight */
+    font-weight: 400; /* Adjusted weight */
     color: Black;
 }
 .medium-font {
     font-family: 'Bebas Neue', cursive;
     font-size:40px !important;
-    font-weight: bold; /* Bebas Neue usually considered bold by default */
+    font-weight: bold;
     color: #D09E55;
 }
 .small-font {
@@ -25,15 +24,16 @@ st.markdown("""
     color: Black;
 }
 .reportview-container .main {
-    background-color: #1d262f;
+    background-color: #1D262F; /* Ensure this is correctly set */
 }
 .sidebar .sidebar-content {
     background-color: #1d262f;
-    color: Black;
+    color: white; /* Ensure text color is set appropriately for visibility */
 }
 .fa {
     padding-right: 5px;
 }
+/* Additional styles if needed */
 </style>
 """, unsafe_allow_html=True)
 
