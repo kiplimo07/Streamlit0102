@@ -6,9 +6,15 @@ import matplotlib.pyplot as plt
 # Set the page configuration and custom CSS
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 st.markdown("""
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-.big-font { font-size:50px !important; font-weight: bold; color: Black; }
+.big-font {
+    font-family: 'Bebas Neue', cursive;
+    font-size:50px !important;
+    font-weight: bold;
+    color: Black;
+}
 .medium-font { font-size:35px !important; color: #a47321; }
 .small-font { font-size:25px !important; color: Black; }
 .reportview-container .main { background-color: #1d262f; }
