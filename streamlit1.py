@@ -16,7 +16,7 @@ st.markdown(
     }
     .medium-font {
         font-family: 'Bebas Neue', cursive;
-        font-size:55px !important;
+        font-size:40px !important;
         font-weight: bold;
         color: #D09E55;
     }
