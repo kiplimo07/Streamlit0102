@@ -154,6 +154,9 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
     sns.kdeplot(event_2_data['dollars_spent'], shade=True, color="salmon", label="Event 2", ax=axes[1, 1])
     axes[1, 1].set_title('Distribution of Dollars Spent')
 
+
+st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', width=1000)
+    
     plt.tight_layout()
     st.pyplot(fig)
 
@@ -169,7 +172,7 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
     st.write("""
     The analysis provides actionable insights into how player engagement and spending behaviors vary across different segments. By focusing on the high-value segments identified, targeted strategies can be developed to enhance player retention and increase revenue. Additionally, understanding the factors driving player churn during event periods can inform more effective engagement strategies for future events.
     """)
-st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/888', width=1000)
+
 
 
 
