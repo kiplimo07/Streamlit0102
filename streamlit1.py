@@ -3,14 +3,20 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+def layout_wrapper(content_func):
+    # Define a container for the main content
+    main_container = st.container()
+    # Define a container for extra space on the right (if needed)
+    right_space = st.sidebar.container()
 
-data_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/RAWBliz.csv"
-data = load_data(data_url)
-
-# Set Streamlit page configuration
+    with main_container:
+        content_func()
+    
+    # Adjust the width of the right_space or add elements here as needed
+    with right_space:
+        st.write("3")  # Adjust based on need
+        
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
-
-# Custom CSS for styling
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
@@ -25,35 +31,17 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Define custom layout wrapper function
-def layout_wrapper(content_func):
-    # Define a container for the main content
-    main_container = st.container()
-    # Define a container for extra space on the right (if needed)
-    right_space = st.sidebar.container()
-
-    with main_container:
-        content_func()
-    
-    # Adjust the width of the right_space or add elements here as needed
-    with right_space:
-        st.write("")  # Adjust based on need
-
-# Header and Subheader
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<p class="medium-font">PORTFOLIO</p>', unsafe_allow_html=True)
 st.markdown('<p class="small-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
-# Sidebar navigation setup
+
+
+
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
-    page_selection = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", 
-                                   "Dashboard / Executive Business Insights", 
-                                   "Data Analysis / Warehouse & GL Account Optimization", 
-                                   "Process Automation / Quarterly Royalty Management", 
-                                   "Scope of Skills", "Certifications", "Contact"])
+    page = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", "Dashboard / Executive Business Insights", "Data Analysis / Warehouse & GL Account Optimization", "Process Automation / Quarterly Royalty Management", "Scope of Skills", "Certifications", "Contact"])
 
-# Data loading and bucket assignment functions
 @st.cache
 def load_data(url):
     data = pd.read_csv(url)
@@ -68,22 +56,20 @@ def assign_correct_bucket(games_played):
     elif games_played >= 10 and games_played <= 68: return 'High'
     else: return 'Unknown'
 
+data_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/RAWBliz.csv"
+data = load_data(data_url)
 
 
 
 
-
-
-def welcome_page():
+if page == "Welcome":
+    content_col, spacer_col = st.columns([0.95, 0.05])  # Adjust the ratio based on your preference
     st.markdown("### Welcome to My Portfolio")
     st.markdown("""
-        As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, 
-        I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights. 
-        Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation 
-        by leveraging data intelligence for business growth and collaborative leadership.
+    As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.
     """)
 
-def data_analytics_engagement_monetization_strategies():
+if page == "Data Analytics / Engagement & Monetization Strategies":
     st.header("Data Analytics / Engagement & Monetization Strategies")
     st.subheader("Executive Summary/Business Objective:")
     st.write("""
@@ -99,26 +85,28 @@ def data_analytics_engagement_monetization_strategies():
     st.write("""
     Conducted exploratory data analysis to understand player spending behavior, emphasizing games played, skill levels, dollars spent, and items crafted.
     """)
+    # Displaying the third image with a wider width
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=600)
+    # Displaying the first two images side by side if screen allows
+    col1, col2 = st.columns([1, 1])  # Adjust the ratio if needed
+ 
+    with col1:
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Distribution of Spending Across Skill Brackets', width=500)
 
-    # Methodology and Analytical Proficiency
+    with col2:
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=500)
+
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
     Leveraged Python, K-Means Clustering, and heatmap analysis for an in-depth comparative study of player engagement and spending. Implemented segmentation based on in-game behavior for a comprehensive analysis.
     """)
 
-    # Displaying Images
-    col1, col2 = st.columns([3, 2])
-    with col1:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', caption='Distribution of Spending Across Skill Brackets', width=600)
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=600)
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=600)
-
-    with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', width=900)
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/555', width=900)
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', width=900)
-
    
+
+    # Adjusting the width for the last three images
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', width=900)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/555', width=900)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', width=900)
 
 
 
