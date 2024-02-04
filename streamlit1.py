@@ -4,38 +4,45 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 # Set the page configuration and custom CSS
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
-st.markdown("""
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<style>
-.big-font {
-    font-family: 'Bebas Neue', cursive;
-    font-size:70px !important;
-    font-weight: 100; /* Adjusted weight */
-    color: Black;
-}
-.medium-font {
-    font-family: 'Bebas Neue', cursive;
-    font-size:40px !important;
-    font-weight: 400;
-    color: #D09E55;
-}
-.small-font {
-    font-size:25px !important;
-    color: Black;
-}
-.reportview-container .main {
-    background-color: #1D262F; /* Ensure this is correctly set */
-}
-.sidebar .sidebar-content {
-    background-color: #1d262f;
-    color: white; /* Ensure text color is set appropriately for visibility */
-}
-.fa {
-    padding-right: 5px;
-}
-/* Additional styles if needed */
-</style>
-""", unsafe_allow_html=True)
+st.markdown(
+    """
+    <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
+    <style>
+    .big-font {
+        font-family: 'Bebas Neue', cursive;
+        font-size:70px !important;
+        font-weight: 400;
+        color: Black;
+    }
+    .medium-font {
+        font-family: 'Bebas Neue', cursive;
+        font-size:40px !important;
+        font-weight: bold;
+        color: #D09E55;
+    }
+    .small-font {
+        font-family: 'Lato', sans-serif;
+        font-size:25px !important;
+        color: Black;
+    }
+    .reportview-container .main {
+        background-color: #1D262F;
+    }
+    .sidebar .sidebar-content {
+        background-color: #1D262F;
+        color: white;
+    }
+    .fa {
+        padding-right: 5px;
+    }
+    /* Adjust top padding of the main container for all pages */
+    .reportview-container .main .block-container {
+        padding-top: 1rem; /* Reduced padding to move content up */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 # Header and other content setup
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
