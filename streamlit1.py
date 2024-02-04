@@ -7,27 +7,37 @@ import matplotlib.pyplot as plt
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 st.markdown("""
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 .big-font {
     font-family: 'Bebas Neue', cursive;
     font-size:70px !important;
-    font-weight: thin;
+    font-weight: 400; /* 'Bebas Neue' typically doesn't have 'thin', using normal weight */
     color: Black;
 }
-.medium-font  {
+.medium-font {
     font-family: 'Bebas Neue', cursive;
     font-size:40px !important;
-    font-weight: bold;!important; color: D09E55;}
-    
-.small-font { font-size:25px !important; color: Black; }
-.reportview-container .main { background-color: #1d262f; }
-.sidebar .sidebar-content { background-color: #1d262f; color: Black; }
-.fa { padding-right: 5px; }
+    font-weight: bold; /* Bebas Neue usually considered bold by default */
+    color: #D09E55;
+}
+.small-font {
+    font-size:25px !important;
+    color: Black;
+}
+.reportview-container .main {
+    background-color: #1d262f;
+}
+.sidebar .sidebar-content {
+    background-color: #1d262f;
+    color: Black;
+}
+.fa {
+    padding-right: 5px;
+}
 </style>
 """, unsafe_allow_html=True)
 
-# Header and sidebar setup
+# Header and other content setup
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<p class="medium-font">PORTFOLIO</p>', unsafe_allow_html=True)
 st.markdown('<p class="small-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
