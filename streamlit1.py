@@ -12,8 +12,8 @@ st.markdown("""
 .big-font {
     font-family: 'Bebas Neue', cursive;
     font-size:50px !important;
-    font-weight: bold;
-    color: Black;
+    -webkit-text-stroke: 1px black; /* Adding a thin stroke to mimic thinner appearance */
+    color: transparent; /* Making the text color transparent to show only the stroke */
 }
 .medium-font { font-size:35px !important; color: #a47321; }
 .small-font { font-size:25px !important; color: Black; }
