@@ -156,8 +156,7 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
 
 
 
-    col1, col2 = st.columns([9, 1,])  # Adjust the ratio if needed
- with col1:
+
     plt.tight_layout()
     st.pyplot(fig)
 
