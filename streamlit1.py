@@ -170,10 +170,7 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
     st.pyplot(plt)
 
 
-     with col2:
-       st.write("""
-    Leveraged Python, K-Means Clustering, and heatmap analysis for an in-depth comparative study of player engagement and spending. Implemented segmentation based on in-game behavior for a comprehensive analysis.
-    """)
+
     st.subheader("Conclusion and Strategic Insights:")
     st.write("""
     The analysis provides actionable insights into how player engagement and spending behaviors vary across different segments. By focusing on the high-value segments identified, targeted strategies can be developed to enhance player retention and increase revenue. Additionally, understanding the factors driving player churn during event periods can inform more effective engagement strategies for future events.
