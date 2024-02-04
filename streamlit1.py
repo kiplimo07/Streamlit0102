@@ -11,11 +11,14 @@ st.markdown("""
 <style>
 .big-font {
     font-family: 'Bebas Neue', cursive;
-    font-size:50px !important;
-    -webkit-text-stroke: 1px black; /* Adding a thin stroke to mimic thinner appearance */
-    color: transparent; /* Making the text color transparent to show only the stroke */
+    font-size:70px !important;
+    font-weight: thin;
+    color: Black;
 }
-.medium-font { font-size:35px !important; color: #a47321; }
+.medium-font  {
+    font-family: 'Bebas Neue', cursive;
+    font-size:40px !important;
+    font-weight: bold;!important; color: Black;}
 .small-font { font-size:25px !important; color: Black; }
 .reportview-container .main { background-color: #1d262f; }
 .sidebar .sidebar-content { background-color: #1d262f; color: Black; }
