@@ -95,6 +95,15 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     st.write("""
     Conducted exploratory data analysis to understand player spending behavior, emphasizing games played, skill levels, dollars spent, and items crafted.
     """)
+
+ # Include the images from GitHub
+    st.image('https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/222', caption='Distribution of Spending Across Skill Brackets')
+    st.image('https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/111', caption='Day-by-Day Churn Rate: Event 1 vs Event 2')
+    st.image('https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/333', caption='Average Spending by Number of Games Played: Event 1 vs Event 2')
+
+
+
+    
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
     Leveraged Python, K-Means Clustering, and heatmap analysis for an in-depth comparative study of player engagement and spending. Implemented segmentation based on in-game behavior for a comprehensive analysis.
