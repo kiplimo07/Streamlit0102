@@ -72,12 +72,16 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     Conducted exploratory data analysis to understand player spending behavior, emphasizing games played, skill levels, dollars spent, and items crafted.
     """)
 
+
+ col1, col2 = st.columns(2)
+
+
     # Images from GitHub
     common_width = 500
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', caption='Distribution of Spending Across Skill Brackets', width=common_width)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=common_width)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=common_width)
-      common_width = 900
+ 
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', caption='  ',width=common_width)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/555', caption='  ',width=common_width)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', caption='  ',width=common_width)
@@ -122,16 +126,19 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     sns.kdeplot(event_2_data['dollars_spent'], shade=True, color="salmon", label="Event 2", ax=axes[1, 1])
     axes[1, 1].set_title('Distribution of Dollars Spent')
 
-    plt.tight_layout()
-    st.pyplot(fig)
+        sns.set_style("whitegrid")
+        fig, axes = plt.subplots(2, 2, figsize=(6, 4))  # Adjusted size for smaller plots
+        # Your plotting code for KDE plots
+        plt.tight_layout()
+        st.pyplot(fig)
 
 
 
-    heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
-    plt.figure(figsize=(8, 6)) # Adjusted for a common width of 1000 pixels
-    sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.5)
-    plt.title("Average Dollars Spent per Player by Region and Platform")
-    st.pyplot(plt)
+       heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
+        plt.figure(figsize=(4, 3))  # Adjusted size for the heatmap
+        sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.5)
+        plt.title("Average Dollars Spent per Player by Region and Platform")
+        st.pyplot(plt)
 
     st.subheader("Conclusion and Strategic Insights:")
     st.write("""
