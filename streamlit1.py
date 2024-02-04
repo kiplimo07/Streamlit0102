@@ -9,7 +9,7 @@ st.markdown("""
 <style>
 .big-font { font-family: 'Bebas Neue', cursive; font-size:70px !important; font-weight: 400; color: Black; }
 .medium-font { font-family: 'Bebas Neue', cursive; font-size:40px !important; font-weight: bold; color: #D09E55; }
-.small-font { font-family: 'Lato', sans-serif; font-size:30px !important;font-weight: 200; color: Black; }
+.small-font { font-family: 'Lato', sans-serif; font-size:30px !important; color: Black; }
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 5px; }
@@ -72,16 +72,11 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     Conducted exploratory data analysis to understand player spending behavior, emphasizing games played, skill levels, dollars spent, and items crafted.
     """)
 
-
- col1, col2 = st.columns(2)
-
-
     # Images from GitHub
-    common_width = 500
+    common_width = 600
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', caption='Distribution of Spending Across Skill Brackets', width=common_width)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=common_width)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=common_width)
- 
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', caption='  ',width=common_width)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/555', caption='  ',width=common_width)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', caption='  ',width=common_width)
@@ -96,11 +91,7 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     st.write("""
     Leveraged Python, K-Means Clustering, and heatmap analysis for an in-depth comparative study of player engagement and spending. Implemented segmentation based on in-game behavior for a comprehensive analysis.
     """)
-  # Creating smaller KDE plots
-    sns.set_style("whitegrid")
 
-
-    
     event_1_start, event_1_end = pd.Timestamp('2017-01-24'), pd.Timestamp('2017-02-14')
     event_2_start, event_2_end = pd.Timestamp('2017-02-28'), pd.Timestamp('2017-03-21')
 
@@ -108,7 +99,7 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     event_2_data = data[(data['Date'] >= event_2_start) & (data['Date'] <= event_2_end)]
 
     sns.set_style("whitegrid")
-    fig, axes = plt.subplots(2, 2, figsize=(10, 8)) # Adjusted for a common width of 1300 pixels
+    fig, axes = plt.subplots(2, 2, figsize=(8, 6)) # Adjusted for a common width of 1300 pixels
 
     sns.kdeplot(event_1_data['games_played'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 0])
     sns.kdeplot(event_2_data['games_played'], shade=True, color="salmon", label="Event 2", ax=axes[0, 0])
@@ -126,19 +117,16 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     sns.kdeplot(event_2_data['dollars_spent'], shade=True, color="salmon", label="Event 2", ax=axes[1, 1])
     axes[1, 1].set_title('Distribution of Dollars Spent')
 
-        sns.set_style("whitegrid")
-        fig, axes = plt.subplots(2, 2, figsize=(6, 4))  # Adjusted size for smaller plots
-        # Your plotting code for KDE plots
-        plt.tight_layout()
-        st.pyplot(fig)
+    plt.tight_layout()
+    st.pyplot(fig)
 
 
 
-       heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
-        plt.figure(figsize=(4, 3))  # Adjusted size for the heatmap
-        sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.5)
-        plt.title("Average Dollars Spent per Player by Region and Platform")
-        st.pyplot(plt)
+    heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
+    plt.figure(figsize=(8, 6)) # Adjusted for a common width of 1000 pixels
+    sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.5)
+    plt.title("Average Dollars Spent per Player by Region and Platform")
+    st.pyplot(plt)
 
     st.subheader("Conclusion and Strategic Insights:")
     st.write("""
@@ -204,7 +192,6 @@ elif page == "Contact":
     - **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)
     - **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)
     """, unsafe_allow_html=True)
-
 
 
 
