@@ -55,7 +55,7 @@ if page == "Welcome":
     As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.
     """)
 
-elif page == "Data Analytics / Engagement & Monetization Strategies":
+if page == "Data Analytics / Engagement & Monetization Strategies":
     st.header("Data Analytics / Engagement & Monetization Strategies")
     st.subheader("Executive Summary/Business Objective:")
     st.write("""
@@ -72,25 +72,27 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     Conducted exploratory data analysis to understand player spending behavior, emphasizing games played, skill levels, dollars spent, and items crafted.
     """)
 
-# Create two columns for the first two images
-col1, col2 = st.columns(2)
+    st.subheader("Methodology/Analytical Proficiency:")
+    st.write("""
+    Leveraged Python, K-Means Clustering, and heatmap analysis for an in-depth comparative study of player engagement and spending. Implemented segmentation based on in-game behavior for a comprehensive analysis.
+    """)
 
-# Use the columns to display the first two images side by side
-with col1:
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', caption='Distribution of Spending Across Skill Brackets', width=300)
+    # Displaying the first two images side by side if screen allows
+    col1, col2 = st.columns([1, 1])  # Adjust the ratio if needed
 
-with col2:
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=300)
+    with col1:
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', caption='Distribution of Spending Across Skill Brackets', width=300)
 
-# Display the third image normally
-st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=600)
+    with col2:
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=300)
 
-# Last three images with adjusted widths
-st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', caption='Caption for Image 4', width=900)  # Adjusted caption as placeholder
-st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/555', caption='Caption for Image 5', width=900)  # Adjusted caption as placeholder
-st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', caption='Caption for Image 6', width=900)  # Adjusted caption as placeholder
+    # Displaying the third image with a wider width
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=600)
 
-
+    # Adjusting the width for the last three images
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', width=900)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/555', width=900)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', width=900)
 
 
 
