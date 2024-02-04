@@ -72,7 +72,7 @@ if page == "Welcome":
 
 if page == "Data Analytics / Engagement & Monetization Strategies":
  
-    st.header("Data Analytics / Engagement & Monetization Strategies")
+    st.header("Data Analytics / Engagement & Monetization")
     st.subheader("Executive Summary/Business Objective:")
     st.write("""
     Emphasized maximizing revenue and enhancing player engagement and satisfaction by analyzing behavior and spending patterns during Warcraft's two in-game events.
