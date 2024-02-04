@@ -95,11 +95,12 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     st.write("""
     Conducted exploratory data analysis to understand player spending behavior, emphasizing games played, skill levels, dollars spent, and items crafted.
     """)
-common_width = 600
- # Include the images from GitHub
-    st.image('https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/222', caption='Distribution of Spending Across Skill Brackets')
-    st.image('https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/111', caption='Day-by-Day Churn Rate: Event 1 vs Event 2')
-    st.image('https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/333', caption='Average Spending by Number of Games Played: Event 1 vs Event 2')
+
+    common_width = 600
+    # Include the images from GitHub with specified width
+    st.image('https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/222.png', caption='Distribution of Spending Across Skill Brackets', width=common_width)
+    st.image('https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/111.png', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=common_width)
+    st.image('https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/333.png', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=common_width)
 
 
 
