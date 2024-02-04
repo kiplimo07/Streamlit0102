@@ -95,7 +95,7 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     event_2_data = data[(data['Date'] >= event_2_start) & (data['Date'] <= event_2_end)]
 
     sns.set_style("whitegrid")
-    fig, axes = plt.subplots(2, 2, figsize=(13, 10)) # Adjusted for a common width of 1300 pixels
+    fig, axes = plt.subplots(2, 2, figsize=(10, 8)) # Adjusted for a common width of 1300 pixels
 
     sns.kdeplot(event_1_data['games_played'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 0])
     sns.kdeplot(event_2_data['games_played'], shade=True, color="salmon", label="Event 2", ax=axes[0, 0])
@@ -119,7 +119,7 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
 
 
     heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
-    plt.figure(figsize=(12, 8)) # Adjusted for a common width of 1000 pixels
+    plt.figure(figsize=(10, 8)) # Adjusted for a common width of 1000 pixels
     sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.5)
     plt.title("Average Dollars Spent per Player by Region and Platform")
     st.pyplot(plt)
