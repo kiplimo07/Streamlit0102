@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+
 # Set the page configuration and custom CSS
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
-st.markdown(
-    """
+st.markdown("""
     <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
     <style>
     .big-font {
@@ -40,9 +40,7 @@ st.markdown(
         padding-top: 1rem; /* Reduced padding to move content up */
     }
     </style>
-    """,
-    unsafe_allow_html=True,
-)
+""", unsafe_allow_html=True)
 
 # Header and other content setup
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
@@ -53,7 +51,6 @@ with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
     page = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", "Dashboard / Executive Business Insights", "Data Analysis / Warehouse & GL Account Optimization", "Process Automation / Quarterly Royalty Management", "Scope of Skills", "Certifications", "Contact"])
 
-# Data loading and preprocessing
 @st.cache
 def load_data(url):
     data = pd.read_csv(url)
@@ -76,86 +73,60 @@ def assign_correct_bucket(games_played):
 data_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/RAWBliz.csv"
 data = load_data(data_url)
 
-# Main content based on the navigation
 if page == "Welcome":
-    st.markdown("### As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.")
-    # Welcome page content here
-
+    st.markdown("### Welcome to my Portfolio")
+    st.write("""
+        As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.
+    """)
 elif page == "Data Analytics / Engagement & Monetization Strategies":
     st.header("Data Analytics / Engagement & Monetization Strategies")
     st.subheader("Executive Summary/Business Objective:")
     st.write("""
     Emphasized maximizing revenue and enhancing player engagement and satisfaction by analyzing behavior and spending patterns during Warcraft's two in-game events.
     """)
-    st.subheader("Findings/Strategic Implications:")
-    st.write("""
-    Identified high-spending segments, especially in Platform 3, Region 1, signaling a priority for future promotions. Observed low spending in Platform 1, Region 5, highlighting the necessity for further research and adjustments to the strategy.
-    """)
-    st.subheader("Research Question/Data Exploration:")
-    st.write("""
-    Conducted exploratory data analysis to understand player spending behavior, emphasizing games played, skill levels, dollars spent, and items crafted.
-    """)
 
-    common_width = 1000
     # Include the images from GitHub with specified width
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', caption='Distribution of Spending Across Skill Brackets', width=common_width)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=common_width)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=common_width)
+    common_width = 1000
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333.png', caption='Distribution of Spending Across Skill Brackets', width=common_width)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222.png', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=common_width)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111.png', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=common_width)
 
-
-
-    
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
     Leveraged Python, K-Means Clustering, and heatmap analysis for an in-depth comparative study of player engagement and spending. Implemented segmentation based on in-game behavior for a comprehensive analysis.
     """)
 
-    # Ensure 'data' has been loaded using the load_data function above
-    # Filter data for event periods
+    # Visualizations for Data Analytics
     event_1_start, event_1_end = pd.Timestamp('2017-01-24'), pd.Timestamp('2017-02-14')
     event_2_start, event_2_end = pd.Timestamp('2017-02-28'), pd.Timestamp('2017-03-21')
 
     event_1_data = data[(data['Date'] >= event_1_start) & (data['Date'] <= event_1_end)]
     event_2_data = data[(data['Date'] >= event_2_start) & (data['Date'] <= event_2_end)]
 
-    # Set the aesthetic style of the plots
     sns.set_style("whitegrid")
+    fig, axes = plt.subplots(2, 2, figsize=(13, 10))  # Adjusted for a common width
 
-    # Create figure for KDE plots
-    fig, axes = plt.subplots(2, 2, figsize=(12, 10))
-
-    # Kernel Density Estimate plot for Games Played
     sns.kdeplot(event_1_data['games_played'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 0])
     sns.kdeplot(event_2_data['games_played'], shade=True, color="salmon", label="Event 2", ax=axes[0, 0])
     axes[0, 0].set_title('Distribution of Games Played')
-    axes[0, 0].legend()
 
-    # Kernel Density Estimate plot for Skill Last
     sns.kdeplot(event_1_data['skill_last'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 1])
     sns.kdeplot(event_2_data['skill_last'], shade=True, color="salmon", label="Event 2", ax=axes[0, 1])
     axes[0, 1].set_title('Distribution of Skill Last')
-    axes[0, 1].legend()
 
-    # Kernel Density Estimate plot for Items Crafted
     sns.kdeplot(event_1_data['items_crafted'], shade=True, color="skyblue", label="Event 1", ax=axes[1, 0])
     sns.kdeplot(event_2_data['items_crafted'], shade=True, color="salmon", label="Event 2", ax=axes[1, 0])
     axes[1, 0].set_title('Distribution of Items Crafted')
-    axes[1, 0].legend()
 
-    # Kernel Density Estimate plot for Dollars Spent
     sns.kdeplot(event_1_data['dollars_spent'], shade=True, color="skyblue", label="Event 1", ax=axes[1, 1])
     sns.kdeplot(event_2_data['dollars_spent'], shade=True, color="salmon", label="Event 2", ax=axes[1, 1])
     axes[1, 1].set_title('Distribution of Dollars Spent')
-    axes[1, 1].legend()
 
-    # Adjust layout and display the plots
     plt.tight_layout()
     st.pyplot(fig)
 
-    # Assuming 'data' has relevant columns for region, platform, and dollars_spent
-    # Group data by region and platform for heatmap
     heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
-    plt.figure(figsize=(10, 8))
+    plt.figure(figsize=(13, 8))
     sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.5)
     plt.title("Average Dollars Spent per Player by Region and Platform")
     st.pyplot(plt)
