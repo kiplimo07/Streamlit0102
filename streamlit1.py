@@ -63,7 +63,7 @@ data = load_data(data_url)
 
 
 if page == "Welcome":
-    content_col, spacer_col = st.columns([0.95, 0.05])  # Adjust the ratio based on your preference
+    content_col, spacer_col = st.columns([0.90, 0.10])  # Adjust the ratio based on your preference
     st.markdown("### Welcome to My Portfolio")
     st.markdown("""
     As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.
@@ -92,10 +92,10 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
     col1, col2 = st.columns([1, 1])  # Adjust the ratio if needed
  
     with col1:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Distribution of Spending Across Skill Brackets', width=500)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Distribution of Spending Across Skill Brackets', width=600)
 
     with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=500)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=600)
 
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
@@ -105,9 +105,9 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
    
 
     # Adjusting the width for the last three images
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', width=900)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/555', width=900)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', width=900)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', width=1000)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/555', width=1000)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', width=1000)
 
 
 
