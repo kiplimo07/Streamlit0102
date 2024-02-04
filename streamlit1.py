@@ -77,9 +77,13 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', caption='Distribution of Spending Across Skill Brackets', width=common_width)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=common_width)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=common_width)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', width=common_width)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/555', width=common_width)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', width=common_width)
 
 
-    
+
+
     # Continue with Methodology/Analytical Proficiency and further analysis
 
 
