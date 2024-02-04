@@ -71,23 +71,23 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
     st.write("""
     Conducted exploratory data analysis to understand player spending behavior, emphasizing games played, skill levels, dollars spent, and items crafted.
     """)
+    # Displaying the third image with a wider width
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=600)
+    # Displaying the first two images side by side if screen allows
+    col1, col2 = st.columns([1, 1])  # Adjust the ratio if needed
+ 
+    with col1:
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', caption='Distribution of Spending Across Skill Brackets', width=500)
+
+    with col2:
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=500)
 
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
     Leveraged Python, K-Means Clustering, and heatmap analysis for an in-depth comparative study of player engagement and spending. Implemented segmentation based on in-game behavior for a comprehensive analysis.
     """)
 
-    # Displaying the first two images side by side if screen allows
-    col1, col2 = st.columns([1, 1])  # Adjust the ratio if needed
-
-    with col1:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', caption='Distribution of Spending Across Skill Brackets', width=300)
-
-    with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=300)
-
-    # Displaying the third image with a wider width
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=600)
+   
 
     # Adjusting the width for the last three images
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', width=900)
