@@ -212,10 +212,12 @@ elif page == "Scope of Skills":
     st.header("Scope of Skills")
     st.markdown("""
     - **Programming Languages:** Proficient in Python and VBA.
-    - **Data Engineering Tools:** Experienced with ETL processes, SSMS, and Snowflake.
-    - **Data Analysis Libraries:** Skilled in using Pandas, NumPy, Seaborn, and Matplotlib.
+    - **Data Engineering Tools:** Experienced in ETL, SSMS, AS400, Snowflakes, Power Query, System Integration Analysis.
+    - **Data Analysis Libraries:** Skilled in using Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow.
+    - **Statistical Analysis:** Descriptive/Inferential Statistics, A/B Testing, Predictive Modeling, Forecasting, Regression Analysis, Hypothesis Testing, & Time Series Analysis.
     - **BI Tools:** Proficient in Power BI, Google Analytics, and Data Studio.
-    - **Digital Marketing:** Knowledgeable in campaign management and optimization across platforms like Facebook and Google Ads.
+    - **Digital Marketing:** Facebook, Google Ads, Shopify, Google Analytics, Data Studio, Campaign Management, Performance and Content Optimization.
+    - **Data Modeling:** STAR/ER/DAG diagrams, and Normalization
     """)
 
 elif page == "Certifications":
