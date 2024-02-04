@@ -155,7 +155,7 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
     axes[1, 1].set_title('Distribution of Dollars Spent')
 
 
-st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', width=1000)
+
     
     plt.tight_layout()
     st.pyplot(fig)
