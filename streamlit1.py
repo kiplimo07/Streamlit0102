@@ -9,7 +9,7 @@ st.markdown("""
 <style>
 .big-font { font-family: 'Bebas Neue', cursive; font-size:70px !important; font-weight: 400; color: Black; }
 .medium-font { font-family: 'Bebas Neue', cursive; font-size:40px !important; font-weight: bold; color: #D09E55; }
-.small-font { font-family: 'Lato', sans-serif; font-size:30px !important; color: Black; }
+.small-font { font-family: 'Lato', sans-serif; font-size:30px !important;font-weight: 200; color: Black; }
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 5px; }
