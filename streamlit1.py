@@ -70,6 +70,7 @@ if page == "Welcome":
     """)
 
 if page == "Data Analytics / Engagement & Monetization Strategies":
+        content_col, spacer_col = st.columns([0.95, 0.05])  # Adjust the ratio based on your preference
     st.header("Data Analytics / Engagement & Monetization Strategies")
     st.subheader("Executive Summary/Business Objective:")
     st.write("""
