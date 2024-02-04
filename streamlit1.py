@@ -12,7 +12,7 @@ st.markdown("""
 .medium-font { font-size:35px !important; color: #a47321; }
 .small-font { font-size:25px !important; color: white; }
 .reportview-container .main { background-color: #1D262F; }
-.sidebar .sidebar-content { background-color: #1d262f; color: white; }
+.sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 5px; }
 </style>
 """, unsafe_allow_html=True)
