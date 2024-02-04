@@ -73,10 +73,11 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     """)
 
     # Images from GitHub
-    common_width = 600
+    common_width = 500
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', caption='Distribution of Spending Across Skill Brackets', width=common_width)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=common_width)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Average Spending by Number of Games Played: Event 1 vs Event 2', width=common_width)
+      common_width = 900
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', caption='  ',width=common_width)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/555', caption='  ',width=common_width)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', caption='  ',width=common_width)
@@ -103,7 +104,7 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     event_2_data = data[(data['Date'] >= event_2_start) & (data['Date'] <= event_2_end)]
 
     sns.set_style("whitegrid")
-    fig, axes = plt.subplots(2, 2, figsize=(6, 4)) # Adjusted for a common width of 1300 pixels
+    fig, axes = plt.subplots(2, 2, figsize=(10, 8)) # Adjusted for a common width of 1300 pixels
 
     sns.kdeplot(event_1_data['games_played'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 0])
     sns.kdeplot(event_2_data['games_played'], shade=True, color="salmon", label="Event 2", ax=axes[0, 0])
@@ -127,7 +128,7 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
 
 
     heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
-    plt.figure(figsize=(6, 4)) # Adjusted for a common width of 1000 pixels
+    plt.figure(figsize=(8, 6)) # Adjusted for a common width of 1000 pixels
     sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.5)
     plt.title("Average Dollars Spent per Player by Region and Platform")
     st.pyplot(plt)
