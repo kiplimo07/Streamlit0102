@@ -147,9 +147,7 @@ def assign_correct_bucket(games_played):
         return 'Unknown'
 
 # Load the dataset
-data_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/RAWBliz.csv"
-data = load_data(data_url)
-
+data = pd.read_csv('https://github.com/jasonchang0102/Streamlit0102/blob/main/RAWBliz.csv')
 
 # Apply the function to create a new column for the games played bucket
 data['games_played_bucket'] = data['games_played'].apply(assign_correct_bucket)
