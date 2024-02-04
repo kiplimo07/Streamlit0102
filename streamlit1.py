@@ -119,11 +119,6 @@ def data_analytics_engagement_monetization_strategies():
         st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', width=900)
 
    
-if page_selection == "Welcome":
-    layout_wrapper(welcome_page)
-elif page_selection == "Data Analytics / Engagement & Monetization Strategies":
-    layout_wrapper(data_analytics_engagement_monetization_strategies)
-
 
 
 
