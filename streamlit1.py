@@ -1,7 +1,4 @@
 import streamlit as st
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
 
 # Set the page configuration to wide mode with a dark theme
 st.set_page_config(layout="wide")
@@ -41,7 +38,10 @@ st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<p class="medium-font">PROJECT PORTFOLIO</p>', unsafe_allow_html=True)
 st.markdown('<p class="small-font">SENIOR DATA ANALYST</p>', unsafe_allow_html=True)
 
-# Sidebar navigation
+
+
+
+# Sidebar navigation with 'Certifications' page
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
     page = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", 
@@ -51,83 +51,7 @@ with st.sidebar:
                          "Scope of Skills", "Certifications", "Contact"])
 
 
-
 # Main content based on the navigation
-if page == "Data Analytics / Engagement & Monetization Strategies":
-    st.header("Data Analytics / Engagement & Monetization Strategies")
-    st.subheader("Executive Summary/Business Objective:")
-    st.write("""
-    Emphasized maximizing revenue and enhancing player engagement and satisfaction by analyzing behavior and spending patterns during Warcraft's two in-game events.
-    """)
-    st.subheader("Findings/Strategic Implications:")
-    st.write("""
-    Identified high-spending segments, especially in Platform 3, Region 1, signaling a priority for future promotions. Observed low spending in Platform 1, Region 5, highlighting the necessity for further research and adjustments to the strategy.
-    """)
-    st.subheader("Research Question/Data Exploration:")
-    st.write("""
-    Conducted exploratory data analysis to understand player spending behavior, emphasizing games played, skill levels, dollars spent, and items crafted.
-    """)
-    st.subheader("Methodology/Analytical Proficiency:")
-    st.write("""
-    Leveraged Python, K-Means Clustering, and heatmap analysis for an in-depth comparative study of player engagement and spending. Implemented segmentation based on in-game behavior for a comprehensive analysis.
-    """)
-
-    # Load the dataset from the GitHub URL
-    @st.cache
-    def load_data(url):
-        data = pd.read_csv(url)
-        data['Date'] = pd.to_datetime(data['Date'])
-        return data
-
-    data_url = "https://github.com/jasonchang0102/Streamlit0102/raw/main/RAWBliz.csv"
-    data = load_data(data_url)
-
-    # Define the event periods
-    event_1_start = pd.Timestamp('2017-01-24')
-    event_1_end = pd.Timestamp('2017-02-14')
-    event_2_start = pd.Timestamp('2017-02-28')
-    event_2_end = pd.Timestamp('2017-03-21')
-
-    # Filter the data for each event
-    event_1_data = data[(data['Date'] >= event_1_start) & (data['Date'] <= event_1_end)]
-    event_2_data = data[(data['Date'] >= event_2_start) & (data['Date'] <= event_2_end)]
-
-    # Set the aesthetic style of the plots
-    sns.set_style("whitegrid")
-
-    # Create figure for all four distributions
-    fig, axes = plt.subplots(2, 2, figsize=(16, 12))
-
-    # Kernel Density Estimate plot for Games Played
-    sns.kdeplot(event_1_data['games_played'], color="skyblue", shade=True, label="Event 1", ax=axes[0, 0])
-    sns.kdeplot(event_2_data['games_played'], color="salmon", shade=True, label="Event 2", ax=axes[0, 0])
-    axes[0, 0].set_title('Bell Curve Distribution of Games Played')
-    axes[0, 0].legend()
-
-    # Kernel Density Estimate plot for Skill Last
-    sns.kdeplot(event_1_data['skill_last'], color="skyblue", shade=True, label="Event 1", ax=axes[0, 1])
-    sns.kdeplot(event_2_data['skill_last'], color="salmon", shade=True, label="Event 2", ax=axes[0, 1])
-    axes[0, 1].set_title('Bell Curve Distribution of Skill Last')
-    axes[0, 1].legend()
-
-    # Kernel Density Estimate plot for Items Crafted
-    sns.kdeplot(event_1_data['items_crafted'], color="skyblue", shade=True, label="Event 1", ax=axes[1, 0])
-    sns.kdeplot(event_2_data['items_crafted'], color="salmon", shade=True, label="Event 2", ax=axes[1, 0])
-    axes[1, 0].set_title('Bell Curve Distribution of Items Crafted')
-    axes[1, 0].legend()
-
-    # Kernel Density Estimate plot for Dollars Spent
-    sns.kdeplot(event_1_data['dollars_spent'], color="skyblue", shade=True, label="Event 1", ax=axes[1, 1])
-    sns.kdeplot(event_2_data['dollars_spent'], color="salmon", shade=True, label="Event 2", ax=axes[1, 1])
-    axes[1, 1].set_title('Bell Curve Distribution of Dollars Spent')
-    axes[1, 1].legend()
-
-    # Adjust the layout
-    plt.tight_layout()
-
-    # Show the plot
-    st.pyplot(fig)
-
 if page == "Welcome":
     st.markdown("### Welcome to my page")
     
@@ -159,7 +83,44 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
 
 # ... [Previous Streamlit setup and Project 1 code] ...
 
+elif page == "Dashboard / Executive Business Insights":
+    st.header("Dashboard / Executive Business Insights")
+    st.subheader("Executive Summary/Business Objective:")
+    st.write("""
+    Post-merger, the goal is to optimize financial performance by developing a 
+    unified data ecosystem in SSMS. This aims to enhance strategic decision-making 
+    and stakeholder value, focusing on creating a seamless data environment for dynamic 
+    business intelligence.
+    """)
 
+
+    st.subheader("Findings/Strategic Implications:")
+    st.write("""
+    Analysis uncovers divisions and accounts with promising performance post-merger, 
+    indicating opportunities for strategic realignment and efficiencies, leading to 
+    potential resource reprioritization to maximize margins and cut costs.
+    """)
+
+    st.subheader("Background:")
+    st.write("""
+    Faced with the challenge of integrating disparate data systems from four pre-merger 
+    companies, the aim was to combine these to maintain operational continuity and 
+    capitalize on a unified market presence.
+    """)
+
+    st.subheader("Research Question/Data Exploration:")
+    st.write("""
+    Investigates how the merged data environment impacts financial health and 
+    efficiency, involving a deep dive into Reverse Schema Building and analysis of 
+    combined sales and operational data.
+    """)
+
+    st.subheader("Methodology/Analytical Proficiency:")
+    st.write("""
+    Utilizes advanced data analysis techniques with Python and SQL, and employs 
+    Power BI's interactivity for real-time insights, focusing on reverse engineering 
+    the data schema in the consolidated analytics platform.
+    """)
 
 # ... [Previous Streamlit setup and Project 2 code] ...
 
