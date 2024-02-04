@@ -10,21 +10,38 @@ st.set_page_config(layout="wide")
 st.markdown("""
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-.big-font { font-size:50px !important; font-weight: bold; color: white; }
-.medium-font { font-size:35px !important; color: #a47321; }
-.small-font { font-size:25px !important; color: white; }
-.reportview-container .main { background-color: #1d262f; }
-.sidebar .sidebar-content { background-color: #1d262f; color: white; }
-.fa { padding-right: 5px; }
+.big-font {
+    font-size:50px !important;
+    font-weight: bold;
+    color: white;
+}
+.medium-font {
+    font-size:35px !important;
+    color: #a47321;
+}
+.small-font {
+    font-size:25px !important;
+    color: white;
+}
+.reportview-container .main {
+    background-color: #1d262f;
+}
+.sidebar .sidebar-content {
+    background-color: #1d262f;
+    color: white;
+}
+.fa {
+    padding-right: 5px;
+}
 </style>
 """, unsafe_allow_html=True)
 
 # Header and subheader
-st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
-st.markdown('<p class="medium-font">PORTFOLIO</p>', unsafe_allow_html=True)
+st.markdown('<p class="big-font"> JASON CHANG</p>', unsafe_allow_html=True)
+st.markdown('<p class="medium-font">       PORTFOLIO</p>', unsafe_allow_html=True)
 st.markdown('<p class="small-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
-# Sidebar navigation setup
+# Sidebar navigation
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
     page = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", 
@@ -35,44 +52,8 @@ with st.sidebar:
 
 
 
-# Define the assign_correct_bucket function
-def assign_correct_bucket(games_played):
-    if games_played >= 1 and games_played <= 3:
-        return 'Very Low'
-    elif games_played >= 4 and games_played <= 5:
-        return 'Low'
-    elif games_played >= 6 and games_played <= 9:
-        return 'Medium'
-    elif games_played >= 10 and games_played <= 68:
-        return 'High'
-    else:
-        return 'Unknown'
-
-# Load the dataset with a corrected approach
-@st.cache
-def load_data(url):
-    data = pd.read_csv(url)
-    data['Date'] = pd.to_datetime(data['Date'])
-    data['games_played_bucket'] = data['games_played'].apply(assign_correct_bucket)
-    # Include any other necessary data processing here
-    return data
-
-# Ensure the corrected URL for raw GitHub content is used
-data_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/RAWBliz.csv"
-data = load_data(data_url)
-
-
 # Main content based on the navigation
-if page == "Welcome":
-    st.markdown("### Welcome to my Portfolio")
-    st.markdown("""
-    As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, 
-    I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights, 
-    positioning me ideally for a Full Stack Senior Data Analyst or Data Scientist role. Committed to pioneering data-driven research, 
-    I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.
-    """)
-
-elif page == "Data Analytics / Engagement & Monetization Strategies":
+if page == "Data Analytics / Engagement & Monetization Strategies":
     st.header("Data Analytics / Engagement & Monetization Strategies")
     st.subheader("Executive Summary/Business Objective:")
     st.write("""
@@ -90,7 +71,9 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     st.write("""
     Leveraged Python, K-Means Clustering, and heatmap analysis for an in-depth comparative study of player engagement and spending. Implemented segmentation based on in-game behavior for a comprehensive analysis.
     """)
-  @st.cache
+
+    # Load the dataset from the GitHub URL
+    @st.cache
     def load_data(url):
         data = pd.read_csv(url)
         data['Date'] = pd.to_datetime(data['Date'])
@@ -145,85 +128,267 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     # Show the plot
     st.pyplot(fig)
     st.subheader(" ")
-    # Assuming 'data' DataFrame is already loaded and processed with necessary columns
-    # Group by criteria and calculate average dollars spent
-    grouped_data = data.groupby(['region', 'platform', 'games_played_bucket', 'Event'])['dollars_spent'].mean().reset_index()
+    st.subheader(" ")
+    st.subheader(" ")
+    st.subheader("Heatmap: Platform & Region x Player Engagement on Average Dollar Spending")
+    st.subheader(" ")
 
-    # Pivot for heatmap
-    heatmap_data = grouped_data.pivot("region", "platform", "dollars_spent")
+# Corrected games played buckets based on the new ranges provided
+def assign_correct_bucket(games_played):
+    if games_played >= 1 and games_played <= 3:
+        return 'Very Low'
+    elif games_played >= 4 and games_played <= 5:
+        return 'Low'
+    elif games_played >= 6 and games_played <= 9:
+        return 'Medium'
+    elif games_played >= 10 and games_played <= 68:
+        return 'High'
+    else:
+        return 'Unknown'
 
-    # Generate heatmap
-    plt.figure(figsize=(10, 8))
-    sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f")
-    plt.title("Average Dollars Spent per Player by Region and Platform")
-    plt.ylabel("Region")
-    plt.xlabel("Platform")
+# Load the dataset
+data_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/RAWBliz.csv"
+data = load_data(data_url)
 
-    st.pyplot(plt)
 
-    st.markdown("""
-    **Heatmap Analysis:** The heatmap visualizes the average dollars spent per player across different regions and platforms. 
-    It highlights that Platform 3, Region 1, has the highest spending, indicating a key segment for targeted marketing efforts to maximize ROI. 
-    Conversely, Platform 1, Region 5 shows lower spending, suggesting a need for further investigation and tailored engagement strategies.
+# Apply the function to create a new column for the games played bucket
+data['games_played_bucket'] = data['games_played'].apply(assign_correct_bucket)
+
+# Assuming Event based on the day of the month
+data['Date'] = pd.to_datetime(data['Date'])
+data['Event'] = data['Date'].dt.day.apply(lambda x: 'Event 1' if x <= 15 else 'Event 2')
+
+# Group by region, platform, games played bucket, and event to calculate average dollars spent
+grouped_data = data.groupby(['region', 'platform', 'games_played_bucket', 'Event'])['dollars_spent'].mean().reset_index()
+
+# Pivot the data to create a matrix form suitable for a heatmap
+grouped_data['Region_x_Platform'] = grouped_data.apply(lambda row: f"Region {row['region']} x Platform {row['platform']}", axis=1)
+grouped_data['Games_Played_x_Event'] = grouped_data.apply(lambda row: f"{row['games_played_bucket']} x {row['Event']}", axis=1)
+heatmap_data = grouped_data.pivot('Region_x_Platform', 'Games_Played_x_Event', 'dollars_spent')
+
+# Order columns correctly according to games played bucket from left to right
+ordered_columns = [col for col in heatmap_data.columns if 'Very Low' in col]
+ordered_columns += [col for col in heatmap_data.columns if 'Low' in col]
+ordered_columns += [col for col in heatmap_data.columns if 'Medium' in col]
+ordered_columns += [col for col in heatmap_data.columns if 'High' in col]
+heatmap_data = heatmap_data[ordered_columns]
+
+# Create the heatmap with the corrected axes and color scheme
+plt.figure(figsize=(14, 10))
+cmap_choice = sns.diverging_palette(240, 10, n=9, as_cmap=True)  # Blue to red color palette
+sns.heatmap(heatmap_data, annot=True, fmt=".2f", cmap=cmap_choice, cbar_kws={'label': 'Average Dollars Spent'})
+plt.title('Average Player Spending per Player by Region x Platform and Games Played Bucket x Event')
+plt.xlabel('Games Played Bucket x Event')
+plt.ylabel('Region x Platform')
+
+# Save the heatmap to a file with the corrected bucket labels and color scheme
+heatmap_file_path = 'heatmap_spending.png'
+plt.savefig(heatmap_file_path)
+
+# Display the heatmap
+plt.show()
+
+
+if page == "Welcome":
+    st.markdown("### Welcome to my Portfolio")
+    
+    # Your professional introduction
+    st.write("""
+    As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights, positioning me ideally for a Full Stack Senior Data Analyst or Data Scientist role. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.
     """)
 
+
+
+    # Summary of the Heatmap analysis
+
+# ... [Previous Streamlit setup and Project 1 code] ...
 elif page == "Dashboard / Executive Business Insights":
     st.header("Dashboard / Executive Business Insights")
-    st.markdown("""
-    **Objective:** Enhance strategic decision-making through a unified data ecosystem post-merger. Focus on leveraging analytics to drive stakeholder value and operational efficiency.
-    
-    **Findings:** Highlighted divisions and accounts showing promising performance, indicating opportunities for strategic realignment and resource optimization.
-    
-    **Methodology:** Utilized Python for data manipulation and SQL for data querying. Employed Power BI for dynamic dashboards showcasing real-time business intelligence.
+    st.subheader("Executive Summary/Business Objective:")
+    st.write("""
+    Post-merger, the goal is to optimize financial performance by developing a 
+    unified data ecosystem in SSMS. This aims to enhance strategic decision-making 
+    and stakeholder value, focusing on creating a seamless data environment for dynamic 
+    business intelligence.
     """)
 
+
+    st.subheader("Findings/Strategic Implications:")
+    st.write("""
+    Analysis uncovers divisions and accounts with promising performance post-merger, 
+    indicating opportunities for strategic realignment and efficiencies, leading to 
+    potential resource reprioritization to maximize margins and cut costs.
+    """)
+
+    st.subheader("Background:")
+    st.write("""
+    Faced with the challenge of integrating disparate data systems from four pre-merger 
+    companies, the aim was to combine these to maintain operational continuity and 
+    capitalize on a unified market presence.
+    """)
+
+    st.subheader("Research Question/Data Exploration:")
+    st.write("""
+    Investigates how the merged data environment impacts financial health and 
+    efficiency, involving a deep dive into Reverse Schema Building and analysis of 
+    combined sales and operational data.
+    """)
+
+    st.subheader("Methodology/Analytical Proficiency:")
+    st.write("""
+    Utilizes advanced data analysis techniques with Python and SQL, and employs 
+    Power BI's interactivity for real-time insights, focusing on reverse engineering 
+    the data schema in the consolidated analytics platform.
+    """)
+
+
+# ... [Previous Streamlit setup and Project 2 code] ...
 
 elif page == "Data Analysis / Warehouse & GL Account Optimization":
     st.header("Data Analysis / Warehouse & GL Account Optimization")
-    st.markdown("""
-    **Objective:** Identify cost-saving opportunities across logistics and warehouse operations to impact the bottom line positively.
-    
-    **Findings:** Revealed inefficiencies in 'SKYLAB' and '3PL Logistics', suggesting areas for cost optimization and process improvements.
-    
-    **Methodology:** Analyzed financial data using Python, with a focus on dissecting spending patterns and identifying optimization opportunities.
+    st.subheader("Executive Summary/Business Objective:")
+    st.write("""
+    This project aims to showcase the potential for cost savings and positive impacts 
+    on the bottom line to stakeholders, including the CEO and directors, by optimizing 
+    financial oversight across various operational categories.
     """)
 
+    st.subheader("Findings/Strategic Implications:")
+    st.write("""
+    The analysis revealed significant opportunities for cost optimization. Insights 
+    into departmental spending patterns, especially in areas like 'SKYLAB' and '3PL 
+    Logistics,' led to strategic recommendations for enhanced financial decision-making 
+    and stewardship.
+    """)
+
+    st.subheader("Research Question/Data Exploration:")
+    st.write("""
+    Collaborating with team members, we aimed to gather and probe into the financial 
+    data, revealing the nature of spending and identifying areas for potential savings.
+    """)
+
+    st.subheader("Background:")
+    st.write("""
+    As an extension of the Executive Dashboard, the focus was on dissecting complex 
+    datasets across logistics, freight, and other areas to identify spending trends and 
+    variances, vital for strategic financial planning.
+    """)
+
+    st.subheader("Methodology/Analytical Proficiency:")
+    st.write("""
+    Employed Python for data consolidation and SQL for database management, focusing 
+    on breaking down expenses, conducting comparative analyses, and identifying 
+    outliers and trends.
+    """)
+
+# ... [Previous Streamlit setup and Project 3 code] ...
 elif page == "Process Automation / Quarterly Royalty Management":
     st.header("Process Automation / Quarterly Royalty Management")
-    st.markdown("""
-    **Objective:** Streamline the quarterly royalty management process, reducing time spent by financial analysts from a month-long task to a 2-hour automated process.
-    
-    **Impact:** Achieved an 85% reduction in process time, significantly lowering operational costs and enhancing efficiency and accuracy in royalty management.
-    
-    **Methodology:** Developed a custom Python script for data consolidation and utilized Excel VBA for automating data extraction and report generation.
+    st.subheader("Executive Summary/Business Objective:")
+    st.write("""
+    Automate the quarterly royalty management process to transform a month-long task 
+    for two financial analysts into a 2-hour automated system. This aims to reduce 
+    labor time by 85%, lowering operational costs and increasing efficiency and accuracy.
     """)
 
-
-elif page == "Scope of Skills":
-    st.header("Scope of Skills")
-    st.markdown("""
-    - **Programming Languages:** Proficient in Python and VBA.
-    - **Data Engineering Tools:** Experienced with ETL processes, SSMS, and Snowflake.
-    - **Data Analysis Libraries:** Skilled in using Pandas, NumPy, Seaborn, and Matplotlib.
-    - **BI Tools:** Proficient in Power BI, Google Analytics, and Data Studio.
-    - **Digital Marketing:** Knowledgeable in campaign management and optimization across platforms like Facebook and Google Ads.
+    st.subheader("Strategic Implications:")
+    st.write("""
+    The implementation of this automation has led to an 85% reduction in processing time, 
+    offering a model for similar improvements across financial processes and potentially 
+    reshaping the organization's fiscal management approach.
     """)
+
+    st.subheader("Background:")
+    st.write("""
+    The project addresses the inefficiencies of manually processing 99 contracts every 
+    quarter, a task that previously occupied two full-time financial analysts for an 
+    entire month and was prone to human error.
+    """)
+
+    st.subheader("Methodology/Analytical Proficiency:")
+    st.write("""
+    Utilized Python for data consolidation and Excel VBA for maintaining the data repository 
+    and processing notifications to vendors, including custom scripts for automating data 
+    extraction and aggregation.
+    """)
+# ... [Previous Streamlit setup and Project 4 code] ...
+
 
 elif page == "Certifications":
     st.header("Certifications")
-    st.markdown("""
-    - **Big Data Technology Fundamentals** - AWS
-    - **AWS Cloud Practitioner Essentials** - AWS
-    - **Analyzing and Visualizing Data with Power BI** - EdX
+
+    # List of certifications
+    st.write("""
+    - **Big Data Technology Fundamentals**  
+      Certified by: AWS (June 2019)
+    
+    - **AWS Cloud Practitioner Essentials**  
+      Certified by: AWS (June 2019)
+    
+    - **Analyzing and Visualizing Data with Power BI**  
+      Certified by: EdX (July 2019)
     """)
+# ... [Previous Streamlit setup and other project codes] ...
+
+elif page == "Scope of Skills":
+    st.header("Scope of Skills")
+
+    # Programming Languages
+    st.subheader("Programming Language:")
+    st.write("Python, VBA")
+
+    # Data Engineering Tools
+    st.subheader("Data Engineering Tools:")
+    st.write("ETL, SSMS, AS400, Snowflakes, Power Query, Integration Analysis")
+
+    # Data Analysis Libraries
+    st.subheader("Data Analysis Libraries:")
+    st.write("Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow")
+
+    # Statistical Analysis
+    st.subheader("Statistical Analysis:")
+    st.write("""
+    Descriptive/Inferential Statistics, A/B Testing, Predictive Modeling, Forecasting, 
+    Regression Analysis, Hypothesis Testing, & Time Series Analysis
+    """)
+
+    # BI Tools
+    st.subheader("BI Tools:")
+    st.write("Power BI, Google Analytics/Data Studio, Excel")
+
+    # Digital Marketing
+    st.subheader("Digital Marketing:")
+    st.write("""
+    Facebook, Google Ads, Shopify, Google Analytics, Data Studio, Campaign 
+    Management, Performance and Content Optimization
+    """)
+
+    # Data Modeling
+    st.subheader("Data Modeling:")
+    st.write("STAR/ER/DAG diagrams, and Normalization")
+
+
+
+
+
+# ... [Previous Streamlit setup and other project codes] ...
 
 elif page == "Contact":
     st.header("Contact Information")
+
+    # Inspirational Quote
     st.markdown("""
-    Feel free to connect with me for any inquiries or opportunities.
-    
-    - **Phone:** (626) 203 – 3319
-    - **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)
-    - **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)
+    <p style="font-style: italic;">
+        "In God we trust; for all else, we turn to the validation of data. With data science as our compass, we're set to reveal hidden insights that our data is just dying to tell."
+    </p>
     """, unsafe_allow_html=True)
 
+    # Contact Details with Icons
+    st.markdown("""
+    <div style="font-size: 20px;">
+        <i class="fa fa-phone"></i> (626) 203 – 3319<br>
+        <i class="fa fa-envelope"></i> <a href="mailto:jason.chang01022021@gmail.com">jason.chang01022021@gmail.com</a><br>
+        <i class="fa fa-home"></i> Irvine, CA<br>
+        <i class="fa fa-linkedin"></i> <a href="https://linkedin.com/in/jchang0102" target="_blank">linkedin.com/in/jchang0102</a>
+    </div>
+    """, unsafe_allow_html=True)
