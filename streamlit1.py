@@ -22,7 +22,7 @@ st.markdown("""
 <style>
 .big-font { font-family: 'Bebas Neue', cursive; font-size:100px !important; font-weight: 400; color: Black; }
 .medium-font { font-family: 'Bebas Neue', cursive; font-size:60px !important; font-weight: bold; color: #D09E55; }
-.small-font { font-family: 'Lato', sans-serif; font-size:30px !important; color: Black; }
+.small-font { font-family: 'Bahnschrift ', sans-serif; font-size:30px !important; color: Black; }
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 5px; }
@@ -33,7 +33,7 @@ st.markdown("""
 
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<p class="medium-font">PORTFOLIO</p>', unsafe_allow_html=True)
-st.markdown('<p class="small-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
+st.markdown('<p class="medium-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
 
 
