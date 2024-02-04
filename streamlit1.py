@@ -184,3 +184,8 @@ elif page == "Contact":
     - **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)
     - **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)
     """, unsafe_allow_html=True)
+
+
+
+
+
