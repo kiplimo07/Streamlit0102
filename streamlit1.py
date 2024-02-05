@@ -3,8 +3,6 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-
-
 def layout_wrapper(content_func):
     # Define a container for the main content
     main_container = st.container()
@@ -31,18 +29,13 @@ st.markdown("""
 .fa { padding-right: 5px; }
 /* Adjust top padding of the main container for all pages */
 .reportview-container .main .block-container { padding-top: 1rem; }
+hr { border-top: 3px solid #FFFFFF; margin-top: 20px; margin-bottom: 20px; }
 </style>
 """, unsafe_allow_html=True)
 
-
-st.markdown("""
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    """, unsafe_allow_html=True)
-
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<p class="medium-font">PORTFOLIO</p>', unsafe_allow_html=True)
-# Insert a horizontal line here for a visual break
-
+st.markdown('<hr>', unsafe_allow_html=True)  # This adds the white page breaker
 st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
 st.markdown("""
@@ -54,6 +47,7 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 with st.sidebar:
