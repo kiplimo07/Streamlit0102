@@ -163,20 +163,22 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
 
 
 
-    heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
-    plt.figure(figsize=(8, 6)) # Adjusted for a common width of 1000 pixels
-    sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.5)
-    plt.title("Average Dollars Spent per Player by Region and Platform")
-    st.pyplot(plt)
+   # Heatmap visualization
+heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
+plt.figure(figsize=(8, 6))
+sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.5)
+plt.title("Average Dollars Spent per Player by Region and Platform")
+st.pyplot(plt)
 
-
+# Conclusion and strategic insights
 st.subheader("Conclusion and Strategic Insights:")
-        st.write("""
-        The analysis provides actionable insights into how player engagement and spending behaviors vary across different segments. By focusing on the high-value segments identified, targeted strategies can be developed to enhance player retention and increase revenue. Additionally, understanding the factors driving player churn during event periods can inform more effective engagement strategies for future events.
-        """)
-    
-        # The final image inside the content column
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/999', caption='Your Caption Here', width=600)
+st.write("""
+The analysis provides actionable insights into how player engagement and spending behaviors vary across different segments. By focusing on the high-value segments identified, targeted strategies can be developed to enhance player retention and increase revenue. Additionally, understanding the factors driving player churn during event periods can inform more effective engagement strategies for future events.
+""")
+
+# Final image display
+st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/999', caption='Your Caption Here', width=600)
+
 
 elif page == "Dashboard / Executive Business Insights":
     st.header("Dashboard / Executive Business Insights")
