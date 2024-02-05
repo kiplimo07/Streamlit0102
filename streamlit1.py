@@ -3,6 +3,8 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+
+
 def layout_wrapper(content_func):
     # Define a container for the main content
     main_container = st.container()
@@ -31,6 +33,11 @@ st.markdown("""
 .reportview-container .main .block-container { padding-top: 1rem; }
 </style>
 """, unsafe_allow_html=True)
+
+
+st.markdown("""
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    """, unsafe_allow_html=True)
 
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<p class="medium-font">PORTFOLIO</p>', unsafe_allow_html=True)
@@ -255,10 +262,14 @@ elif page == "Contact":
     st.header("LET'S CONNECT!!")
     st.markdown("""
     Feel free to connect with me for any inquiries or opportunities.
-    
-    - **Phone:** (626) 203 – 3319
-    - **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)
-    - **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)
+    <br><br>
+    <i class="fa fa-phone"></i> **Phone:** (626) 203 – 3319
+    <br>
+    <i class="fa fa-envelope"></i> **Email:** <a href="mailto:jason.chang01022021@gmail.com">jason.chang01022021@gmail.com</a>
+    <br>
+    <i class="fa fa-linkedin"></i> **LinkedIn:** <a href="https://linkedin.com/in/jchang0102" target="_blank">linkedin.com/in/jchang0102</a>
+    <br>
+    <i class="fa fa-home"></i> **Location:** Irvine CA
     """, unsafe_allow_html=True)
 
 
