@@ -109,7 +109,6 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
         st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', width=700)
 
 
-st.markdown(html_str, unsafe_allow_html=True)
 
 
     with col2:
