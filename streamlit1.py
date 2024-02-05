@@ -196,7 +196,7 @@ elif page == "Dashboard / Executive Business Insights":
     **Objective:** Enhance strategic decision-making through a unified data ecosystem post-merger. Focus on leveraging analytics to drive stakeholder value and operational efficiency.
     """)
     # Correct placement of st.image call
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/1111', width=600)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/1111', width=800)
     st.markdown("""
     **Findings:** Highlighted divisions and accounts showing promising performance, indicating opportunities for strategic realignment and resource optimization.
     
@@ -209,8 +209,8 @@ elif page == "Data Analysis / Warehouse & GL Account Optimization":
     **Objective:** Identify cost-saving opportunities across logistics and warehouse operations to impact the bottom line positively.
     """)
     # Correct placement of st.image call
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/2222', width=600)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/3333', width=600)
+
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/3333', width=800)
     st.markdown("""
     **Findings:** Revealed inefficiencies in 'SKYLAB' and '3PL Logistics', suggesting areas for cost optimization and process improvements.
     
@@ -223,7 +223,7 @@ elif page == "Process Automation / Quarterly Royalty Management":
     **Objective:** Streamline the quarterly royalty management process, reducing time spent by financial analysts from a month-long task to a 2-hour automated process.
     
     **Impact:** Achieved an 85% reduction in process time, significantly lowering operational costs and enhancing efficiency and accuracy in royalty management.
-    
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/2222', width=800)
     **Methodology:** Developed a custom Python script for data consolidation and utilized Excel VBA for automating data extraction and report generation.
     """)
 
