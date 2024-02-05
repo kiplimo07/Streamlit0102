@@ -252,7 +252,7 @@ elif page == "Certifications":
     """)
 
 elif page == "Contact":
-    st.header("Contact Information")
+    st.header("LET'S CONNECT!!")
     st.markdown("""
     Feel free to connect with me for any inquiries or opportunities.
     
