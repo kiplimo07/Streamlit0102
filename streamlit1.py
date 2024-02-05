@@ -204,9 +204,15 @@ elif page == "Dashboard / Executive Business Insights":
     """)
     # Correct placement of st.image call
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/1111', width=800)
+    
     st.markdown("""
     **Findings:** Highlighted divisions and accounts showing promising performance, indicating opportunities for strategic realignment and resource optimization.
+    """)
+    # Images after the findings
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/11', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/44', width=800)
     
+    st.markdown("""
     **Methodology:** Utilized Python for data manipulation and SQL for data querying. Employed Power BI for dynamic dashboards showcasing real-time business intelligence.
     """)
 
