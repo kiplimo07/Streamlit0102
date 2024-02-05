@@ -24,7 +24,7 @@ st.markdown("""
 <style>
 .big-font { font-family: 'Bebas Neue thin', cursive; font-size:110px !important; font-weight: 200; color: Black; }
 .med2-font { font-family: 'Bebas Neue', cursive; font-size:60px !important; font-weight: 100; color: Black; }
-.medium-font { font-family: 'Bebas Neue', cursive; font-size:80px !important; font-weight: 100; color: #D09E55; }
+.medium-font { font-family: 'Bebas Neue', thin; font-size:80px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Bahnschrift ', sans-serif; font-size:30px !important; color: Black; }
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
