@@ -107,11 +107,7 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
  
     with col1:
         st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', width=700)
-html_str = f"""
-    <div style='text-align: center;'>
-        <img src='{image_url}' width='700' height='500' />
-    </div>
-    """
+
 
 st.markdown(html_str, unsafe_allow_html=True)
 
