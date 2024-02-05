@@ -22,10 +22,10 @@ st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
-.big-font { font-family: 'Bebas Neue thin', cursive; font-size:90px !important; font-weight: 80; color: Black; }
-.med2-font { font-family: 'Bebas Neue', cursive; font-size:45px !important; font-weight: 100; color: Black; }
+.big-font { font-family: 'Bebas Neue thin', cursive; font-size:90px !important; font-weight: 80; color: white; }
+.med2-font { font-family: 'Bebas Neue', cursive; font-size:45px !important; font-weight: 100; color: white; }
 .medium-font { font-family: 'Bebas Neue', cursive; font-size:55px !important; font-weight: 100; color: #D09E55; }
-.small-font { font-family: 'Lato ', sans-serif; font-size:35px !important; color: Black; }
+.small-font { font-family: 'Lato ', sans-serif; font-size:35px !important; color: white; }
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 5px; }
