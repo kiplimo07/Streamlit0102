@@ -36,7 +36,15 @@ st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<p class="medium-font">PORTFOLIO</p>', unsafe_allow_html=True)
 st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
-
+st.markdown("""
+<style>
+    /* Other styles */
+    .reportview-container .main .block-container {
+        /* Adjust padding on the right to create empty space */
+        padding-right: 16.66%;
+    }
+</style>
+""", unsafe_allow_html=True)
 
 
 with st.sidebar:
