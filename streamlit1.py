@@ -176,8 +176,7 @@ if page == "Data Analytics / Engagement & Monetization Strategies":
     The analysis provides actionable insights into how player engagement and spending behaviors vary across different segments. By focusing on the high-value segments identified, targeted strategies can be developed to enhance player retention and increase revenue. Additionally, understanding the factors driving player churn during event periods can inform more effective engagement strategies for future events.
     """)
 
-  st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/999', caption='Your Caption Here', width=600)
-
+st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/999', caption='Your Caption Here', width=600)
 
 
 elif page == "Dashboard / Executive Business Insights":
