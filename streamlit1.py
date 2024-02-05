@@ -41,6 +41,8 @@ st.markdown("""
 
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<p class="medium-font">PORTFOLIO</p>', unsafe_allow_html=True)
+# Insert a horizontal line here for a visual break
+st.markdown('<hr>', unsafe_allow_html=True)  
 st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
 st.markdown("""
