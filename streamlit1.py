@@ -26,8 +26,8 @@ st.markdown("""
 .med2-font { font-family: 'Bebas Neue', cursive; font-size:60px !important; font-weight: 100; color: Black; }
 .medium-font { font-family: 'Bebas Neue', thin; font-size:80px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Bahnschrift ', sans-serif; font-size:30px !important; color: Black; }
-.reportview-container .main { background-color: #1D262F; }
-.sidebar .sidebar-content { background-color: #1D262F; color: white; }
+.reportview-container .main { background-color: #1D262F,color: #1D262F; }
+.sidebar .sidebar-content { background-color: #1D262F; color: #1D262F; }
 .fa { padding-right: 5px; }
 /* Adjust top padding of the main container for all pages */
 .reportview-container .main .block-container { padding-top: 1rem; }
