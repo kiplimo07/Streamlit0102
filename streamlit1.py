@@ -30,21 +30,9 @@ st.markdown("""
 .fa { padding-right: 5px; }
 /* Adjust top padding of the main container for all pages */
 .reportview-container .main .block-container { padding-top: 1rem; }
-hr { 
-    border-top: 1px solid #FFFFFF; /* Thinner line */
-    width: 50%; /* Shorter line */
-    margin: 0 auto; /* Center the line */
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
+hr { border-top: 3px solid #FFFFFF; margin-top: 20px; margin-bottom: 20px; }
 </style>
 """, unsafe_allow_html=True)
-
-st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
-# Position "PORTFOLIO" above the line
-st.markdown('<div class="medium-font" style="text-align: center;">PORTFOLIO</div>', unsafe_allow_html=True)
-st.markdown('<hr>', unsafe_allow_html=True)  # This adds the white page breaker
-st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<p class="big2-font">PORTFOLIO</p>', unsafe_allow_html=True)
@@ -292,7 +280,6 @@ elif page == "Contact":
     <br>
     <i class="fa fa-home"></i> **Location:** Irvine CA
     """, unsafe_allow_html=True)
-
 
 
 
