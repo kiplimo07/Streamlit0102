@@ -21,6 +21,7 @@ st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
 .big-font { font-family: 'Bebas Neue', cursive; font-size:90px !important; font-weight: 80; color: white; }
+.big2-font { font-family: 'Bebas Neue', cursive; font-size:55px !important; font-weight: 100; color: #D09E55; }
 .med2-font { font-family: 'Bebas Neue', cursive; font-size:45px !important; font-weight: 100; color: white; }
 .medium-font { font-family: 'Bebas Neue', cursive; font-size:55px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato ', sans-serif; font-size:35px !important; color: white; }
@@ -34,7 +35,7 @@ hr { border-top: 3px solid #FFFFFF; margin-top: 20px; margin-bottom: 20px; }
 """, unsafe_allow_html=True)
 
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
-st.markdown('<p class="medium-font">PORTFOLIO</p>', unsafe_allow_html=True)
+st.markdown('<p class="big2-font">PORTFOLIO</p>', unsafe_allow_html=True)
 st.markdown('<hr>', unsafe_allow_html=True)  # This adds the white page breaker
 st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
