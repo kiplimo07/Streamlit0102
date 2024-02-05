@@ -196,7 +196,7 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     """)
     
     # Adding the final image at the correct indentation level
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/999', width=1200)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/999', width=800)
 
 
 
