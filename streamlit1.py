@@ -23,8 +23,8 @@ st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
 .big-font { font-family: 'Bebas Neue thin', cursive; font-size:90px !important; font-weight: 80; color: Black; }
-.med2-font { font-family: 'Bebas Neue', cursive; font-size:60px !important; font-weight: 100; color: Black; }
-.medium-font { font-family: 'Bebas Neue', cursive; font-size:70px !important; font-weight: 100; color: #D09E55; }
+.med2-font { font-family: 'Bebas Neue', cursive; font-size:45px !important; font-weight: 100; color: Black; }
+.medium-font { font-family: 'Bebas Neue', cursive; font-size:55px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato ', sans-serif; font-size:35px !important; color: Black; }
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
