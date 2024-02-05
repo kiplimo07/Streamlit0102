@@ -186,7 +186,7 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     """)
     
     # Adding the final image at the correct indentation level
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/999', caption='Inspirational Quote', width=600)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/999', width=600)
 
 
 
@@ -204,9 +204,10 @@ elif page == "Data Analysis / Warehouse & GL Account Optimization":
     st.header("Data Analysis / Warehouse & GL Account Optimization")
     st.markdown("""
     **Objective:** Identify cost-saving opportunities across logistics and warehouse operations to impact the bottom line positively.
-    
+       st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/1111.png', width=600)
     **Findings:** Revealed inefficiencies in 'SKYLAB' and '3PL Logistics', suggesting areas for cost optimization and process improvements.
-    
+      st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/2222.png', width=600)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/3333.png', width=600)
     **Methodology:** Analyzed financial data using Python, with a focus on dissecting spending patterns and identifying optimization opportunities.
     """)
 
