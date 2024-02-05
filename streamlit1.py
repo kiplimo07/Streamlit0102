@@ -221,11 +221,15 @@ elif page == "Process Automation / Quarterly Royalty Management":
     st.header("Process Automation / Quarterly Royalty Management")
     st.markdown("""
     **Objective:** Streamline the quarterly royalty management process, reducing time spent by financial analysts from a month-long task to a 2-hour automated process.
-    
+    """)
+    # Place the st.image call correctly outside the markdown string
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/2222.png', width=800)
+    st.markdown("""
     **Impact:** Achieved an 85% reduction in process time, significantly lowering operational costs and enhancing efficiency and accuracy in royalty management.
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/2222', width=800)
+    
     **Methodology:** Developed a custom Python script for data consolidation and utilized Excel VBA for automating data extraction and report generation.
     """)
+
 
 elif page == "Scope of Skills":
     st.header("Scope of Skills")
