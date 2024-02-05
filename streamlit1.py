@@ -194,7 +194,10 @@ elif page == "Dashboard / Executive Business Insights":
     st.header("Dashboard / Executive Business Insights")
     st.markdown("""
     **Objective:** Enhance strategic decision-making through a unified data ecosystem post-merger. Focus on leveraging analytics to drive stakeholder value and operational efficiency.
-    
+    """)
+    # Correct placement of st.image call
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/1111', width=600)
+    st.markdown("""
     **Findings:** Highlighted divisions and accounts showing promising performance, indicating opportunities for strategic realignment and resource optimization.
     
     **Methodology:** Utilized Python for data manipulation and SQL for data querying. Employed Power BI for dynamic dashboards showcasing real-time business intelligence.
@@ -204,10 +207,13 @@ elif page == "Data Analysis / Warehouse & GL Account Optimization":
     st.header("Data Analysis / Warehouse & GL Account Optimization")
     st.markdown("""
     **Objective:** Identify cost-saving opportunities across logistics and warehouse operations to impact the bottom line positively.
-       st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/1111.png', width=600)
+    """)
+    # Correct placement of st.image call
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/2222', width=600)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/3333', width=600)
+    st.markdown("""
     **Findings:** Revealed inefficiencies in 'SKYLAB' and '3PL Logistics', suggesting areas for cost optimization and process improvements.
-      st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/2222.png', width=600)
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/3333.png', width=600)
+    
     **Methodology:** Analyzed financial data using Python, with a focus on dissecting spending patterns and identifying optimization opportunities.
     """)
 
