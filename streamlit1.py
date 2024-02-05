@@ -118,10 +118,10 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     col1, col2 = st.columns([1, 1,])  # Adjust the ratio if needed
  
     with col1:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/777', caption='Distribution of Spending Across Skill Brackets', width=500)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/777', caption='Distribution of Spending Across Skill Brackets', width=700)
 
     with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=500)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=700)
 
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
@@ -131,9 +131,9 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
    
 
     # Adjusting the width for the last three images
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', width=1000)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/555', width=1000)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', width=1000)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', width=1200)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/555', width=1200)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', width=1200)
 
 
 
@@ -193,7 +193,7 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     """)
     
     # Adding the final image at the correct indentation level
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/999', width=600)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/999', width=1200)
 
 
 
@@ -203,14 +203,14 @@ elif page == "Dashboard / Executive Business Insights":
     **Objective:** Enhance strategic decision-making through a unified data ecosystem post-merger. Focus on leveraging analytics to drive stakeholder value and operational efficiency.
     """)
     # Correct placement of st.image call
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/1111', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/1111', width=1200)
     
     st.markdown("""
     **Findings:** Highlighted divisions and accounts showing promising performance, indicating opportunities for strategic realignment and resource optimization.
     """)
     # Images after the findings
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/11', width=800)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/44', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/11', width=1200)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/44', width=1200)
     
     st.markdown("""
     **Methodology:** Utilized Python for data manipulation and SQL for data querying. Employed Power BI for dynamic dashboards showcasing real-time business intelligence.
@@ -223,7 +223,7 @@ elif page == "Data Analysis / Warehouse & GL Account Optimization":
     """)
     # Correct placement of st.image call
 
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/3333', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/3333', width=1200)
     st.markdown("""
     **Findings:** Revealed inefficiencies in 'SKYLAB' and '3PL Logistics', suggesting areas for cost optimization and process improvements.
     
@@ -235,9 +235,9 @@ elif page == "Process Automation / Quarterly Royalty Management":
     st.markdown("""
     **Objective:** Streamline the quarterly royalty management process, reducing time spent by financial analysts from a month-long task to a 2-hour automated process.
     """)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/2222', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/2222', width=1200)
     # Add another image under the first one
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/9999', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/9999', width=1200)
 
     st.markdown("""
     **Impact:** Achieved an 85% reduction in process time, significantly lowering operational costs and enhancing efficiency and accuracy in royalty management.
