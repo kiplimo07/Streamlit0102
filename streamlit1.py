@@ -112,6 +112,10 @@ html_str = f"""
         <img src='{image_url}' width='700' height='500' />
     </div>
     """
+
+st.markdown(html_str, unsafe_allow_html=True)
+
+
     with col2:
         st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', width=700)
 
