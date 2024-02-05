@@ -106,7 +106,7 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     col1, col2 = st.columns([1, 1,])  # Adjust the ratio if needed
  
     with col1:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', width=700,height=500)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', width=700)
 
     with col2:
         st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', width=700)
