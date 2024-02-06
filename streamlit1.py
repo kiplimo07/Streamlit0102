@@ -11,11 +11,11 @@ def layout_wrapper(content_func):
 
     with main_container:
         content_func()
-    
+
     # Adjust the width of the right_space or add elements here as needed
     with right_space:
         st.write("4")  # Adjust based on need
-        
+
 # Page configuration
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 
