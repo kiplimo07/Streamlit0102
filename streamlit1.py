@@ -26,7 +26,6 @@ st.markdown("""
     font-weight: 100;
     color: white;
 }
-</style>
 .big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: #D09E55; display: inline-block; margin-bottom: 0px; }
 .med2-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: white; }
 .medium-font { font-family: 'Bebas Neue', sans-serif; font-size:55px !important; font-weight: 100; color: #D09E55; }
@@ -289,6 +288,5 @@ elif page == "Contact":
     <br>
     <i class="fa fa-home"></i> **Location:** Irvine CA
     """, unsafe_allow_html=True)
-
 
 
