@@ -16,9 +16,8 @@ def layout_wrapper(content_func):
     with right_space:
         st.write("4")  # Adjust based on need
         
- st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
+st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 st.markdown("""
-<link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
     /* Header styles */
     .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 110px !important; font-weight: 600; color: #383f47; }
@@ -27,27 +26,28 @@ st.markdown("""
     .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 55px !important; font-weight: 400; color: #D09E55; }
     .small-font { font-family: 'Lato', sans-serif; font-size: 45px !important; color: #282D33; }
 
-    /* Main content and sidebar background color */
+    /* Main content and sidebar background color adjustments */
     .reportview-container .main { background-color: #1D262F !important; }
     .sidebar .sidebar-content { background-color: #1D262F !important; color: white; }
 
-/* Apply Lato font and adjust size for markdown elements */
-.markdown, .streamlit-container .markdown-text-container * {
-    font-family: 'Lato', sans-serif !important;
-    font-size: 20px !important;
-}
-.reportview-container .main { background-color: #1D262F; }
-.sidebar .sidebar-content { background-color: #1D262F; color: white; }
-.fa { padding-right: 10px; }
-hr { 
-    border-top: 2px solid #FFFFFF;
-    width: 88%;
-    margin-left: 0;
-    margin-top: -20px;
-    margin-bottom: 20px;
-}
+    /* Apply Lato font and adjust size for markdown elements */
+    .markdown, .streamlit-container .markdown-text-container * {
+        font-family: 'Lato', sans-serif !important;
+        font-size: 20px !important;
+    }
+
+    /* Adjustments for icons and horizontal line */
+    .fa { padding-right: 10px; }
+    hr { 
+        border-top: 2px solid #FFFFFF;
+        width: 88%;
+        margin-left: 0;
+        margin-top: -20px;
+        margin-bottom: 20px;
+    }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
