@@ -20,14 +20,8 @@ st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
-.big-font {
-    font-family: 'Raleway', sans-serif; /* Corrected font family */
-    font-size: 90px !important;
-    font-weight: 100; /* Use a standard font weight value */
-    color: white;
-}
-
-.big2-font { font-family: 'Bebas Neue', cursive; font-size:70px !important; font-weight: 100; color: #D09E55; display: inline-block; margin-bottom: 0px; }
+.big-font { font-family: 'Bebas Neue', cursive; font-size:90px !important; font-weight: 80; color: white; }
+.big2-font { font-family: 'Bebas Neue', cursive; font-size:65px !important; font-weight: 100; color: #D09E55; display: inline-block; margin-bottom: 0px; }
 .med2-font { font-family: 'Bebas Neue', cursive; font-size:45px !important; font-weight: 100; color: white; }
 .medium-font { font-family: 'Bebas Neue', cursive; font-size:55px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato ', sans-serif; font-size:35px !important; color: white; }
@@ -289,7 +283,6 @@ elif page == "Contact":
     <br>
     <i class="fa fa-home"></i> **Location:** Irvine CA
     """, unsafe_allow_html=True)
-
 
 
 
