@@ -24,58 +24,23 @@ st.markdown("""
     font-family: 'Bebas Neue', sans-serif;
     font-size: 130px !important;
     font-weight: 100;
-    color: #d8dee4; /* Corrected color code */
+    color: ##d8dee4;
     display: inline-block;
     max-width: 60%;
     margin: 0 auto;
 }
 
-.big2-font { 
-    font-family: 'Bebas Neue', sans-serif; 
-    font-size:80px !important; 
-    font-weight: 100; 
-    color: #d8dee4; /* Corrected color code */ 
-    display: inline-block; 
-    margin-bottom: 0px; 
-}
+.big2-font { font-family: 'Bebas Neue', sans-serif; font-size:80px !important; font-weight: 100; color: ##d8dee4 ; display: inline-block; margin-bottom: 0px; }
 
-.med2-font { 
-    font-family: 'Bebas Neue', sans-serif; 
-    font-size:40px !important; 
-    font-weight: 100; 
-    color: #D09E55; 
-}
 
-.medium-font { 
-    font-family: 'Bebas Neue', sans-serif; 
-    font-size:40px !important; 
-    font-weight: 100; 
-    color: #D09E55; 
-}
-
-.small-font { 
-    font-family: 'Lato', sans-serif; 
-    font-size: 35px !important; /* Added unit px */ 
-    color: #282D33; 
-}
-
+.med2-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: #D09E55; }
+.medium-font { font-family: 'Bebas Neue', sans-serif; font-size:40px !important; font-weight: 100; color: #D09E55; }
+.small-font { font-family: 'Lato', sans-serif; font-size 35px !important; color: #282D33; }
 /* Apply Lato font and adjust size for markdown elements */
 .markdown, .streamlit-container .markdown-text-container * {
     font-family: 'Lato', sans-serif !important;
     font-size: 20px !important;
 }
-
-.reportview-container .main { background-color: #1D262F; }
-.sidebar .sidebar-content { background-color: #1D262F; color: white; }
-.fa { padding-right: 15px; }
-hr { 
-    border-top: 2px solid #FFFFFF; 
-    width: 80%; 
-    margin-left: 0; 
-    margin-top: -20px; 
-    margin-bottom: 20px; 
-}
-
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 15px; }
