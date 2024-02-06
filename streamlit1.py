@@ -20,19 +20,17 @@ st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
-.big-font {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 110px !important;
-    font-weight: 60;
-    color: #383f47;
-    display: inline-block;
-    max-width: 70%;
-    margin: 0 auto;
-}
-.big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: #383f47 ; display: inline-block; margin-bottom: 0px; }
-.med2-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: #D09E55; }
-.medium-font { font-family: 'Bebas Neue', sans-serif; font-size:55px !important; font-weight: 100; color: #D09E55; }
-.small-font { font-family: 'Lato', sans-serif; font-size:45px !important; color: #282D33; }
+    /* Header styles */
+    .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 110px !important; font-weight: 600; color: #383f47; }
+    .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 70px !important; font-weight: 400; color: #383f47; }
+    .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 45px !important; font-weight: 400; color: #D09E55; }
+    .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 55px !important; font-weight: 400; color: #D09E55; }
+    .small-font { font-family: 'Lato', sans-serif; font-size: 45px !important; color: #282D33; }
+
+    /* Main content and sidebar background color */
+    .reportview-container .main { background-color: #1D262F !important; }
+    .sidebar .sidebar-content { background-color: #1D262F !important; color: white; }
+
 /* Apply Lato font and adjust size for markdown elements */
 .markdown, .streamlit-container .markdown-text-container * {
     font-family: 'Lato', sans-serif !important;
