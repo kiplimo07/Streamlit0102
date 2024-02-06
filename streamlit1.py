@@ -21,8 +21,8 @@ st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
 .big-font {
-     font-family: 'Bebas Neue', sans-serif;
-     font-size: 110px !important; /* Reduced size for shorter appearance */
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 110px !important; /* Reduced size for shorter appearance */
     font-weight: 60;
     color: white;
     display: inline-block; /* Makes the element respect the width */
@@ -33,6 +33,10 @@ st.markdown("""
 .med2-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: #D09E55; }
 .medium-font { font-family: 'Bebas Neue', sans-serif; font-size:55px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato ', sans-serif; font-size:45px !important; color: white; }
+/* New style to increase markdown text size */
+.markdown {
+    font-size: 20px !important;
+}
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 15px; }
@@ -47,6 +51,7 @@ hr {
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)  # Adjusted for closer spacing and alignment
