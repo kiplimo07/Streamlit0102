@@ -14,49 +14,20 @@ def layout_wrapper(content_func):
     
     # Adjust the width of the right_space or add elements here as needed
     with right_space:
-        st.write("3")  # Adjust based on need
-      st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
+        st.write("Extra sidebar space")  # Example placeholder text
+
+# Set the page configuration outside of the layout_wrapper function
+st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
+
+# Continue with the rest of the Streamlit setup (CSS, markdown content, sidebar setup)
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
-/* Header styles */
-.big-font { font-family: 'Bebas Neue', sans-serif; font-size: 110px !important; font-weight: 600; color: white; text-align: center; }
-.big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 70px !important; font-weight: 400; color: white; text-align: center; }
-.med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 45px !important; font-weight: 400; color: #D09E55; text-align: center; }
-.medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 55px !important; font-weight: 400; color: #D09E55; }
-.small-font { font-family: 'Lato', sans-serif; font-size: 45px !important; color: white; }
-
-/* Apply Lato font and adjust size for markdown elements */
-.markdown, .streamlit-container .markdown-text-container *, .stMarkdown {
-    font-family: 'Lato', sans-serif !important;
-    font-size: 20px !important;
-}
-
-/* Sidebar styles */
-.sidebar .sidebar-content {
-    background-color: #1D262F; color: white;
-}
-.fa { padding-right: 15px; }
-
-/* Horizontal line style */
-hr {
-    border-top: 2px solid #FFFFFF;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-/* Navigation hover effect */
-.stRadio > div { transition: background-color 0.3s ease; }
-.stRadio > div:hover { background-color: #2A2F36; cursor: pointer; }
-.stRadio label:hover { color: #D09E55 !important; font-weight: 500; }
-
-/* Adjust padding and margins */
-.reportview-container .main .block-container { padding-top: 1rem; padding-right: 16.66%; }
-.sidebar .sidebar-content { padding: 20px; }
+/* CSS styles here */
 </style>
 """, unsafe_allow_html=True)
 
+# Main content and sidebar navigation
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)
 st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
