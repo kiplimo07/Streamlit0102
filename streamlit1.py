@@ -208,32 +208,33 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
 
 
 elif page == "Dashboard / Executive Business Insights":
-    # Header consistent with the other section
-    st.markdown('<h1 class="big-font">Dashboard / Executive Business Insights</h1>', unsafe_allow_html=True)
+    st.header("Dashboard / Executive Business Insights")
     
-    # Objective section styled similarly to "Executive Summary/Business Objective"
-    st.markdown('<h2 class="medium-font">Objective:</h2>', unsafe_allow_html=True)
+    st.subheader("Objective:")
     st.markdown("""
-    <p class="small-font">Enhance strategic decision-making through a unified data ecosystem post-merger. Focus on leveraging analytics to drive stakeholder value and operational efficiency.</p>
+    Enhance strategic decision-making through a unified data ecosystem post-merger. Focus on leveraging analytics to drive stakeholder value and operational efficiency.
     """, unsafe_allow_html=True)
-
-    # Image after Objective
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/1111', width=1200)
     
-    # Findings section
-    st.markdown('<h2 class="medium-font">Findings:</h2>', unsafe_allow_html=True)
+    st.subheader("Findings:")
     st.markdown("""
-    <p class="small-font">Highlighted divisions and accounts showing promising performance, indicating opportunities for strategic realignment and resource optimization.</p>
+    Highlighted divisions and accounts showing promising performance, indicating opportunities for strategic realignment and resource optimization.
     """, unsafe_allow_html=True)
-
-    # Images after Findings
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/11', width=1200)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/44', width=1200)
     
-    # Methodology section
-    st.markdown('<h2 class="medium-font">Methodology:</h2>', unsafe_allow_html=True)
+    # Image display with adjusted width
+    col1, col2, col3 = st.columns([1,1,1])  # Adjust the ratio if needed
+    
+    with col1:
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/1111', width=700)
+
+    with col2:
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/11', width=700)
+
+    with col3:
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/44', width=700)
+
+    st.subheader("Methodology:")
     st.markdown("""
-    <p class="small-font">Utilized Python for data manipulation and SQL for data querying. Employed Power BI for dynamic dashboards showcasing real-time business intelligence.</p>
+    Utilized Python for data manipulation and SQL for data querying. Employed Power BI for dynamic dashboards showcasing real-time business intelligence.
     """, unsafe_allow_html=True)
 
 
