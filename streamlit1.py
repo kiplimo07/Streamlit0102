@@ -22,7 +22,7 @@ st.markdown("""
 <style>
 .big-font {
     font-family: 'Bebas Neue', sans-serif;
-     font-size: 70px !important; /* Reduced size for shorter appearance */
+     font-size: 100px !important; /* Reduced size for shorter appearance */
     font-weight: 100;
     color: white;
     display: inline-block; /* Makes the element respect the width */
