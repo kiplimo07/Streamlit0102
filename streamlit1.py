@@ -20,10 +20,10 @@ st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 st.markdown("""
 <style>
     /* Header styles */
-    .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 110px !important; font-weight: 600; color: #383f47; }
-    .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 70px !important; font-weight: 400; color: #383f47; }
-    .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 45px !important; font-weight: 400; color: #D09E55; }
-    .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 55px !important; font-weight: 400; color: #D09E55; }
+    .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 110px !important; font-weight: 100; color: #383f47; }
+    .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 70px !important; font-weight: 100; color: #383f47; }
+    .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 45px !important; font-weight: 100; color: #D09E55; }
+    .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 55px !important; font-weight: 100; color: #D09E55; }
     .small-font { font-family: 'Lato', sans-serif; font-size: 45px !important; color: #282D33; }
 
     /* Main content and sidebar background color adjustments */
