@@ -26,7 +26,7 @@ st.markdown("""
     font-weight: 60;
     color: ##d8dee4;
     display: inline-block;
-    max-width: 70%;
+    max-width: 60%;
     margin: 0 auto;
 }
 .big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: ##d8dee4 ; display: inline-block; margin-bottom: 0px; }
