@@ -53,17 +53,25 @@ st.markdown("""
     }
 
 
+# Displaying text with custom CSS classes
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)  # Adjusted for closer spacing and alignment
 st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
+# Including additional CSS styles
 st.markdown("""
-
+<style>
     /* Adjust padding and margins */
-    .reportview-container .main .block-container { padding-top: 1rem; padding-right: 16.66%; }
-    .sidebar .sidebar-content { padding: 20px; }
+    .reportview-container .main .block-container { 
+        padding-top: 1rem; 
+        padding-right: 16.66%; 
+    }
+    .sidebar .sidebar-content { 
+        padding: 20px; 
+    }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 with st.sidebar:
