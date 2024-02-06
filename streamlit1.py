@@ -16,54 +16,56 @@ def layout_wrapper(content_func):
     with right_space:
         st.write("4")  # Adjust based on need
         
-# Page Configuration
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
-
-# Custom Styles and Theme Settings
 st.markdown("""
+<link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
-    /* Header styles */
-    .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 110px !important; font-weight: 600; color: #383f47; text-align: center; }
-    .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 70px !important; font-weight: 400; color: #383f47; text-align: center; }
-    .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 45px !important; font-weight: 400; color: #D09E55; text-align: center; }
-    .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 55px !important; font-weight: 400; color: #D09E55; }
-    .small-font { font-family: 'Lato', sans-serif; font-size: 45px !important; color: #282D33; }
-
-    /* Main content and sidebar background color */
-    .reportview-container .main { background-color: #1D262F !important; }
-    .sidebar .sidebar-content { background-color: #1D262F !important; color: white; }
-
-    /* Apply Lato font and adjust size for markdown elements */
-    .markdown, .streamlit-container .markdown-text-container *, .stMarkdown {
-        font-family: 'Lato', sans-serif !important;
-        font-size: 20px !important;
-    }
-
-    /* Sidebar styles */
-    .sidebar .sidebar-content {
-        background-color: #1D262F; color: white;
-    }
-    .fa { padding-right: 15px; }
-
-    /* Horizontal line style */
-    hr {
-        border-top: 2px solid #FFFFFF;
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    /* Navigation hover effect */
-    .stRadio > div { transition: background-color 0.3s ease; }
-    .stRadio > div:hover { background-color: #2A2F36; cursor: pointer; }
-    .stRadio label:hover { color: #D09E55 !important; font-weight: 500; }
-
-    /* Adjust padding and margins */
-    .reportview-container .main .block-container { padding-top: 1rem; padding-right: 16.66%; }
-    .sidebar .sidebar-content { padding: 20px; }
+.big-font {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 110px !important;
+    font-weight: 60;
+    color: #282D33;
+    display: inline-block;
+    max-width: 70%;
+    margin: 0 auto;
+}
+.big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: #282D33 ; display: inline-block; margin-bottom: 0px; }
+.med2-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: #D09E55; }
+.medium-font { font-family: 'Bebas Neue', sans-serif; font-size:55px !important; font-weight: 100; color: #D09E55; }
+.small-font { font-family: 'Lato', sans-serif; font-size:45px !important; color: #282D33; }
+/* Apply Lato font and adjust size for markdown elements */
+.markdown, .streamlit-container .markdown-text-container * {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 20px !important;
+}
+.reportview-container .main { background-color: #1D262F; }
+.sidebar .sidebar-content { background-color: #1D262F; color: white; }
+.fa { padding-right: 15px; }
+hr { 
+    border-top: 2px solid #FFFFFF;
+    width: 80%;
+    margin-left: 0;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
 </style>
 """, unsafe_allow_html=True)
 
+
+
+st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
+st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)  # Adjusted for closer spacing and alignment
+st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
+
+st.markdown("""
+<style>
+    /* Other styles */
+    .reportview-container .main .block-container {
+        /* Adjust padding on the right to create empty space */
+        padding-right: 16.66%;
+    }
+</style>
+""", unsafe_allow_html=True)
 
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
