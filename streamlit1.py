@@ -23,6 +23,12 @@ st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
+    /* Adjust main container's top padding to push content up */
+    .reportview-container .main .block-container {
+        padding-top: 2rem; /* Reduce this value to push the content higher */
+        padding-right: 16.66%;
+    }
+
     .big-font {
         font-family: 'Bebas Neue', sans-serif;
         font-size: 120px !important;
