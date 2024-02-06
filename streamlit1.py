@@ -14,7 +14,7 @@ def layout_wrapper(content_func):
     
     # Adjust the width of the right_space or add elements here as needed
     with right_space:
-        st.write("3")  # Adjust based on need
+        st.write("4")  # Adjust based on need
         
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 st.markdown("""
@@ -42,7 +42,7 @@ st.markdown("""
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 15px; }
 hr { 
-    border-top: 1px solid #FFFFFF;
+    border-top: 2px solid #FFFFFF;
     width: 80%;
     margin-left: 0;
     margin-top: -20px;
