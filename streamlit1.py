@@ -52,10 +52,7 @@ st.markdown("""
         margin-bottom: 20px;
     }
 
-    /* Navigation hover effect */
-    .stRadio > div { transition: background-color 0.3s ease; }
-    .stRadio > div:hover { background-color: #2A2F36; cursor: pointer; }
-    .stRadio label:hover { color: #D09E55 !important; font-weight: 500; }
+
 
     /* Adjust padding and margins */
     .reportview-container .main .block-container { padding-top: 1rem; padding-right: 16.66%; }
