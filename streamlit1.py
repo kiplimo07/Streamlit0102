@@ -21,10 +21,13 @@ st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
 .big-font {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 90px !important;
     font-weight: 100;
     color: white;
+    display: inline-block; /* Makes the element respect the width */
+    max-width: 80%; /* Adjust as needed to control width */
+    margin: 0 auto; /* Center align if needed */
 }
 .big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: #D09E55; display: inline-block; margin-bottom: 0px; }
 .med2-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: white; }
