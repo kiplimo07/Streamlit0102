@@ -49,7 +49,7 @@ st.markdown("""
     /* Other styles */
     .reportview-container .main .block-container {
         /* Adjust padding on the right to create empty space */
-        padding-right: 16.66%;
+        padding-right: 10%;
     }
 </style>
 """, unsafe_allow_html=True)
