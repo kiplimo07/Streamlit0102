@@ -35,7 +35,7 @@ st.markdown("""
 .small-font { font-family: 'Lato ', sans-serif; font-size:45px !important; color: white; }
 /* New style to increase markdown text size */
 .markdown {
-    font-size: 20px !important;
+    font-size: 35px !important;
 }
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
