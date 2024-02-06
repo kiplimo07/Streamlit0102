@@ -36,7 +36,7 @@ st.markdown("""
 /* New style to increase markdown text size and change font to Lato */
 .write {
     font-family: 'Lato', sans-serif; /* Change font to Lato */
-    font-size: 20px !important;
+    font-size: 40px !important;
 }
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
