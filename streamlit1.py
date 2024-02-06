@@ -17,39 +17,30 @@ def layout_wrapper(content_func):
         st.write("3")  # Adjust based on need
         
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
+
 st.markdown("""
-<link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
-<style>
-.big-font {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 110px !important;
-    font-weight: 60;
-    color: white;
-    display: inline-block;
-    max-width: 70%;
-    margin: 0 auto;
-}
-.big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: white; display: inline-block; margin-bottom: 0px; }
-.med2-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: #D09E55; }
-.medium-font { font-family: 'Bebas Neue', sans-serif; font-size:55px !important; font-weight: 100; color: #D09E55; }
-.small-font { font-family: 'Lato', sans-serif; font-size:45px !important; color: white; }
-/* Apply Lato font and adjust size for markdown elements */
-.markdown, .streamlit-container .markdown-text-container * {
-    font-family: 'Lato', sans-serif !important;
-    font-size: 20px !important;
-}
-.reportview-container .main { background-color: #1D262F; }
-.sidebar .sidebar-content { background-color: #1D262F; color: white; }
-.fa { padding-right: 15px; }
-hr { 
-    border-top: 1px solid #FFFFFF;
-    width: 80%;
-    margin-left: 0;
-    margin-top: -20px;
-    margin-bottom: 20px;
-}
-</style>
+    <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
+    <style>
+    /* Custom font sizes and styles */
+    .big-font { font-family: 'Bebas Neue', sans-serif; font-size:110px !important; font-weight: 60; color: white; display: inline-block; max-width: 70%; margin: 0 auto; }
+    .big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: white; display: inline-block; margin-bottom: 0px; }
+    .med2-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: #D09E55; }
+    .medium-font { font-family: 'Bebas Neue', sans-serif; font-size:55px !important; font-weight: 100; color: #D09E55; }
+    .small-font { font-family: 'Lato', sans-serif; font-size:45px !important; color: white; }
+    
+    /* Global style overrides */
+    body, h1, h2, h3, h4, h5, h6, p, .stText, .stMarkdown {
+        font-family: 'Lato', sans-serif !important;
+        font-size: 20px !important;
+        color: white; /* Adjust if you want a different color */
+    }
+    .reportview-container .main { background-color: #1D262F; }
+    .sidebar .sidebar-content { background-color: #1D262F; color: white; }
+    .fa { padding-right: 15px; }
+    hr { border-top: 1px solid #FFFFFF; width: 80%; margin-left: 0; margin-top: -20px; margin-bottom: 20px; }
+    </style>
 """, unsafe_allow_html=True)
+
 
 
 
