@@ -31,11 +31,11 @@ st.markdown("""
 
     .big-font {
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 120px !important;
-        font-weight: 400; /* Adjust font-weight if needed */
+        font-size: 110px !important;
+        font-weight: 100; /* Adjust font-weight if needed */
         color: #3b3f24;
         display: inline-block;
-        max-width: 60%;
+        max-width: 80%;
         margin: 0 auto;
     }
     .big2-font {
