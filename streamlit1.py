@@ -148,9 +148,9 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
    
 
     # Adjusting the width for the last three images
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', width=1200)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/555', width=1200)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', width=1200)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/444', width=1000)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/555', width=1000)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/666', width=1000)
 
 
 
