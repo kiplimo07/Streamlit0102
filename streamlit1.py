@@ -119,13 +119,13 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     col1, col2 = st.columns([1, 1,])  # Adjust the ratio if needed
  
     with col1:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', width=700)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', width=600)
 
 
 
 
     with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', width=700)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', width=600)
 
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
@@ -134,10 +134,10 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     col1, col2 = st.columns([1, 1,])  # Adjust the ratio if needed
  
     with col1:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/777', caption='Distribution of Spending Across Skill Brackets', width=700)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/777', caption='Distribution of Spending Across Skill Brackets', width=600)
 
     with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=700)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=600)
 
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
@@ -196,7 +196,7 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
 
     heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
     plt.figure(figsize=(8, 6)) # Adjusted for a common width of 1000 pixels
-    sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.5)
+    sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.4)
     plt.title("Average Dollars Spent per Player by Region and Platform")
     st.pyplot(plt)
 
