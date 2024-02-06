@@ -1,3 +1,21 @@
+import streamlit as st
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+def layout_wrapper(content_func):
+    # Define a container for the main content
+    main_container = st.container()
+    # Define a container for extra space on the right (if needed)
+    right_space = st.sidebar.container()
+
+    with main_container:
+        content_func()
+    
+    # Adjust the width of the right_space or add elements here as needed
+    with right_space:
+        st.write("3")  # Adjust based on need
+        
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
@@ -74,6 +92,10 @@ st.markdown("""
     .sidebar .sidebar-content { padding: 20px; }
 </style>
 """, unsafe_allow_html=True)
+
+with st.sidebar:
+    st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
+    page = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", "Dashboard / Executive Business Insights", "Data Analysis / Warehouse & GL Account Optimization", "Process Automation / Quarterly Royalty Management", "Scope of Skills", "Certifications", "Contact"])
 
 @st.cache
 def load_data(url):
