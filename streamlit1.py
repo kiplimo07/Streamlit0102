@@ -32,7 +32,7 @@ st.markdown("""
 .big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: white; display: inline-block; margin-bottom: 0px; }
 .med2-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: #D09E55; }
 .medium-font { font-family: 'Bebas Neue', sans-serif; font-size:55px !important; font-weight: 100; color: #D09E55; }
-.small-font { font-family: 'Lato ', sans-serif; font-size:35px !important; color: white; }
+.small-font { font-family: 'Lato ', sans-serif; font-size:45px !important; color: white; }
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 15px; }
