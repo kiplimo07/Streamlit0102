@@ -37,7 +37,7 @@ st.markdown("""
     }
 
     /* Adjustments for icons and horizontal line */
-    .fa { padding-right: 5px; }
+    .fa { padding-right: 20px; }
     hr { 
         border-top: 2px solid #FFFFFF;
         width: 90%;
