@@ -26,7 +26,7 @@ st.markdown("""
     font-weight: 80;
     color: ##d8dee4;
     display: inline-block;
-    max-width: 50%;
+    max-width: 60%;
     margin: 0 auto;
 }
 
