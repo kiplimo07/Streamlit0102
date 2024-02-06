@@ -22,37 +22,34 @@ st.markdown("""
 <style>
 .big-font {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 110px !important; /* Reduced size for shorter appearance */
+    font-size: 110px !important;
     font-weight: 60;
     color: white;
-    display: inline-block; /* Makes the element respect the width */
-    max-width: 70%; /* Adjust as needed to control width */
-    margin: 0 auto; /* Center align if needed */
+    display: inline-block;
+    max-width: 70%;
+    margin: 0 auto;
 }
 .big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: white; display: inline-block; margin-bottom: 0px; }
 .med2-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: #D09E55; }
 .medium-font { font-family: 'Bebas Neue', sans-serif; font-size:55px !important; font-weight: 100; color: #D09E55; }
-.small-font { font-family: 'Lato ', sans-serif; font-size:45px !important; color: white; }
-/* New style to increase markdown text size and change font to Lato */
-.write {
-    font-family: 'Lato', sans-serif; /* Change font to Lato */
-    font-size: 40px !important;
+.small-font { font-family: 'Lato', sans-serif; font-size:45px !important; color: white; }
+/* Apply Lato font and adjust size for markdown elements */
+.markdown, .streamlit-container .markdown-text-container * {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 20px !important;
 }
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 15px; }
-/* Adjust top padding of the main container for all pages */
-.reportview-container .main .block-container { padding-top: 1rem; }
 hr { 
-    border-top: 1px solid #FFFFFF; /* Thinner line */
-    width: 80%; /* Adjusted width */
-    margin-left: 0; /* Align to the left */
-    margin-top: -20px; /* Reduce space between PORTFOLIO and the line */
+    border-top: 1px solid #FFFFFF;
+    width: 80%;
+    margin-left: 0;
+    margin-top: -20px;
     margin-bottom: 20px;
 }
 </style>
 """, unsafe_allow_html=True)
-
 
 
 
