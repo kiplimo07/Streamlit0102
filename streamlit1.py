@@ -24,12 +24,12 @@ st.markdown("""
     font-family: 'Bebas Neue', sans-serif;
     font-size: 110px !important;
     font-weight: 60;
-    color: #282D33;
+    color: #383f47;
     display: inline-block;
     max-width: 70%;
     margin: 0 auto;
 }
-.big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: #282D33 ; display: inline-block; margin-bottom: 0px; }
+.big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: #383f47 ; display: inline-block; margin-bottom: 0px; }
 .med2-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: #D09E55; }
 .medium-font { font-family: 'Bebas Neue', sans-serif; font-size:55px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato', sans-serif; font-size:45px !important; color: #282D33; }
