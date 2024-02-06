@@ -16,12 +16,15 @@ def layout_wrapper(content_func):
     with right_space:
         st.write("4")  # Adjust based on need
         
+# Page Configuration
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
+
+# Custom CSS
 st.markdown("""
 <style>
     /* Header styles */
-    .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 80px !important; font-weight: 100; color: #FFFFF; }
-    .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 60px !important; font-weight: 100; color: #FFFFF; }
+    .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 80px !important; font-weight: 100; color: #FFFFFF; }
+    .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 60px !important; font-weight: 100; color: #FFFFFF; }
     .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 40px !important; font-weight: 100; color: #D09E55; }
     .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 45px !important; font-weight: 400; color: #D09E55; }
     .small-font { font-family: 'Lato', sans-serif; font-size: 35px !important; color: #282D33; }
@@ -48,12 +51,12 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-
-
+# Display the headers
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
-st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)  # Adjusted for closer spacing and alignment
+st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)
 st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
+# Additional styles
 st.markdown("""
 <style>
     /* Other styles */
