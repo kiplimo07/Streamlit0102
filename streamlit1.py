@@ -210,22 +210,33 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
 
 elif page == "Dashboard / Executive Business Insights":
     st.header("Dashboard / Executive Business Insights")
+    
+    # Using markdown for subheaders and text to apply custom styling
     st.markdown("""
-    **Objective:** Enhance strategic decision-making through a unified data ecosystem post-merger. Focus on leveraging analytics to drive stakeholder value and operational efficiency.
-    """)
-    # Correct placement of st.image call
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/1111', width=1200)
+    <div class="medium-font">Objective:</div>
+    <div class="small-font">Enhance strategic decision-making through a unified data ecosystem post-merger. Focus on leveraging analytics to drive stakeholder value and operational efficiency.</div>
+    """, unsafe_allow_html=True)
+    
+    # Correct placement of st.image call with adjusted width
+    col1, col2 = st.columns([1, 1])  # Adjust the ratio if needed
+    with col1:
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/1111', width=700)
     
     st.markdown("""
-    **Findings:** Highlighted divisions and accounts showing promising performance, indicating opportunities for strategic realignment and resource optimization.
-    """)
-    # Images after the findings
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/11', width=1200)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/44', width=1200)
+    <div class="medium-font">Findings:</div>
+    <div class="small-font">Highlighted divisions and accounts showing promising performance, indicating opportunities for strategic realignment and resource optimization.</div>
+    """, unsafe_allow_html=True)
     
+    # Images after the findings with adjusted width
+    with col2:
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/11', width=700)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/44', width=700)  # This will span full width; adjust if needed
+
     st.markdown("""
-    **Methodology:** Utilized Python for data manipulation and SQL for data querying. Employed Power BI for dynamic dashboards showcasing real-time business intelligence.
-    """)
+    <div class="medium-font">Methodology:</div>
+    <div class="small-font">Utilized Python for data manipulation and SQL for data querying. Employed Power BI for dynamic dashboards showcasing real-time business intelligence.</div>
+    """, unsafe_allow_html=True)
+
 
 elif page == "Data Analysis / Warehouse & GL Account Optimization":
     st.header("Data Analysis / Warehouse & GL Account Optimization")
