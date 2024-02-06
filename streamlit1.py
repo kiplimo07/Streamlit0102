@@ -20,14 +20,6 @@ st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
-html, body, [data-testid="stApp"] {
-    background-color: #1D262F !important;
-}
-
-.stSidebar > div:first-child, .stSidebar > div:first-child > div:first-child {
-    background-color: #1D262F !important;
-}
-
 .big-font {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 110px !important;
@@ -37,47 +29,18 @@ html, body, [data-testid="stApp"] {
     max-width: 70%;
     margin: 0 auto;
 }
-
-.big2-font { 
-    font-family: 'Bebas Neue', sans-serif; 
-    font-size:70px !important; 
-    font-weight: 100; 
-    color: white; 
-    display: inline-block; 
-    margin-bottom: 0px; 
-}
-
-.med2-font { 
-    font-family: 'Bebas Neue', sans-serif; 
-    font-size:45px !important; 
-    font-weight: 100; 
-    color: #D09E55; 
-}
-
-.medium-font { 
-    font-family: 'Bebas Neue', sans-serif; 
-    font-size:55px !important; 
-    font-weight: 100; 
-    color: #D09E55; 
-}
-
-.small-font { 
-    font-family: 'Lato', sans-serif; 
-    font-size:45px !important; 
-    color: white; 
-}
-
+.big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: white; display: inline-block; margin-bottom: 0px; }
+.med2-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: #D09E55; }
+.medium-font { font-family: 'Bebas Neue', sans-serif; font-size:55px !important; font-weight: 100; color: #D09E55; }
+.small-font { font-family: 'Lato', sans-serif; font-size:45px !important; color: white; }
 /* Apply Lato font and adjust size for markdown elements */
 .markdown, .streamlit-container .markdown-text-container * {
     font-family: 'Lato', sans-serif !important;
     font-size: 20px !important;
-    color: white !important;
 }
-
-.fa { 
-    padding-right: 15px; 
-}
-
+.reportview-container .main { background-color: #1D262F; }
+.sidebar .sidebar-content { background-color: #1D262F; color: white; }
+.fa { padding-right: 15px; }
 hr { 
     border-top: 1px solid #FFFFFF;
     width: 80%;
@@ -88,13 +51,15 @@ hr {
 </style>
 """, unsafe_allow_html=True)
 
+
+
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
-st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)
+st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)  # Adjusted for closer spacing and alignment
 st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
 st.markdown("""
 <style>
-    /* Adjusting the main content area */
+    /* Other styles */
     .reportview-container .main .block-container {
         /* Adjust padding on the right to create empty space */
         padding-right: 16.66%;
@@ -295,32 +260,31 @@ elif page == "Data Analysis / Warehouse & GL Account Optimization":
 elif page == "Process Automation / Quarterly Royalty Management":
     st.header("Process Automation / Quarterly Royalty Management")
     
-    # Objective
     st.subheader("Objective:")
     st.markdown("""
-Streamline the quarterly royalty management process, reducing time spent by financial analysts from a month-long task to a 2-hour automated process.
+    Streamline the quarterly royalty management process, reducing time spent by financial analysts from a month-long task to a 2-hour automated process.
     """, unsafe_allow_html=True)
-
-    # Python Section
-    st.markdown("#### PYTHON", unsafe_allow_html=True)
+     st.markdown("""
+   PYTHON
+    """, unsafe_allow_html=True)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/2222', width=1200)
-
-    # VBA Section
-    st.markdown("#### VBA", unsafe_allow_html=True)
+st.markdown("""
+    
+    """, unsafe_allow_html=True)
+ st.markdown("""
+    VBA
+    """, unsafe_allow_html=True)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/9999', width=1200)
     
-    # Impact
     st.subheader("Impact:")
     st.markdown("""
-Achieved an 85% reduction in process time, significantly lowering operational costs and enhancing efficiency and accuracy in royalty management.
+    Achieved an 85% reduction in process time, significantly lowering operational costs and enhancing efficiency and accuracy in royalty management.
     """, unsafe_allow_html=True)
     
-    # Methodology
     st.subheader("Methodology:")
     st.markdown("""
-Developed a custom Python script for data consolidation and utilized Excel VBA for automating data extraction and report generation.
+    Developed a custom Python script for data consolidation and utilized Excel VBA for automating data extraction and report generation.
     """, unsafe_allow_html=True)
-
 
 
 
