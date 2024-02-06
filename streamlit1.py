@@ -21,7 +21,7 @@ st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
 .big-font {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 100px !important;
     font-weight: 80;
     color: ##3b3f24;
