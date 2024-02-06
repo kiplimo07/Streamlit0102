@@ -3,72 +3,70 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Define a layout wrapper if needed
 def layout_wrapper(content_func):
+    # Define a container for the main content
     main_container = st.container()
+    # Define a container for extra space on the right (if needed)
     right_space = st.sidebar.container()
 
     with main_container:
         content_func()
-
+    
+    # Adjust the width of the right_space or add elements here as needed
     with right_space:
-        # Placeholder or actual content
-        st.write("Sidebar content here")
-
-# Page configuration
+        st.write("4")  # Adjust based on need
+        
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
+st.markdown("""
+<link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
+<style>
+.big-font {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 110px !important;
+    font-weight: 60;
+    color: #282D33;
+    display: inline-block;
+    max-width: 70%;
+    margin: 0 auto;
+}
+.big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: #282D33 ; display: inline-block; margin-bottom: 0px; }
+.med2-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: #D09E55; }
+.medium-font { font-family: 'Bebas Neue', sans-serif; font-size:55px !important; font-weight: 100; color: #D09E55; }
+.small-font { font-family: 'Lato', sans-serif; font-size:45px !important; color: #282D33; }
+/* Apply Lato font and adjust size for markdown elements */
+.markdown, .streamlit-container .markdown-text-container * {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 20px !important;
+}
+.reportview-container .main { background-color: #1D262F; }
+.sidebar .sidebar-content { background-color: #1D262F; color: white; }
+.fa { padding-right: 15px; }
+hr { 
+    border-top: 2px solid #FFFFFF;
+    width: 80%;
+    margin-left: 0;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+</style>
+""", unsafe_allow_html=True)
 
-# Custom Styles and Theme Settings
+
+
+st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
+st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)  # Adjusted for closer spacing and alignment
+st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
+
 st.markdown("""
 <style>
-    /* Header styles */
-    .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 110px !important; font-weight: 600; color: #383f47; text-align: center; }
-    .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 70px !important; font-weight: 400; color: #383f47; text-align: center; }
-    .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 45px !important; font-weight: 400; color: #D09E55; text-align: center; }
-    .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 55px !important; font-weight: 400; color: #D09E55; }
-    .small-font { font-family: 'Lato', sans-serif; font-size: 45px !important; color: #282D33; }
-
-    /* Main content and sidebar background color */
-    .reportview-container .main { background-color: #1D262F !important; }
-    .sidebar .sidebar-content { background-color: #1D262F !important; color: white; }
-
-    /* Apply Lato font and adjust size for markdown elements */
-    .markdown, .streamlit-container .markdown-text-container *, .stMarkdown {
-        font-family: 'Lato', sans-serif !important;
-        font-size: 20px !important;
-    }
-
-    /* Sidebar styles */
-    .sidebar .sidebar-content {
-        background-color: #1D262F; color: white;
-    }
-    .fa { padding-right: 15px; }
-
-    /* Horizontal line style */
-    hr {
-        border-top: 2px solid #FFFFFF;
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    /* Adjust padding and margins */
-    .reportview-container .main .block-container { 
-        padding-top: 1rem; 
-        padding-right: 16.66%; 
-    }
-    .sidebar .sidebar-content { 
-        padding: 20px; 
+    /* Other styles */
+    .reportview-container .main .block-container {
+        /* Adjust padding on the right to create empty space */
+        padding-right: 16.66%;
     }
 </style>
 """, unsafe_allow_html=True)
 
-# Displaying text with custom CSS classes
-st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
-st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)
-st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
-
-# Sidebar Navigation
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
     page = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", "Dashboard / Executive Business Insights", "Data Analysis / Warehouse & GL Account Optimization", "Process Automation / Quarterly Royalty Management", "Scope of Skills", "Certifications", "Contact"])
