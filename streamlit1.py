@@ -24,7 +24,7 @@ st.markdown("""
     .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 60px !important; font-weight: 100; color: #383f47; }
     .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 40px !important; font-weight: 100; color: #D09E55; }
     .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 30px !important; font-weight: 400; color: #D09E55; }
-    .small-font { font-family: 'Lato', sans-serif; font-size: 45px !important; color: #282D33; }
+    .small-font { font-family: 'Lato', sans-serif; font-size: 35px !important; color: #282D33; }
 
     /* Main content and sidebar background color adjustments */
     .reportview-container .main { background-color: #1D262F !important; }
@@ -37,10 +37,10 @@ st.markdown("""
     }
 
     /* Adjustments for icons and horizontal line */
-    .fa { padding-right: 10px; }
+    .fa { padding-right: 5px; }
     hr { 
         border-top: 2px solid #FFFFFF;
-        width: 88%;
+        width: 90%;
         margin-left: 0;
         margin-top: -20px;
         margin-bottom: 20px;
