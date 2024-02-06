@@ -22,14 +22,17 @@ st.markdown("""
 <style>
 .big-font {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 110px !important;
-    font-weight: 60;
+    font-size: 130px !important;
+    font-weight: 50;
     color: ##d8dee4;
     display: inline-block;
-    max-width: 60%;
+    max-width: 50%;
     margin: 0 auto;
 }
-.big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: ##d8dee4 ; display: inline-block; margin-bottom: 0px; }
+
+.big2-font { font-family: 'Bebas Neue', sans-serif; font-size:80px !important; font-weight: 100; color: ##d8dee4 ; display: inline-block; margin-bottom: 0px; }
+
+
 .med2-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: #D09E55; }
 .medium-font { font-family: 'Bebas Neue', sans-serif; font-size:40px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato', sans-serif; font-size 35px !important; color: #282D33; }
