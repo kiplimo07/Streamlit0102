@@ -220,16 +220,15 @@ elif page == "Dashboard / Executive Business Insights":
     Highlighted divisions and accounts showing promising performance, indicating opportunities for strategic realignment and resource optimization.
     """, unsafe_allow_html=True)
     
-    # Image display with adjusted width
-    col1, col2, col3 = st.columns([1,1,1])  # Adjust the ratio if needed
+ 
     
-    with col1:
+
         st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/1111', width=700)
 
-    with col2:
+
         st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/11', width=700)
 
-    with col3:
+
         st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/44', width=700)
 
     st.subheader("Methodology:")
