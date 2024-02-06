@@ -20,7 +20,7 @@ st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
-.big-font { font-family: 'For a thinner font compared to "Bebas Neue", you can consider using "Roboto Condensed', cursive; font-size:90px !important; font-weight: 80; color: white; }
+.big-font { font-family: "Roboto Condensed", cursive; font-size:90px !important; font-weight: 80; color: white; }
 .big2-font { font-family: 'Bebas Neue', cursive; font-size:65px !important; font-weight: 100; color: #D09E55; display: inline-block; margin-bottom: 0px; }
 .med2-font { font-family: 'Bebas Neue', cursive; font-size:45px !important; font-weight: 100; color: white; }
 .medium-font { font-family: 'Bebas Neue', cursive; font-size:55px !important; font-weight: 100; color: #D09E55; }
