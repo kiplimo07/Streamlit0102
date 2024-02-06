@@ -23,7 +23,7 @@ st.markdown("""
 .big-font {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 130px !important;
-    font-weight: 60;
+    font-weight: 80;
     color: #282D33;
     display: inline-block;
     max-width: 90%;
