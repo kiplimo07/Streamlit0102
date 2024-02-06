@@ -33,9 +33,10 @@ st.markdown("""
 .med2-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: #D09E55; }
 .medium-font { font-family: 'Bebas Neue', sans-serif; font-size:55px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato ', sans-serif; font-size:45px !important; color: white; }
-/* New style to increase markdown text size */
-.markdown {
-    font-size: 35px !important;
+/* New style to increase markdown text size and change font to Lato */
+.write {
+    font-family: 'Lato', sans-serif; /* Change font to Lato */
+    font-size: 20px !important;
 }
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
@@ -51,6 +52,8 @@ hr {
 }
 </style>
 """, unsafe_allow_html=True)
+
+
 
 
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
