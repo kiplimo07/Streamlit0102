@@ -21,7 +21,7 @@ st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
 .big-font {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 120px !important;
     font-weight: 400; /* This is the thinnest available for Bebas Neue, but you can try 300 if available */
     color: #3b3f24;
