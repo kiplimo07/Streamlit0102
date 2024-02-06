@@ -23,7 +23,7 @@ st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 st.markdown("""
 <style>
     /* Header styles */
-    .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 80px !important; font-weight: 100; color: #FFFFFF; }
+    .big-font { font-family: 'Bebas Neue Thin', sans-serif; font-size: 80px !important; font-weight: 100; color: #FFFFFF; }
     .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 60px !important; font-weight: 100; color: #FFFFFF; }
     .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 40px !important; font-weight: 100; color: #D09E55; }
     .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 45px !important; font-weight: 400; color: #D09E55; }
