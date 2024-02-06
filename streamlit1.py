@@ -268,11 +268,11 @@ Streamline the quarterly royalty management process, reducing time spent by fina
 
     # Python Section
     st.markdown("#### PYTHON", unsafe_allow_html=True)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/2222', width=1200)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/2222', width=1000)
 
     # VBA Section
     st.markdown("#### VBA", unsafe_allow_html=True)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/9999', width=1200)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/9999', width=1000)
     
     # Impact
     st.subheader("Impact:")
