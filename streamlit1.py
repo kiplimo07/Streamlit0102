@@ -21,16 +21,22 @@ st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
 .big-font { font-family: 'Bebas Neue', cursive; font-size:90px !important; font-weight: 80; color: white; }
-.big2-font { font-family: 'Bebas Neue', cursive; font-size:55px !important; font-weight: 100; color: #D09E55; }
+.big2-font { font-family: 'Bebas Neue', cursive; font-size:65px !important; font-weight: 100; color: #D09E55; }
 .med2-font { font-family: 'Bebas Neue', cursive; font-size:45px !important; font-weight: 100; color: white; }
 .medium-font { font-family: 'Bebas Neue', cursive; font-size:55px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato ', sans-serif; font-size:35px !important; color: white; }
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
-.fa { padding-right: 5px; }
+.fa { padding-right: 15px; }
 /* Adjust top padding of the main container for all pages */
 .reportview-container .main .block-container { padding-top: 1rem; }
-hr { border-top: 3px solid #FFFFFF; margin-top: 20px; margin-bottom: 20px; }
+hr { 
+    border-top: 1px solid #FFFFFF; /* Thinner line */
+    width: 80%; /* Shorter line */
+    margin: 0 auto; /* Center the line */
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
 </style>
 """, unsafe_allow_html=True)
 
