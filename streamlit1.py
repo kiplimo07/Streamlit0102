@@ -21,7 +21,7 @@ st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
 .big-font { font-family: 'Bebas Neue', cursive; font-size:90px !important; font-weight: 80; color: white; }
-.big2-font { font-family: 'Bebas Neue', cursive; font-size:65px !important; font-weight: 100; color: #D09E55; }
+.big2-font { font-family: 'Bebas Neue', cursive; font-size:65px !important; font-weight: 100; color: #D09E55; display: inline-block; margin-bottom: 0px; }
 .med2-font { font-family: 'Bebas Neue', cursive; font-size:45px !important; font-weight: 100; color: white; }
 .medium-font { font-family: 'Bebas Neue', cursive; font-size:55px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato ', sans-serif; font-size:35px !important; color: white; }
@@ -32,17 +32,16 @@ st.markdown("""
 .reportview-container .main .block-container { padding-top: 1rem; }
 hr { 
     border-top: 1px solid #FFFFFF; /* Thinner line */
-    width: 80%; /* Shorter line */
-    margin: 0 auto; /* Center the line */
-    margin-top: 10px;
-    margin-bottom: 5px;
+    width: 80%; /* Adjusted width */
+    margin-left: 0; /* Align to the left */
+    margin-top: -20px; /* Reduce space between PORTFOLIO and the line */
+    margin-bottom: 20px;
 }
 </style>
 """, unsafe_allow_html=True)
 
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
-st.markdown('<p class="big2-font">PORTFOLIO</p>', unsafe_allow_html=True)
-st.markdown('<hr>', unsafe_allow_html=True)  # This adds the white page breaker
+st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)  # Adjusted for closer spacing and alignment
 st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
 st.markdown("""
@@ -54,8 +53,6 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
-
-
 
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
