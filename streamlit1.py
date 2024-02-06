@@ -20,76 +20,50 @@ st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
-    /* Global background color */
-    body {
-        background-color: #1D262F;
-    }
+.big-font {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 110px !important;
+    font-weight: 60;
+    color: white;
+    display: inline-block;
+    max-width: 70%;
+    margin: 0 auto;
+}
+.big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: white; display: inline-block; margin-bottom: 0px; }
+.med2-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: #D09E55; }
+.medium-font { font-family: 'Bebas Neue', sans-serif; font-size:55px !important; font-weight: 100; color: #D09E55; }
+.small-font { font-family: 'Lato', sans-serif; font-size:45px !important; color: white; }
+/* Apply Lato font and adjust size for markdown elements */
+.markdown, .streamlit-container .markdown-text-container * {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 20px !important;
+}
+.reportview-container .main { background-color: #1D262F; }
+.sidebar .sidebar-content { background-color: #1D262F; color: white; }
+.fa { padding-right: 15px; }
+hr { 
+    border-top: 1px solid #FFFFFF;
+    width: 80%;
+    margin-left: 0;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+</style>
+""", unsafe_allow_html=True)
 
-    /* Header styles */
-    .big-font {
-        font-family: 'Bebas Neue', sans-serif;
-        font-size: 110px !important;
-        font-weight: 600;
-        color: white;
-        text-align: center;
-    }
-    .big2-font {
-        font-family: 'Bebas Neue', sans-serif;
-        font-size: 70px !important;
-        font-weight: 400;
-        color: white;
-        text-align: center;
-    }
-    .med2-font {
-        font-family: 'Bebas Neue', sans-serif;
-        font-size: 45px !important;
-        font-weight: 400;
-        color: #D09E55;
-        text-align: center;
-    }
-    .medium-font {
-        font-family: 'Bebas Neue', sans-serif;
-        font-size: 55px !important;
-        font-weight: 400;
-        color: #D09E55;
-    }
-    .small-font {
-        font-family: 'Lato', sans-serif;
-        font-size: 45px !important;
-        color: white;
-    }
 
-    /* Apply Lato font and adjust size for markdown elements */
-    .markdown, .streamlit-container .markdown-text-container *, .stMarkdown {
-        font-family: 'Lato', sans-serif !important;
-        font-size: 20px !important;
-    }
 
-    /* Sidebar styles */
-    .sidebar .sidebar-content {
-        background-color: #1D262F;
-        color: white;
-    }
-    .fa {
-        padding-right: 15px;
-    }
+st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
+st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)  # Adjusted for closer spacing and alignment
+st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
-    /* Horizontal line style */
-    hr {
-        border-top: 2px solid #FFFFFF;
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
+st.markdown("""
+<style>
+    /* Other styles */
+    .reportview-container .main .block-container {
+        /* Adjust padding on the right to create empty space */
+        padding-right: 16.66%;
     }
-
-    /* Navigation hover effect */
-    .stRadio > div { transition: background-color 0.3s ease; }
-    .stRadio > div:hover { background-color: #2A2F36; cursor: pointer; }
-    .stRadio label:hover { color: #D09E55 !important; font-weight: 500; }
-
-    /* Adjust padding and margins */
-    .reportview-container .main .block-container { padding-top: 1rem; padding-right: 16.66%; }
-    .sidebar .sidebar-content { padding: 20px; }
 </style>
 """, unsafe_allow_html=True)
 
