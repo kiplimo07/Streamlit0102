@@ -3,19 +3,19 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+# Define a layout wrapper if needed
 def layout_wrapper(content_func):
-    # Define a container for the main content
     main_container = st.container()
-    # Define a container for extra space on the right (if needed)
     right_space = st.sidebar.container()
 
     with main_container:
         content_func()
-    
-    # Adjust the width of the right_space or add elements here as needed
+
     with right_space:
-        st.write("4")  # Adjust based on need
-        
+        # Placeholder or actual content
+        st.write("Sidebar content here")
+
+# Page configuration
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 
 # Custom Styles and Theme Settings
@@ -52,15 +52,6 @@ st.markdown("""
         margin-bottom: 20px;
     }
 
-
-# Displaying text with custom CSS classes
-st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
-st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)  # Adjusted for closer spacing and alignment
-st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
-
-# Including additional CSS styles
-st.markdown("""
-<style>
     /* Adjust padding and margins */
     .reportview-container .main .block-container { 
         padding-top: 1rem; 
@@ -72,8 +63,12 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+# Displaying text with custom CSS classes
+st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
+st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)
+st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
-
+# Sidebar Navigation
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
     page = st.radio("", ["Welcome", "Data Analytics / Engagement & Monetization Strategies", "Dashboard / Executive Business Insights", "Data Analysis / Warehouse & GL Account Optimization", "Process Automation / Quarterly Royalty Management", "Scope of Skills", "Certifications", "Contact"])
