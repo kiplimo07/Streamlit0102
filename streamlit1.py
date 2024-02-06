@@ -208,15 +208,12 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
 
 
 elif page == "Dashboard / Executive Business Insights":
-    st.header("Dashboard / Executive Business Insights")
+    # Using st.markdown with custom class for header to match the style
+    st.markdown('<h1 class="big-font">Dashboard / Executive Business Insights</h1>', unsafe_allow_html=True)
     
-    # Applying the 'medium-font' class for consistency with the other section
+    # Aligning Objective with Executive Summary/Business Objective style
     st.markdown("""
     <div class="medium-font">Objective:</div>
-    """, unsafe_allow_html=True)
-    
-    # Keeping the text styling consistent with the 'small-font' class
-    st.markdown("""
     <div class="small-font">Enhance strategic decision-making through a unified data ecosystem post-merger. Focus on leveraging analytics to drive stakeholder value and operational efficiency.</div>
     <br>
     """, unsafe_allow_html=True)
@@ -225,9 +222,6 @@ elif page == "Dashboard / Executive Business Insights":
     
     st.markdown("""
     <div class="medium-font">Findings:</div>
-    """, unsafe_allow_html=True)
-    
-    st.markdown("""
     <div class="small-font">Highlighted divisions and accounts showing promising performance, indicating opportunities for strategic realignment and resource optimization.</div>
     <br>
     """, unsafe_allow_html=True)
@@ -237,22 +231,9 @@ elif page == "Dashboard / Executive Business Insights":
     
     st.markdown("""
     <div class="medium-font">Methodology:</div>
-    """, unsafe_allow_html=True)
-    
-    st.markdown("""
     <div class="small-font">Utilized Python for data manipulation and SQL for data querying. Employed Power BI for dynamic dashboards showcasing real-time business intelligence.</div>
     """, unsafe_allow_html=True)
 
-    
-    # Images after the findings with adjusted width
-    with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/11', width=700)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/44', width=700)  # This will span full width; adjust if needed
-
-    st.markdown("""
-    <div class="medium-font">Methodology:</div>
-    <div class="small-font">Utilized Python for data manipulation and SQL for data querying. Employed Power BI for dynamic dashboards showcasing real-time business intelligence.</div>
-    """, unsafe_allow_html=True)
 
 
 elif page == "Data Analysis / Warehouse & GL Account Optimization":
