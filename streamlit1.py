@@ -22,11 +22,11 @@ st.markdown("""
 <style>
 .big-font {
     font-family: 'Bebas Neue', sans-serif;
-     font-size: 100px !important; /* Reduced size for shorter appearance */
-    font-weight: 100;
+     font-size: 110px !important; /* Reduced size for shorter appearance */
+    font-weight: 60;
     color: white;
     display: inline-block; /* Makes the element respect the width */
-    max-width: 80%; /* Adjust as needed to control width */
+    max-width: 70%; /* Adjust as needed to control width */
     margin: 0 auto; /* Center align if needed */
 }
 .big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: #D09E55; display: inline-block; margin-bottom: 0px; }
