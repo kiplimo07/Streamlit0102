@@ -23,7 +23,7 @@ st.markdown("""
     .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 80px !important; font-weight: 100; color: #383f47; }
     .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 60px !important; font-weight: 100; color: #383f47; }
     .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 40px !important; font-weight: 100; color: #D09E55; }
-    .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 30px !important; font-weight: 400; color: #D09E55; }
+    .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 45px !important; font-weight: 400; color: #D09E55; }
     .small-font { font-family: 'Lato', sans-serif; font-size: 35px !important; color: #282D33; }
 
     /* Main content and sidebar background color adjustments */
