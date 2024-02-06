@@ -22,12 +22,9 @@ st.markdown("""
 <style>
 .big-font {
     font-family: 'Raleway', sans-serif;
-    font-size: 70px !important; /* Reduced size for shorter appearance */
+    font-size: 90px !important;
     font-weight: 100;
     color: white;
-    display: inline-block; /* Makes the element respect the width */
-    max-width: 80%; /* Adjust as needed to control width */
-    margin: 0 auto; /* Center align if needed */
 }
 </style>
 .big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: #D09E55; display: inline-block; margin-bottom: 0px; }
