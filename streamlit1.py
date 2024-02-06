@@ -221,15 +221,15 @@ elif page == "Dashboard / Executive Business Insights":
     Enhance strategic decision-making through a unified data ecosystem post-merger. Focus on leveraging analytics to drive stakeholder value and operational efficiency.
     """, unsafe_allow_html=True)
     
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/1111', width=1200)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/1111', width=1000)
     
     st.subheader("Findings:")
     st.markdown("""
     Highlighted divisions and accounts showing promising performance, indicating opportunities for strategic realignment and resource optimization.
     """, unsafe_allow_html=True)
     
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/11', width=1200)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/44', width=1200)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/11', width=1000)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/44', width=1000)
     
     st.subheader("Methodology:")
     st.markdown("""
@@ -245,7 +245,7 @@ elif page == "Data Analysis / Warehouse & GL Account Optimization":
     Identify cost-saving opportunities across logistics and warehouse operations to impact the bottom line positively.
     """, unsafe_allow_html=True)
     
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/3333', width=1200)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/3333', width=1000)
     
     st.subheader("Findings:")
     st.markdown("""
