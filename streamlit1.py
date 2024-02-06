@@ -233,32 +233,46 @@ elif page == "Dashboard / Executive Business Insights":
 
 elif page == "Data Analysis / Warehouse & GL Account Optimization":
     st.header("Data Analysis / Warehouse & GL Account Optimization")
-    st.markdown("""
-    **Objective:** Identify cost-saving opportunities across logistics and warehouse operations to impact the bottom line positively.
-    """)
-    # Correct placement of st.image call
-
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/3333', width=1200)
-    st.markdown("""
-    **Findings:** Revealed inefficiencies in 'SKYLAB' and '3PL Logistics', suggesting areas for cost optimization and process improvements.
     
-    **Methodology:** Analyzed financial data using Python, with a focus on dissecting spending patterns and identifying optimization opportunities.
-    """)
+    st.subheader("Objective:")
+    st.markdown("""
+    Identify cost-saving opportunities across logistics and warehouse operations to impact the bottom line positively.
+    """, unsafe_allow_html=True)
+    
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/3333', width=1200)
+    
+    st.subheader("Findings:")
+    st.markdown("""
+    Revealed inefficiencies in 'SKYLAB' and '3PL Logistics', suggesting areas for cost optimization and process improvements.
+    """, unsafe_allow_html=True)
+    
+    st.subheader("Methodology:")
+    st.markdown("""
+    Analyzed financial data using Python, with a focus on dissecting spending patterns and identifying optimization opportunities.
+    """, unsafe_allow_html=True)
+
 
 elif page == "Process Automation / Quarterly Royalty Management":
     st.header("Process Automation / Quarterly Royalty Management")
-    st.markdown("""
-    **Objective:** Streamline the quarterly royalty management process, reducing time spent by financial analysts from a month-long task to a 2-hour automated process.
-    """)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/2222', width=1200)
-    # Add another image under the first one
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/9999', width=1200)
-
-    st.markdown("""
-    **Impact:** Achieved an 85% reduction in process time, significantly lowering operational costs and enhancing efficiency and accuracy in royalty management.
     
-    **Methodology:** Developed a custom Python script for data consolidation and utilized Excel VBA for automating data extraction and report generation.
-    """)
+    st.subheader("Objective:")
+    st.markdown("""
+    Streamline the quarterly royalty management process, reducing time spent by financial analysts from a month-long task to a 2-hour automated process.
+    """, unsafe_allow_html=True)
+    
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/2222', width=1200)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/9999', width=1200)
+    
+    st.subheader("Impact:")
+    st.markdown("""
+    Achieved an 85% reduction in process time, significantly lowering operational costs and enhancing efficiency and accuracy in royalty management.
+    """, unsafe_allow_html=True)
+    
+    st.subheader("Methodology:")
+    st.markdown("""
+    Developed a custom Python script for data consolidation and utilized Excel VBA for automating data extraction and report generation.
+    """, unsafe_allow_html=True)
+
 
 
 
