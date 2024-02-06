@@ -23,13 +23,13 @@ st.markdown("""
 .big-font {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 120px !important;
-    font-weight: 400;
-    color: ##3b3f24;
+    font-weight: 400; /* This is the thinnest available for Bebas Neue, but you can try 300 if available */
+    color: #3b3f24;
     display: inline-block;
     max-width: 60%;
     margin: 0 auto;
 }
-.big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: ##3b3f24 ; display: inline-block; margin-bottom: 0px; }
+.big2-font { font-family: 'Bebas Neue', sans-serif; font-size:70px !important; font-weight: 100; color: #3b3f24 ; display: inline-block; margin-bottom: 0px; }
 .med2-font { font-family: 'Bebas Neue', sans-serif; font-size:30px !important; font-weight: 100; color: #D09E55; }
 .medium-font { font-family: 'Bebas Neue', sans-serif; font-size:45px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato', sans-serif; font-size:35px !important; color: #282D33; }
@@ -50,6 +50,7 @@ hr {
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 
