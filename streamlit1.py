@@ -12,7 +12,7 @@ def layout_wrapper(content_func):
         content_func()
 
     with right_space:
-        st.write("4")
+        st.write("6")
 
 # Only need to set the page configuration once at the beginning
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
