@@ -21,7 +21,7 @@ st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
-    .reportview-container .main .block-container { padding-top: 10rem; padding-right: 10%; }
+    .reportview-container .main .block-container { padding-top: 10rem; padding-right: 15%; }
     .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 110px !important; font-weight: 100; color: #3b3f24; display: inline-block; max-width: 80%; margin: 0 auto; }
     .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 70px !important; font-weight: 100; color: #3b3f24; display: inline-block; margin-bottom: 0px; }
     .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 30px !important; font-weight: 100; color: #D09E55; }
@@ -36,7 +36,7 @@ st.markdown("""
     .reportview-container .main { background-color: #1D262F; }
     .sidebar .sidebar-content { background-color: #1D262F; color: white; }
     .fa { padding-right: 15px; }
-    hr { border-top: 2px solid #FFFFFF; width: 90%; margin-left: 0; margin-top: -20px; margin-bottom: 20px; }
+    hr { border-top: 2px solid #FFFFFF; width: 95%; margin-left: 0; margin-top: -20px; margin-bottom: 20px; }
 </style>
 """, unsafe_allow_html=True)
 
