@@ -24,7 +24,11 @@ st.markdown("""
     .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 30px !important; font-weight: 100; color: #D09E55; }
     .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 50px !important; font-weight: 100; color: #D09E55; }
     .small-font { font-family: 'Lato', sans-serif; font-size: 20px !important; color: #282D33; } /* Adjusted for smaller font */
-    .markdown, .streamlit-container .markdown-text-container * { font-family: 'Lato', sans-serif !important; font-size: 40px !important; color: #282D33; } /* Apply smaller font size globally to markdown */
+  .markdown, .streamlit-container .markdown-text-container * { 
+    font-family: 'Lato', sans-serif !important; 
+    font-size: 30x !important; 
+    color: #282D33; 
+}
     .reportview-container .main { background-color: #1D262F; }
     .sidebar .sidebar-content { background-color: #1D262F; color: white; }
     .fa { padding-right: 5px; }
@@ -268,7 +272,7 @@ Developed a custom Python script for data consolidation and utilized Excel VBA f
 if page == "Scope of Skills":
     st.header("Scope of Skills")
     st.markdown("""
-    - ***Programming Languages:*** Proficient in Python and VBA.
+    - **Programming Languages:** Proficient in Python and VBA.
     - **Data Engineering Tools:** Experienced in ETL, SSMS, AS400, Snowflakes, Power Query, System Integration Analysis.
     - **Data Analysis Libraries:** Skilled in using Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow.
     - **Statistical Analysis:** Descriptive/Inferential Statistics, A/B Testing, Predictive Modeling, Forecasting, Regression Analysis, Hypothesis Testing, & Time Series Analysis.
