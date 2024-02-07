@@ -268,7 +268,7 @@ Developed a custom Python script for data consolidation and utilized Excel VBA f
 if page == "Scope of Skills":
     st.header("Scope of Skills")
     st.markdown("""
-    - **Programming Languages:** Proficient in Python and VBA.
+    - ***Programming Languages:*** Proficient in Python and VBA.
     - **Data Engineering Tools:** Experienced in ETL, SSMS, AS400, Snowflakes, Power Query, System Integration Analysis.
     - **Data Analysis Libraries:** Skilled in using Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow.
     - **Statistical Analysis:** Descriptive/Inferential Statistics, A/B Testing, Predictive Modeling, Forecasting, Regression Analysis, Hypothesis Testing, & Time Series Analysis.
