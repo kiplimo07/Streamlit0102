@@ -315,7 +315,7 @@ elif page == "LET'S CONNECT":
     st.markdown("""
     Feel free to connect with me for any inquiries or opportunities.
     <br><br>
-    <img src="https://img.icons8.com/material-rounded/24/000000/phone--v1.png" alt="phone_icon" style="vertical-align:middle; width:30px; height:30px;"> **Phone:** `(626) 203 – 3319`
+    <img src="https://img.icons8.com/material-rounded/24/000000/phone--v1.png" alt="phone_icon" style="vertical-align:middle; width:30px; height:30px;"> **Phone:** (626) 203 – 3319
     <br>
     <img src="https://img.icons8.com/material-outlined/24/000000/email--v1.png" alt="email_icon" style="vertical-align:middle; width:30px; height:30px;"> **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)
     <br>
