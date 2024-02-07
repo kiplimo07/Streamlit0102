@@ -95,7 +95,5 @@ Utilized Python for data consolidation and Excel VBA for automating data extract
 "In God we trust; for all else, we turn to the validation of data. With data science as our compass, we're set to reveal hidden insights that our data is just dying to tell." - J. Chang
 
 Contact:
-- (626) 203 – 3319
-- jason.chang01022021@gmail.com
 - Irvine, CA
 - [LinkedIn](linkedin.com/in/jchang0102)
