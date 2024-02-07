@@ -310,7 +310,7 @@ elif page == "CERTIFICATIONS":
     st.subheader("- Analyzing and Visualizing Data with Power BI - EdX")
 
 
-elif page == "Contact":
+elif page == "LET'S CONNECT":
     st.header("LET'S CONNECT!!")
     st.markdown("""
     Feel free to connect with me for any inquiries or opportunities.
