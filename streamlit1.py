@@ -284,9 +284,9 @@ if page == "Scope of Skills":
 elif page == "Certifications":
     st.header("Certifications")
     st.markdown("""
-    - **Big Data Technology Fundamentals### - AWS
-    - **AWS Cloud Practitioner Essentials### - AWS
-    - ###Analyzing and Visualizing Data with Power BI - EdX
+    - **Big Data Technology Fundamentals** - AWS
+    - **AWS Cloud Practitioner Essentials** - AWS
+    - **Analyzing and Visualizing Data with Power BI** - EdX
     """, unsafe_allow_html=False)  # Same here, no HTML content
 
 elif page == "Contact":
