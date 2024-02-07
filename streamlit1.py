@@ -12,7 +12,7 @@ def layout_wrapper(content_func):
         content_func()
 
     with right_space:
-        st.write("2")
+        st.write("3")
 
 # Only need to set the page configuration once at the beginning
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
@@ -35,7 +35,7 @@ st.markdown("""
     }
     .reportview-container .main { background-color: #1D262F; }
     .sidebar .sidebar-content { background-color: #1D262F; color: white; }
-    .fa { padding-right: 5px; }
+    .fa { padding-right: 15px; }
     hr { border-top: 2px solid #FFFFFF; width: 100%; margin-left: 0; margin-top: -20px; margin-bottom: 20px; }
 </style>
 """, unsafe_allow_html=True)
