@@ -54,7 +54,7 @@ st.markdown("""
 
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
-    page = st.radio("", ["WELCOME", "DATA ANALYTICS / ENGAGEMENT & MONETIZATION STRATEGIES", "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS", "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION", "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT", "SCOPE OF SKILLS", "CERTIFICATIONS", "LET'S CONNECT"])
+    page = st.radio("", ["WELCOME", "DATA ANALYTICS / ENGAGEMENT & MONETIZATION", "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS", "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION", "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT", "SCOPE OF SKILLS", "CERTIFICATIONS", "LET'S CONNECT"])
 
 
 @st.cache
@@ -84,9 +84,9 @@ if page == "Welcome":
     As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.
     """)
 
-elif page == "Data Analytics / Engagement & Monetization Strategies":
+elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
  
-    st.header("Data Analytics / Engagement & Monetization")
+    st.header("DATA ANALYTICS / ENGAGEMENT & MONETIZATION")
     st.subheader("Executive Summary/Business Objective:")
     st.write("""
     Emphasized maximizing revenue and enhancing player engagement and satisfaction by analyzing behavior and spending patterns during Warcraft's two in-game events.
@@ -198,8 +198,8 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/999', width=800)
 
 
-elif page == "Dashboard / Executive Business Insights":
-    st.header("Dashboard / Executive Business Insights")
+elif page == "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS":
+    st.header("DASHBOARD / EXECUTIVE BUSINESS INSIGHTS")
     
     st.subheader("Objective:")
     st.markdown("""
@@ -222,8 +222,8 @@ elif page == "Dashboard / Executive Business Insights":
     """, unsafe_allow_html=True)
 
 
-elif page == "Data Analysis / Warehouse & GL Account Optimization":
-    st.header("Data Analysis / Warehouse & GL Account Optimization")
+elif page == "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION":
+    st.header("DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION")
     
     st.subheader("Objective:")
     st.markdown("""
@@ -243,8 +243,8 @@ elif page == "Data Analysis / Warehouse & GL Account Optimization":
     """, unsafe_allow_html=True)
 
 
-elif page == "Process Automation / Quarterly Royalty Management":
-    st.header("Process Automation / Quarterly Royalty Management")
+elif page == "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT":
+    st.header("PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT")
     
     # Objective
     st.subheader("Objective:")
@@ -276,8 +276,8 @@ Developed a custom Python script for data consolidation and utilized Excel VBA f
 
 
 
-if page == "Scope of Skills":
-    st.header("Scope of Skills")
+if page == "SCOPE OF SKILLS":
+    st.header("SCOPE OF SKILLS")
     
     st.markdown("#### Programming Languages:", unsafe_allow_html=True)
     st.markdown("*Proficient in Python and VBA.*", unsafe_allow_html=True)
@@ -303,8 +303,8 @@ if page == "Scope of Skills":
 
 
 
-elif page == "Certifications":
-    st.header("Certifications")
+elif page == "CERTIFICATIONS":
+    st.header("CERTIFICATIONS")
     st.subheader("- Big Data Technology Fundamentals - AWS")
     st.subheader("- AWS Cloud Practitioner Essentials - AWS")
     st.subheader("- Analyzing and Visualizing Data with Power BI - EdX")
