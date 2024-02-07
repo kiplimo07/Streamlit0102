@@ -277,15 +277,28 @@ Developed a custom Python script for data consolidation and utilized Excel VBA f
 
 if page == "Scope of Skills":
     st.header("Scope of Skills")
-    st.markdown("""
-    - **Programming Languages:** Proficient in Python and VBA.
-    - **Data Engineering Tools:** Experienced in ETL, SSMS, AS400, Snowflakes, Power Query, System Integration Analysis.
-    - **Data Analysis Libraries:** Skilled in using Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow.
-    - **Statistical Analysis:** Descriptive/Inferential Statistics, A/B Testing, Predictive Modeling, Forecasting, Regression Analysis, Hypothesis Testing, & Time Series Analysis.
-    - **BI Tools:** Proficient in Power BI, Google Analytics, and Data Studio.
-    - **Digital Marketing:** Facebook, Google Ads, Shopify, Google Analytics, Data Studio, Campaign Management, Performance and Content Optimization.
-    - **Data Modeling:** STAR/ER/DAG diagrams, and Normalization
-    """, unsafe_allow_html=False)  # Set to False since we're not using HTML here
+    
+    st.subheader("Programming Languages:")
+    st.write("Proficient in Python and VBA.")
+    
+    st.subheader("Data Engineering Tools:")
+    st.write("Experienced in ETL, SSMS, AS400, Snowflakes, Power Query, System Integration Analysis.")
+    
+    st.subheader("Data Analysis Libraries:")
+    st.write("Skilled in using Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow.")
+    
+    st.subheader("Statistical Analysis:")
+    st.write("Descriptive/Inferential Statistics, A/B Testing, Predictive Modeling, Forecasting, Regression Analysis, Hypothesis Testing, & Time Series Analysis.")
+    
+    st.subheader("BI Tools:")
+    st.write("Proficient in Power BI, Google Analytics, and Data Studio.")
+    
+    st.subheader("Digital Marketing:")
+    st.write("Facebook, Google Ads, Shopify, Google Analytics, Data Studio, Campaign Management, Performance and Content Optimization.")
+    
+    st.subheader("Data Modeling:")
+    st.write("STAR/ER/DAG diagrams, and Normalization")
+
 
 elif page == "Certifications":
     st.header("Certifications")
