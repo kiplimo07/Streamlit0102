@@ -297,7 +297,7 @@ elif page == "Certifications":
 
 elif page == "Contact":
     st.header("LET'S CONNECT!!")
-    st.write("""
+    st.caption("""
     Feel free to connect with me for any inquiries or opportunities.
     
     - **Phone:** (626) 203 – 3319
