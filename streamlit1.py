@@ -315,13 +315,14 @@ elif page == "LET'S CONNECT":
     st.markdown("""
     Feel free to connect with me for any inquiries or opportunities.
     <br><br>
-    <img src="image.png" alt="phone_icon" style="vertical-align:middle"> **Phone:** `(626) 203 – 3319`
+    <img src="https://example.com/phone_icon.png" alt="phone_icon" style="vertical-align:middle"> **Phone:** `(626) 203 – 3319`
     <br>
-    <img src="image.png" alt="email_icon" style="vertical-align:middle"> **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)
+    <img src="https://example.com/email_icon.png" alt="email_icon" style="vertical-align:middle"> **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)
     <br>
-    <img src="image.png" alt="linkedin_icon" style="vertical-align:middle"> **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)
+    <img src="https://example.com/linkedin_icon.png" alt="linkedin_icon" style="vertical-align:middle"> **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)
     <br>
-    <img src="image.png" alt="location_icon" style="vertical-align:middle"> **Location:** Irvine, CA
+    <img src="https://example.com/location_icon.png" alt="location_icon" style="vertical-align:middle"> **Location:** Irvine, CA
     """, unsafe_allow_html=True)
+
 
 
