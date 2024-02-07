@@ -315,12 +315,12 @@ elif page == "LET'S CONNECT":
     st.markdown("""
     Feel free to connect with me for any inquiries or opportunities.
     <br><br>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Phone_icon_-_noun_project_3074.svg" alt="phone_icon" style="vertical-align:middle; width:20px; height:20px;"> **Phone:** `(626) 203 – 3319`
+    <img src="https://img.icons8.com/material-rounded/24/000000/phone--v1.png" alt="phone_icon" style="vertical-align:middle; width:20px; height:20px;"> **Phone:** `(626) 203 – 3319`
     <br>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="email_icon" style="vertical-align:middle; width:20px; height:20px;"> **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)
+    <img src="https://img.icons8.com/material-outlined/24/000000/email--v1.png" alt="email_icon" style="vertical-align:middle; width:20px; height:20px;"> **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)
     <br>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="linkedin_icon" style="vertical-align:middle; width:20px; height:20px;"> **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)
+    <img src="https://img.icons8.com/material-rounded/24/000000/linkedin--v1.png" alt="linkedin_icon" style="vertical-align:middle; width:20px; height:20px;"> **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)
     <br>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Map_icon_black.svg" alt="location_icon" style="vertical-align:middle; width:20px; height:20px;"> **Location:** Irvine, CA
+    <img src="https://img.icons8.com/material-outlined/24/000000/map-pin.png" alt="location_icon" style="vertical-align:middle; width:20px; height:20px;"> **Location:** Irvine, CA
     """, unsafe_allow_html=True)
 
