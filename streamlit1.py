@@ -267,7 +267,7 @@ Developed a custom Python script for data consolidation and utilized Excel VBA f
 
 elif page == "Scope of Skills":
     st.header("Scope of Skills")
-    st.markdown("""
+    st.medium-font("""
     - **Programming Languages:** Proficient in Python and VBA.
     - **Data Engineering Tools:** Experienced in ETL, SSMS, AS400, Snowflakes, Power Query, System Integration Analysis.
     - **Data Analysis Libraries:** Skilled in using Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow.
@@ -279,7 +279,7 @@ elif page == "Scope of Skills":
 
 elif page == "Certifications":
     st.header("Certifications")
-    st.markdown("""
+    st.medium-font("""
     - **Big Data Technology Fundamentals** - AWS
     - **AWS Cloud Practitioner Essentials** - AWS
     - **Analyzing and Visualizing Data with Power BI** - EdX
@@ -287,7 +287,7 @@ elif page == "Certifications":
 
 elif page == "Contact":
     st.header("LET'S CONNECT!!")
-    st.markdown("""
+    st.medium-font("""
     Feel free to connect with me for any inquiries or opportunities.
     <br><br>
     <i class="fa fa-phone"></i> **Phone:** (626) 203 – 3319
