@@ -304,7 +304,7 @@ if page == "Scope of Skills":
 
 elif page == "Certifications":
     st.header("Certifications")
-    st.markdown("""
+    st.subheader("""
     - Big Data Technology Fundamentals - AWS
     - AWS Cloud Practitioner Essentials - AWS
     - Analyzing and Visualizing Data with Power BI - EdX
