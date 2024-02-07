@@ -265,9 +265,9 @@ Developed a custom Python script for data consolidation and utilized Excel VBA f
 
 
 
-elif page == "Scope of Skills":
+if page == "Scope of Skills":
     st.header("Scope of Skills")
-    st.subheader("""
+    st.markdown("""
     - **Programming Languages:** Proficient in Python and VBA.
     - **Data Engineering Tools:** Experienced in ETL, SSMS, AS400, Snowflakes, Power Query, System Integration Analysis.
     - **Data Analysis Libraries:** Skilled in using Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow.
@@ -275,19 +275,20 @@ elif page == "Scope of Skills":
     - **BI Tools:** Proficient in Power BI, Google Analytics, and Data Studio.
     - **Digital Marketing:** Facebook, Google Ads, Shopify, Google Analytics, Data Studio, Campaign Management, Performance and Content Optimization.
     - **Data Modeling:** STAR/ER/DAG diagrams, and Normalization
-    """)
+    """, unsafe_allow_html=False)  # Set to False since we're not using HTML here
 
 elif page == "Certifications":
     st.header("Certifications")
-    st.subheader("""
+    st.markdown("""
     - **Big Data Technology Fundamentals** - AWS
     - **AWS Cloud Practitioner Essentials** - AWS
     - **Analyzing and Visualizing Data with Power BI** - EdX
-    """)
+    """, unsafe_allow_html=False)  # Same here, no HTML content
 
 elif page == "Contact":
     st.header("LET'S CONNECT!!")
-    st.subheader("""
+    # Here we need unsafe_allow_html=True because of actual HTML tags
+    st.markdown("""
     Feel free to connect with me for any inquiries or opportunities.
     <br><br>
     <i class="fa fa-phone"></i> **Phone:** (626) 203 – 3319
