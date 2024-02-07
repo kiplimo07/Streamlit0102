@@ -36,7 +36,7 @@ st.markdown("""
     .reportview-container .main { background-color: #1D262F; }
     .sidebar .sidebar-content { background-color: #1D262F; color: white; }
     .fa { padding-right: 15px; }
-    hr { border-top: 2px solid #FFFFFF; width: 95%; margin-left: 0; margin-top: -20px; margin-bottom: 5px; }
+    hr { border-top: 2px solid #FFFFFF; width: 90%; margin-left: 0; margin-top: -20px; margin-bottom: 5px; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -48,7 +48,7 @@ st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_al
 # Additional CSS for block-container padding adjustment
 st.markdown("""
 <style>
-    .reportview-container .main .block-container { padding-right: 25%; }
+    .reportview-container .main .block-container { padding-right: 20%; }
 </style>
 """, unsafe_allow_html=True)
 
