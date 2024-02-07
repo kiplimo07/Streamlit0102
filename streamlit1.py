@@ -80,8 +80,7 @@ data = load_data(data_url)
 if page == "Welcome":
     content_col, spacer_col = st.columns([0.50, 0.50])  # Adjust the ratio based on your preference
     st.markdown("### Welcome to My Portfolio")
-    st.markdown("""
-    As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.
+    st.markdown("""    As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.
     """)
 
 elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
@@ -305,9 +304,9 @@ if page == "SCOPE OF SKILLS":
 
 elif page == "CERTIFICATIONS":
     st.header("CERTIFICATIONS")
-    st.subheader("- Big Data Technology Fundamentals - AWS")
-    st.subheader("- AWS Cloud Practitioner Essentials - AWS")
-    st.subheader("- Analyzing and Visualizing Data with Power BI - EdX")
+    st.subheader(" Big Data Technology Fundamentals - AWS")
+    st.subheader(" AWS Cloud Practitioner Essentials - AWS")
+    st.subheader(" Analyzing and Visualizing Data with Power BI - EdX")
 
 
 elif page == "LET'S CONNECT":
