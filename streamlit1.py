@@ -104,13 +104,13 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     col1, col2 = st.columns([1, 1,])  # Adjust the ratio if needed
  
     with col1:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', width=600)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/333', width=550)
 
 
 
 
     with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', width=600)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', width=550)
 
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
@@ -119,10 +119,10 @@ elif page == "Data Analytics / Engagement & Monetization Strategies":
     col1, col2 = st.columns([1, 1,])  # Adjust the ratio if needed
  
     with col1:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/777', caption='Distribution of Spending Across Skill Brackets', width=600)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/777', caption='Distribution of Spending Across Skill Brackets', width=550)
 
     with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=600)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/111', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=550)
 
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
