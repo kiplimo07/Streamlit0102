@@ -278,26 +278,27 @@ Developed a custom Python script for data consolidation and utilized Excel VBA f
 if page == "Scope of Skills":
     st.header("Scope of Skills")
     
-    st.subheader("Programming Languages:")
-    st.subheader("Proficient in Python and VBA.")
+    st.markdown("#### Programming Languages:", unsafe_allow_html=True)
+    st.markdown("*Proficient in Python and VBA.*", unsafe_allow_html=True)
     
-    st.subheader("Data Engineering Tools:")
-    st.subheader("Experienced in ETL, SSMS, AS400, Snowflakes, Power Query, System Integration Analysis.")
+    st.markdown("#### Data Engineering Tools:", unsafe_allow_html=True)
+    st.markdown("*Experienced in ETL, SSMS, AS400, Snowflakes, Power Query, System Integration Analysis.*", unsafe_allow_html=True)
     
-    st.subheader("Data Analysis Libraries:")
-    st.subheader("Skilled in using Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow.")
+    st.markdown("#### Data Analysis Libraries:", unsafe_allow_html=True)
+    st.markdown("*Skilled in using Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow.*", unsafe_allow_html=True)
     
-    st.subheader("Statistical Analysis:")
-    st.subheader("Descriptive/Inferential Statistics, A/B Testing, Predictive Modeling, Forecasting, Regression Analysis, Hypothesis Testing, & Time Series Analysis.")
+    st.markdown("#### Statistical Analysis:", unsafe_allow_html=True)
+    st.markdown("*Descriptive/Inferential Statistics, A/B Testing, Predictive Modeling, Forecasting, Regression Analysis, Hypothesis Testing, & Time Series Analysis.*", unsafe_allow_html=True)
     
-    st.subheader("BI Tools:")
-    st.subheader("Proficient in Power BI, Google Analytics, and Data Studio.")
+    st.markdown("#### BI Tools:", unsafe_allow_html=True)
+    st.markdown("*Proficient in Power BI, Google Analytics, and Data Studio.*", unsafe_allow_html=True)
     
-    st.subheader("Digital Marketing:")
-    st.subheader("Facebook, Google Ads, Shopify, Google Analytics, Data Studio, Campaign Management, Performance and Content Optimization.")
+    st.markdown("#### Digital Marketing:", unsafe_allow_html=True)
+    st.markdown("*Facebook, Google Ads, Shopify, Google Analytics, Data Studio, Campaign Management, Performance and Content Optimization.*", unsafe_allow_html=True)
     
-    st.subheader("Data Modeling:")
-    st.subheader("STAR/ER/DAG diagrams, and Normalization")
+    st.markdown("#### Data Modeling:", unsafe_allow_html=True)
+    st.markdown("*STAR/ER/DAG diagrams, and Normalization.*", unsafe_allow_html=True)
+
 
 
 
