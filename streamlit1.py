@@ -304,11 +304,10 @@ if page == "Scope of Skills":
 
 elif page == "Certifications":
     st.header("Certifications")
-    st.subheader("""
-    - Big Data Technology Fundamentals - AWS
-    - AWS Cloud Practitioner Essentials - AWS
-    - Analyzing and Visualizing Data with Power BI - EdX
-    """)
+    st.subheader("- Big Data Technology Fundamentals - AWS")
+    st.subheader("- AWS Cloud Practitioner Essentials - AWS")
+    st.subheader("- Analyzing and Visualizing Data with Power BI - EdX")
+
 
 elif page == "Contact":
     st.header("LET'S CONNECT!!")
