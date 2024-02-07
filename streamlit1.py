@@ -279,25 +279,26 @@ if page == "Scope of Skills":
     st.header("Scope of Skills")
     
     st.subheader("Programming Languages:")
-    st.write("Proficient in Python and VBA.")
+    st.subheader("Proficient in Python and VBA.")
     
     st.subheader("Data Engineering Tools:")
-    st.write("Experienced in ETL, SSMS, AS400, Snowflakes, Power Query, System Integration Analysis.")
+    st.subheader("Experienced in ETL, SSMS, AS400, Snowflakes, Power Query, System Integration Analysis.")
     
     st.subheader("Data Analysis Libraries:")
-    st.write("Skilled in using Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow.")
+    st.subheader("Skilled in using Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow.")
     
     st.subheader("Statistical Analysis:")
-    st.write("Descriptive/Inferential Statistics, A/B Testing, Predictive Modeling, Forecasting, Regression Analysis, Hypothesis Testing, & Time Series Analysis.")
+    st.subheader("Descriptive/Inferential Statistics, A/B Testing, Predictive Modeling, Forecasting, Regression Analysis, Hypothesis Testing, & Time Series Analysis.")
     
     st.subheader("BI Tools:")
-    st.write("Proficient in Power BI, Google Analytics, and Data Studio.")
+    st.subheader("Proficient in Power BI, Google Analytics, and Data Studio.")
     
     st.subheader("Digital Marketing:")
-    st.write("Facebook, Google Ads, Shopify, Google Analytics, Data Studio, Campaign Management, Performance and Content Optimization.")
+    st.subheader("Facebook, Google Ads, Shopify, Google Analytics, Data Studio, Campaign Management, Performance and Content Optimization.")
     
     st.subheader("Data Modeling:")
-    st.write("STAR/ER/DAG diagrams, and Normalization")
+    st.subheader("STAR/ER/DAG diagrams, and Normalization")
+
 
 
 elif page == "Certifications":
