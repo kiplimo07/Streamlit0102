@@ -22,9 +22,9 @@ st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
     .reportview-container .main .block-container { padding-top: 10rem; padding-right: 20%; }
-    .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 110px !important; font-weight: 100; color: #3b3f24; display: inline-block; max-width: 80%; margin: 0 auto; }
-    .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 70px !important; font-weight: 100; color: #3b3f24; display: inline-block; margin-bottom: 0px; }
-    .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 30px !important; font-weight: 100; color: #D09E55; }
+    .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 120px !important; font-weight: 100; color: #3b3f24; display: inline-block; max-width: 80%; margin: 0 auto; }
+    .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 80px !important; font-weight: 100; color: #3b3f24; display: inline-block; margin-bottom: 0px; }
+    .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 40px !important; font-weight: 100; color: #D09E55; }
     .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 50px !important; font-weight: 100; color: #D09E55; }
     .small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
     /* Ensuring markdown content uses 'Lato' */
