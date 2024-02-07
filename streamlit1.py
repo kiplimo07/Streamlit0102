@@ -321,7 +321,6 @@ elif page == "LET'S CONNECT":
     <br>
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="linkedin_icon" style="vertical-align:middle; width:20px; height:20px;"> **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)
     <br>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Location_marker_icon.png" alt="location_icon" style="vertical-align:middle; width:20px; height:20px;"> **Location:** Irvine, CA
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Map_icon_black.svg" alt="location_icon" style="vertical-align:middle; width:20px; height:20px;"> **Location:** Irvine, CA
     """, unsafe_allow_html=True)
-
 
