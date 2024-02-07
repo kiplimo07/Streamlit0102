@@ -30,7 +30,7 @@ st.markdown("""
     .small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
     .streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { 
         font-family: 'Lato', sans-serif !important; 
-        font-size: 30px !important; 
+        font-size: 40px !important; 
         color: #282D33; 
     }
     .reportview-container .main { background-color: #1D262F; }
