@@ -310,17 +310,18 @@ elif page == "CERTIFICATIONS":
     st.subheader("- Analyzing and Visualizing Data with Power BI - EdX")
 
 
-elif page == "LET'S CONNECT":
+elif page == "Contact":
     st.header("LET'S CONNECT!!")
     st.markdown("""
     Feel free to connect with me for any inquiries or opportunities.
     <br><br>
-    <i class="fa fa-phone"></i> **Phone:** `(626) 203 – 3319`
+    <img src="image.png" alt="phone_icon" style="vertical-align:middle"> **Phone:** `(626) 203 – 3319`
     <br>
-    <i class="fa fa-envelope"></i> **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)
+    <img src="image.png" alt="email_icon" style="vertical-align:middle"> **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)
     <br>
-    <i class="fa fa-linkedin"></i> **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)
+    <img src="image.png" alt="linkedin_icon" style="vertical-align:middle"> **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)
     <br>
-    <i class="fa fa-home"></i> **Location:** Irvine, CA
+    <img src="image.png" alt="location_icon" style="vertical-align:middle"> **Location:** Irvine, CA
     """, unsafe_allow_html=True)
+
 
