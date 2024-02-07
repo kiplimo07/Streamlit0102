@@ -3,6 +3,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+# Function definition remains the same
 def layout_wrapper(content_func):
     main_container = st.container()
     right_space = st.sidebar.container()
@@ -13,8 +14,10 @@ def layout_wrapper(content_func):
     with right_space:
         st.write("4")
 
+# Only need to set the page configuration once at the beginning
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 
+# Custom CSS to style the Streamlit app
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
@@ -23,12 +26,13 @@ st.markdown("""
     .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 70px !important; font-weight: 100; color: #3b3f24; display: inline-block; margin-bottom: 0px; }
     .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 30px !important; font-weight: 100; color: #D09E55; }
     .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 50px !important; font-weight: 100; color: #D09E55; }
-    .small-font { font-family: 'Lato', sans-serif; font-size: 20px !important; color: #282D33; } /* Adjusted for smaller font */
-  .markdown, .streamlit-container .markdown-text-container * { 
-    font-family: 'Lato', sans-serif !important; 
-    font-size: 30x !important; 
-    color: #282D33; 
-}
+    .small-font { font-family: 'Lato', sans-serif; font-size: 20px !important; color: #282D33; }
+    /* Ensuring markdown content uses 'Lato' */
+    .streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { 
+        font-family: 'Lato', sans-serif !important; 
+        font-size: 20px !important; 
+        color: #282D33; 
+    }
     .reportview-container .main { background-color: #1D262F; }
     .sidebar .sidebar-content { background-color: #1D262F; color: white; }
     .fa { padding-right: 5px; }
@@ -36,10 +40,12 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+# HTML content
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)
 st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
+# Additional CSS for block-container padding adjustment
 st.markdown("""
 <style>
     .reportview-container .main .block-container { padding-right: 25%; }
