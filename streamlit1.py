@@ -312,9 +312,15 @@ elif page == "CERTIFICATIONS":
 
 elif page == "LET'S CONNECT":
     st.header("LET'S CONNECT!!")
-    st.subheader("Feel free to connect with me for any inquiries or opportunities.")
-    st.subheader("- **Phone:** (626) 203 – 3319")
-    st.subheader("- **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)")
-    st.subheader("- **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)")
-    st.subheader("- **Location:** Irvine CA")
+    st.markdown("""
+    Feel free to connect with me for any inquiries or opportunities.
+    <br><br>
+    <i class="fa fa-phone"></i> **Phone:** `(626) 203 – 3319`
+    <br>
+    <i class="fa fa-envelope"></i> **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)
+    <br>
+    <i class="fa fa-linkedin"></i> **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)
+    <br>
+    <i class="fa fa-home"></i> **Location:** Irvine, CA
+    """, unsafe_allow_html=True)
 
