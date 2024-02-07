@@ -22,7 +22,7 @@ st.markdown("""
     .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 110px !important; font-weight: 100; color: #3b3f24; display: inline-block; max-width: 80%; margin: 0 auto; }
     .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 70px !important; font-weight: 100; color: #3b3f24; display: inline-block; margin-bottom: 0px; }
     .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 30px !important; font-weight: 100; color: #D09E55; }
-    .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 45px !important; font-weight: 100; color: #D09E55; }
+    .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 50px !important; font-weight: 100; color: #D09E55; }
     .small-font { font-family: 'Lato', sans-serif; font-size: 40px !important; color: #282D33; }
     .markdown, .streamlit-container .markdown-text-container * { font-family: 'Lato', sans-serif !important; font-size: 40px !important; }
     .reportview-container .main { background-color: #1D262F; }
@@ -267,7 +267,7 @@ Developed a custom Python script for data consolidation and utilized Excel VBA f
 
 elif page == "Scope of Skills":
     st.header("Scope of Skills")
-    st.medium-font("""
+    st.subheader("""
     - **Programming Languages:** Proficient in Python and VBA.
     - **Data Engineering Tools:** Experienced in ETL, SSMS, AS400, Snowflakes, Power Query, System Integration Analysis.
     - **Data Analysis Libraries:** Skilled in using Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow.
@@ -279,7 +279,7 @@ elif page == "Scope of Skills":
 
 elif page == "Certifications":
     st.header("Certifications")
-    st.medium-font("""
+    st.subheader("""
     - **Big Data Technology Fundamentals** - AWS
     - **AWS Cloud Practitioner Essentials** - AWS
     - **Analyzing and Visualizing Data with Power BI** - EdX
@@ -287,7 +287,7 @@ elif page == "Certifications":
 
 elif page == "Contact":
     st.header("LET'S CONNECT!!")
-    st.medium-font("""
+    st.subheader("""
     Feel free to connect with me for any inquiries or opportunities.
     <br><br>
     <i class="fa fa-phone"></i> **Phone:** (626) 203 – 3319
