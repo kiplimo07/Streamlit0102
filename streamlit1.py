@@ -297,15 +297,11 @@ elif page == "Certifications":
 
 elif page == "Contact":
     st.header("LET'S CONNECT!!")
-    # Here we need unsafe_allow_html=True because of actual HTML tags
-    st.markdown("""
+    st.write("""
     Feel free to connect with me for any inquiries or opportunities.
-    <br><br>
-    <i class="fa fa-phone"></i> **Phone:** (626) 203 – 3319
-    <br>
-    <i class="fa fa-envelope"></i> **Email:** <a href="mailto:jason.chang01022021@gmail.com">jason.chang01022021@gmail.com</a>
-    <br>
-    <i class="fa fa-linkedin"></i> **LinkedIn:** <a href="https://linkedin.com/in/jchang0102" target="_blank">linkedin.com/in/jchang0102</a>
-    <br>
-    <i class="fa fa-home"></i> **Location:** Irvine CA
-    """, unsafe_allow_html=True)
+    
+    - **Phone:** (626) 203 – 3319
+    - **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang01022021@gmail.com)
+    - **LinkedIn:** [linkedin.com/in/jchang0102](https://linkedin.com/in/jchang0102)
+    - **Location:** Irvine CA
+    """)
