@@ -289,7 +289,7 @@ if page == "Scope of Skills":
 
 elif page == "Certifications":
     st.header("Certifications")
-    st.write("""
+    st.markdown("""
     - Big Data Technology Fundamentals - AWS
     - AWS Cloud Practitioner Essentials - AWS
     - Analyzing and Visualizing Data with Power BI - EdX
@@ -297,7 +297,7 @@ elif page == "Certifications":
 
 elif page == "Contact":
     st.header("LET'S CONNECT!!")
-    st.caption("""
+    st.markdown("""
     Feel free to connect with me for any inquiries or opportunities.
     
     - **Phone:** (626) 203 – 3319
