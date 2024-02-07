@@ -277,35 +277,35 @@ Developed a custom Python script for data consolidation and utilized Excel VBA f
 
 if page == "Scope of Skills":
     st.header("Scope of Skills")
-    st.subheader("""
-    - **Programming Languages:** Proficient in Python and VBA.
-    - **Data Engineering Tools:** Experienced in ETL, SSMS, AS400, Snowflakes, Power Query, System Integration Analysis.
-    - **Data Analysis Libraries:** Skilled in using Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow.
-    - **Statistical Analysis:** Descriptive/Inferential Statistics, A/B Testing, Predictive Modeling, Forecasting, Regression Analysis, Hypothesis Testing, & Time Series Analysis.
-    - **BI Tools:** Proficient in Power BI, Google Analytics, and Data Studio.
-    - **Digital Marketing:** Facebook, Google Ads, Shopify, Google Analytics, Data Studio, Campaign Management, Performance and Content Optimization.
-    - **Data Modeling:** STAR/ER/DAG diagrams, and Normalization
-    """, unsafe_allow_html=False)  # Set to False since we're not using HTML here
+    st.subheader("Programming Languages:")
+    st.write("Proficient in Python and VBA.")
+    st.subheader("Data Engineering Tools:")
+    st.write("Experienced in ETL, SSMS, AS400, Snowflakes, Power Query, System Integration Analysis.")
+    st.subheader("Data Analysis Libraries:")
+    st.write("Skilled in using Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow.")
+    st.subheader("Statistical Analysis:")
+    st.write("Descriptive/Inferential Statistics, A/B Testing, Predictive Modeling, Forecasting, Regression Analysis, Hypothesis Testing, & Time Series Analysis.")
+    st.subheader("BI Tools:")
+    st.write("Proficient in Power BI, Google Analytics, and Data Studio.")
+    st.subheader("Digital Marketing:")
+    st.write("Facebook, Google Ads, Shopify, Google Analytics, Data Studio, Campaign Management, Performance and Content Optimization.")
+    st.subheader("Data Modeling:")
+    st.write("STAR/ER/DAG diagrams, and Normalization")
 
 elif page == "Certifications":
     st.header("Certifications")
-    st.subheader("""
-    - **Big Data Technology Fundamentals** - AWS
-    - **AWS Cloud Practitioner Essentials** - AWS
-    - **Analyzing and Visualizing Data with Power BI** - EdX
-    """, unsafe_allow_html=False)  # Same here, no HTML content
+    st.write("""
+    - Big Data Technology Fundamentals - AWS
+    - AWS Cloud Practitioner Essentials - AWS
+    - Analyzing and Visualizing Data with Power BI - EdX
+    """)
 
 elif page == "Contact":
     st.header("LET'S CONNECT!!")
-    # Here we need unsafe_allow_html=True because of actual HTML tags
-    st.subheader("""
+    st.write("""
     Feel free to connect with me for any inquiries or opportunities.
-    <br><br>
-    <i class="fa fa-phone"></i> **Phone:** (626) 203 – 3319
-    <br>
-    <i class="fa fa-envelope"></i> **Email:** <a href="mailto:jason.chang01022021@gmail.com">jason.chang01022021@gmail.com</a>
-    <br>
-    <i class="fa fa-linkedin"></i> **LinkedIn:** <a href="https://linkedin.com/in/jchang0102" target="_blank">linkedin.com/in/jchang0102</a>
-    <br>
-    <i class="fa fa-home"></i> **Location:** Irvine CA
+    
+    - **Phone:** (626) 203 – 3319
+    - **Email:** [jason.chang01022021@gmail.com](mailto:jason.chang
+
     """, unsafe_allow_html=True)
