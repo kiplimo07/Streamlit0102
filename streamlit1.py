@@ -54,7 +54,7 @@ st.markdown("""
 
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
-    page = st.radio("", ["WELCOME", "DATA ANALYTICS / ENGAGEMENT & MONETIZATION STRATEGIES", "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS", "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION", "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT", "SCOPE OF SKILLS", "CERTIFICATIONS", "CONTACT"])
+    page = st.radio("", ["WELCOME", "DATA ANALYTICS / ENGAGEMENT & MONETIZATION STRATEGIES", "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS", "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION", "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT", "SCOPE OF SKILLS", "CERTIFICATIONS", "LET'S CONNECT"])
 
 
 @st.cache
@@ -310,7 +310,7 @@ elif page == "Certifications":
     st.subheader("- Analyzing and Visualizing Data with Power BI - EdX")
 
 
-elif page == "Contact":
+elif page == "LET'S CONNECT":
     st.header("LET'S CONNECT!!")
     st.subheader("Feel free to connect with me for any inquiries or opportunities.")
     st.subheader("- **Phone:** (626) 203 – 3319")
