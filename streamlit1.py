@@ -110,7 +110,7 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
 
 
     with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/222', width=550)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/222', width=550)
 
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
@@ -253,7 +253,7 @@ Streamline the quarterly royalty management process, reducing time spent by fina
 
     # Python Section
     st.markdown("#### PYTHON", unsafe_allow_html=True)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/2222', width=900)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/2222', width=900)
 
     # VBA Section
     st.markdown("#### VBA", unsafe_allow_html=True)
