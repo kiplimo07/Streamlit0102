@@ -3,6 +3,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+# Function to wrap content in containers
 def layout_wrapper(content_func):
     main_container = st.container()
     right_space = st.sidebar.container()
@@ -11,43 +12,43 @@ def layout_wrapper(content_func):
     with right_space:
         st.write("Sidebar content here")
 
+# Page configuration
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 
-# Assuming direct image URL is obtained and replaced '<direct_image_url>'
-image_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/Picture/main"  # Update this line with the direct URL to your image
-
-st.markdown(f"""
-    <style>
-    .reportview-container .main .block-container {{
-        padding-right: 20% !important;
-    }}
-    .sidebar .sidebar-content {{
-        background-color: #1D262F; color: white;
-    }}
-    </style>
-    <div style="text-align: center;">
-        <img src="{image_url}" alt="Header Image" style="max-width: 100%; margin-bottom: -50px;">
-    </div>
-""", unsafe_allow_html=True)
-
-# Your CSS adjustments for padding and margins
+# Custom header with HTML and CSS
 st.markdown("""
-    <style>
-    /* Adjust the main content area padding and margins */
-    .reportview-container .main .block-container {
-      
-  
-    }
-    /* Sidebar padding for completeness */
-    .sidebar .sidebar-content {
-        padding: 5px !important;
-    }
-    </style>
+<div class="custom-header">
+    <h1>JASON CHANG</h1>
+    <h2>PORTFOLIO</h2>
+    <h3>Full Stack Senior Data Analyst</h3>
+</div>
+
+<style>
+/* Custom CSS for the header block */
+.custom-header {
+    margin-top: -50px; /* Adjust this value to move the block upwards */
+}
+
+/* Additional styles for your headings to match Streamlit's style */
+.custom-header h1, .custom-header h2, .custom-header h3 {
+    color: #3e4047; /* Example color */
+    font-family: 'Bebas Neue', sans-serif; /* Example font */
+    text-align: center; /* Center align text */
+}
+
+/* Adjustments for the rest of the content to ensure proper spacing */
+.reportview-container .main .block-container {
+    padding-top: 1rem !important; /* Adjust the top padding as needed */
+    padding-right: 20% !important; /* Adjust the right padding as needed */
+}
+
+/* Sidebar customization */
+.sidebar .sidebar-content {
+    background-color: #1D262F; /* Sidebar background color */
+    color: white; /* Sidebar text color */
+}
+</style>
 """, unsafe_allow_html=True)
-
-# The rest of your Streamlit app code here...
-
-
 
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
