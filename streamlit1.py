@@ -36,25 +36,24 @@ hr { border-top: 2px solid #FFFFFF; width: 100%; margin-left: 0; margin-top: -20
 
 
 st.markdown("""
+<link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
-/* Adjust the main content area padding and margins */
-.reportview-container .main .block-container {
-    padding-left: 20px !important; /* Left padding */
-    padding-right: 20px !important; /* Right padding */
-    padding-top: 1rem !important; /* Adjust top padding to reduce space, change as needed */
-}
-
-/* If the above does not sufficiently reduce top space, target the first child element */
-.reportview-container .main .block-container > :first-child {
-    margin-top: -50px !important; /* Negative margin to pull up the content, adjust as needed */
-}
-
-/* Sidebar padding for completeness */
-.sidebar .sidebar-content {
-    padding: 5px !important;
-}
+.reportview-container .main .block-container { padding-right: 20% !important; }
+.big-font { font-family: 'Bebas Neue', sans-serif; font-size: 120px !important; font-weight: 100; color: #3e4047; display: inline-block; max-width: 80%; margin: 0 auto; margin-top: -100px; } /* Adjusted */
+.big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 70px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: -50px; } /* Adjusted */
+.med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 40px !important; font-weight: 100; color: #D09E55; margin-top: -20px; } /* Adjusted */
+.medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 50px !important; font-weight: 100; color: #D09E55; }
+.small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
+.streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 40px !important; color: #282D33; }
+.reportview-container .main { background-color: #1D262F; }
+.sidebar .sidebar-content { background-color: #1D262F; color: white; }
+.fa { padding-right: 10px; }
+hr { border-top: 2px solid #FFFFFF; width: 100%; margin-left: 0; margin-top: -20px; margin-bottom: 5px; }
 </style>
 """, unsafe_allow_html=True)
+
+
+
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
     page = st.radio("",["WELCOME", "DATA ANALYTICS / ENGAGEMENT & MONETIZATION", "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS", "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION", "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT", "SCOPE OF SKILLS", "CERTIFICATIONS", "LET'S CONNECT"])
