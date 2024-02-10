@@ -38,7 +38,7 @@ st.markdown("""
 <style>
 /* Adjust the top margin of the first element inside the main block container */
 .reportview-container .main .block-container > :first-child {
-    margin-top: -400px !important;
+    margin-top: -40px !important;
 }
 /* Adjust the right padding of the main block container */
 .reportview-container .main .block-container {
