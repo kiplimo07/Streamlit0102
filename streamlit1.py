@@ -34,11 +34,6 @@ hr { border-top: 2px solid #FFFFFF; width: 100%; margin-left: 0; margin-top: -20
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
-st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)
-st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
-
-
 
 st.markdown("""
 <style>
