@@ -47,12 +47,12 @@ st.markdown("""
 
 /* If the above does not sufficiently reduce top space, target the first child element */
 .reportview-container .main .block-container > :first-child {
-    margin-top: -20px !important; /* Negative margin to pull up the content, adjust as needed */
+    margin-top: -50px !important; /* Negative margin to pull up the content, adjust as needed */
 }
 
 /* Sidebar padding for completeness */
 .sidebar .sidebar-content {
-    padding: 10px !important;
+    padding: 5px !important;
 }
 </style>
 """, unsafe_allow_html=True)
