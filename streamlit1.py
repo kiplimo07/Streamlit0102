@@ -307,16 +307,16 @@ elif page == "CERTIFICATIONS":
     st.subheader(" AWS Cloud Practitioner Essentials - AWS")
     st.subheader(" Analyzing and Visualizing Data with Power BI - EdX")
 
-
-st.header("LET'S CONNECT!!")
-st.markdown("""
-Feel free to connect with me for any inquiries or opportunities.
-<br><br>
-<img src="https://img.icons8.com/material-rounded/48/000000/phone--v1.png" alt="phone_icon" style="vertical-align:middle; width:48px; height:48px;"> <span style="font-size:24px; vertical-align:middle;">**Phone:** (626) 203 – 3319</span>
-<br>
-<img src="https://img.icons8.com/material-outlined/48/000000/email--v1.png" alt="email_icon" style="vertical-align:middle; width:48px; height:48px;"> <span style="font-size:24px; vertical-align:middle;">**Email:** jason.chang01022021@gmail.com</span>
-<br>
-<img src="https://img.icons8.com/material-rounded/48/000000/linkedin--v1.png" alt="linkedin_icon" style="vertical-align:middle; width:48px; height:48px;"> <span style="font-size:24px; vertical-align:middle;">**LinkedIn:** linkedin.com/in/jchang0102</span>
-<br>
-<img src="https://img.icons8.com/material-outlined/48/000000/map-pin.png" alt="location_icon" style="vertical-align:middle; width:48px; height:48px;"> <span style="font-size:24px; vertical-align:middle;">**Location:** Irvine, CA</span>
-""", unsafe_allow_html=True)
+elif page == "LET'S CONNECT":
+    st.header("LET'S CONNECT!!")
+    st.markdown("""
+    Feel free to connect with me for any inquiries or opportunities.
+    <br><br>
+    <img src="https://img.icons8.com/material-rounded/48/000000/phone--v1.png" alt="phone_icon" style="vertical-align:middle; width:48px; height:48px;"> <span style="font-size:24px; vertical-align:middle;">**Phone:** (626) 203 – 3319</span>
+    <br>
+    <img src="https://img.icons8.com/material-outlined/48/000000/email--v1.png" alt="email_icon" style="vertical-align:middle; width:48px; height:48px;"> <span style="font-size:24px; vertical-align:middle;">**Email:** jason.chang01022021@gmail.com</span>
+    <br>
+    <img src="https://img.icons8.com/material-rounded/48/000000/linkedin--v1.png" alt="linkedin_icon" style="vertical-align:middle; width:48px; height:48px;"> <span style="font-size:24px; vertical-align:middle;">**LinkedIn:** linkedin.com/in/jchang0102</span>
+    <br>
+    <img src="https://img.icons8.com/material-outlined/48/000000/map-pin.png" alt="location_icon" style="vertical-align:middle; width:48px; height:48px;"> <span style="font-size:24px; vertical-align:middle;">**Location:** Irvine, CA</span>
+    """, unsafe_allow_html=True)
