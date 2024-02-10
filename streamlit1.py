@@ -38,7 +38,7 @@ st.markdown("""
 <style>
 html, body, .reportview-container, .main .block-container {
     margin: 5;
-    padding: 10;
+    padding: 5;
 }
 .reportview-container .main .block-container {
     padding-right: 10px !important;
