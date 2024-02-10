@@ -9,55 +9,44 @@ def layout_wrapper(content_func):
     with main_container:
         content_func()
     with right_space:
-        st.write("3")
+        st.write("Sidebar content here")
 
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 
-st.markdown("""
-<link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
-<style>
-.reportview-container .main .block-container { padding-right: 20% !important; }
-.big-font { font-family: 'Bebas Neue', sans-serif; font-size: 120px !important; font-weight: 100; color: #3e4047; display: inline-block; max-width: 80%; margin: 0 auto; }
-.big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 70px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; }
-.med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 40px !important; font-weight: 100; color: #D09E55; }
-.medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 50px !important; font-weight: 100; color: #D09E55; }
-.small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
-.streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 40px !important; color: #282D33; }
-.reportview-container .main { background-color: #1D262F; }
-.sidebar .sidebar-content { background-color: #1D262F; color: white; }
-.fa { padding-right: 10px; }
-hr { border-top: 2px solid #FFFFFF; width: 100%; margin-left: 0; margin-top: -20px; margin-bottom: 5px; }
-</style>
+# Assuming direct image URL is obtained and replaced '<direct_image_url>'
+image_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/Picture/main.jpg"  # Update this line with the direct URL to your image
+
+st.markdown(f"""
+    <style>
+    .reportview-container .main .block-container {{
+        padding-right: 20% !important;
+    }}
+    .sidebar .sidebar-content {{
+        background-color: #1D262F; color: white;
+    }}
+    </style>
+    <div style="text-align: center;">
+        <img src="{image_url}" alt="Header Image" style="max-width: 100%; margin-bottom: -50px;">
+    </div>
 """, unsafe_allow_html=True)
 
-
-
+# Your CSS adjustments for padding and margins
 st.markdown("""
-<style>
-/* Adjust the main content area padding and margins */
-.reportview-container .main .block-container {
-    padding-left: 20px !important; /* Left padding */
-    padding-right: 20px !important; /* Right padding */
-    padding-top: 1rem !important; /* Adjust top padding to reduce space, change as needed */
-}
-
-/* If the above does not sufficiently reduce top space, target the first child element */
-.reportview-container .main .block-container > :first-child {
-    margin-top: -50px !important; /* Negative margin to pull up the content, adjust as needed */
-}
-
-/* Sidebar padding for completeness */
-.sidebar .sidebar-content {
-    padding: 5px !important;
-}
-</style>
-
-st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
-st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)
-st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
-
-
+    <style>
+    /* Adjust the main content area padding and margins */
+    .reportview-container .main .block-container {
+        padding-left: 20px !important; /* Left padding */
+        padding-right: 20px !important; /* Right padding */
+        padding-top: 1rem !important; /* Adjust top padding to reduce space, change as needed */
+    }
+    /* Sidebar padding for completeness */
+    .sidebar .sidebar-content {
+        padding: 5px !important;
+    }
+    </style>
 """, unsafe_allow_html=True)
+
+# The rest of your Streamlit app code here...
 
 
 
