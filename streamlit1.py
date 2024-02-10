@@ -22,7 +22,7 @@ st.markdown("""
 <style>
 .reportview-container .main .block-container { padding-right: 10% !important; }
 .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 94px !important; font-weight: 100; color: #3e4047; display: inline-block; margin: 0 auto; margin-top: -40px; } /* Adjusted */
-.big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 60px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: -1px; } /* Adjusted */
+.big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 60px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: 5px; } /* Adjusted */
 .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 30px !important; font-weight: 100; color: #D09E55; margin-top: -20px; } /* Adjusted */
 .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 38px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
@@ -30,7 +30,7 @@ st.markdown("""
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 4px; }
-hr { border-top: 1px solid #FFFFFF; width: 95%; margin-left: 0;margin-top: -10px;}
+hr { border-top: 1px solid #FFFFFF; width: 95%; margin-left: 0;margin-top: 10px;}
 </style>
 """, unsafe_allow_html=True)
 
