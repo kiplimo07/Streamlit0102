@@ -38,19 +38,19 @@ st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_al
 
 st.markdown("""
 <style>
-/* Reset and adjust padding/margins for the main content area */
+/* Adjust the main content area padding and margins */
 .reportview-container .main .block-container {
-    /* Adjust padding on the left and right to create space */
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 20px !important; /* Left padding */
+    padding-right: 20px !important; /* Right padding */
+    padding-top: 1rem !important; /* Adjust top padding to reduce space, change as needed */
 }
 
-/* Adjust top margin for the first element inside the main container, if necessary */
+/* If the above does not sufficiently reduce top space, target the first child element */
 .reportview-container .main .block-container > :first-child {
-    margin-top: 0px !important;
+    margin-top: -20px !important; /* Negative margin to pull up the content, adjust as needed */
 }
 
-/* Ensure the sidebar has some padding, adjust as necessary */
+/* Sidebar padding for completeness */
 .sidebar .sidebar-content {
     padding: 10px !important;
 }
