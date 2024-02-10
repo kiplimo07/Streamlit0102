@@ -38,25 +38,25 @@ st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_al
 
 st.markdown("""
 <style>
-/* Reset default padding/margins and adjust the top margin for the first element */
-html, body, .reportview-container, .main, .block-container {
-    margin: 0px;
-    padding: 0px;
-}
-.reportview-container .main .block-container > :first-child {
-    margin-top: -50px !important; /* Adjust based on your layout needs */
-}
-/* Ensure there's adequate left padding for the main content, adjust as needed */
+/* Reset and adjust padding/margins for the main content area */
 .reportview-container .main .block-container {
-    padding-left: 20px !important; /* Increase left padding if needed */
-    padding-right: 20% !important; /* Maintain right-side spacing */
+    /* Adjust padding on the left and right to create space */
+    padding-left: 20px !important;
+    padding-right: 20px !important;
 }
-/* Optionally, adjust the padding for the sidebar container if needed */
+
+/* Adjust top margin for the first element inside the main container, if necessary */
+.reportview-container .main .block-container > :first-child {
+    margin-top: 0px !important;
+}
+
+/* Ensure the sidebar has some padding, adjust as necessary */
 .sidebar .sidebar-content {
-    padding-right: 10px !important; /* Adjust the right padding of the sidebar */
+    padding: 10px !important;
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 with st.sidebar:
