@@ -37,12 +37,12 @@ st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_al
 st.markdown("""
 <style>
 html, body, .reportview-container, .main .block-container {
-    margin: 10;
-    padding: 10;
+    margin: 5;
+    padding: 5;
 }
 .reportview-container .main .block-container {
-    padding-right: 20% !important;
-    padding-left: 20px !important; /* Adjust this value as needed */
+    padding-right: 15% !important;
+    padding-left: 15px !important; /* Adjust this value as needed */
     padding-top: 0 !important;
 }
 </style>
