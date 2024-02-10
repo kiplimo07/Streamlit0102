@@ -26,11 +26,11 @@ st.markdown("""
 .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 32px !important; font-weight: 100; color: #D09E55; margin-top: -28px; } /* Adjusted */
 .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 40px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
-.streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 35px !important; color: #282D33; }
+.streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 30px !important; color: #282D33; }
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
-.fa { padding-right: 5px; }
-hr { border-top: 1px solid #FFFFFF; width: 95%; margin-left: 0; margin-top: -10px; }
+.fa { padding-right: 4px; }
+hr { border-top: 1px solid #FFFFFF; width: 95%; margin-left: 0; margin-top: -8px; }
 </style>
 """, unsafe_allow_html=True)
 
