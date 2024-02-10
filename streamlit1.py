@@ -20,9 +20,9 @@ st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_al
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
-.reportview-container .main .block-container { padding-right: 5% !important; }
-.big-font { font-family: 'Bebas Neue', sans-serif; font-size: 120px !important; font-weight: 100; color: #3e4047; display: inline-block; max-width: 80%; margin: 0 auto; margin-top: -65px; } /* Adjusted */
-.big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 70px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: -10px; } /* Adjusted */
+.reportview-container .main .block-container { padding-right: 1% !important; }
+.big-font { font-family: 'Bebas Neue', sans-serif; font-size: 1300px !important; font-weight: 100; color: #3e4047; display: inline-block; max-width: 80%; margin: 0 auto; margin-top: -65px; } /* Adjusted */
+.big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 80px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: -10px; } /* Adjusted */
 .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 40px !important; font-weight: 100; color: #D09E55; margin-top: -5px; } /* Adjusted */
 .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 50px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
@@ -30,7 +30,7 @@ st.markdown("""
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 5px; }
-hr { border-top: 1px solid #FFFFFF; width: 95%; margin-left: 0; margin-top: -10px; margin-bottom: 5px; }
+hr { border-top: 1px solid #FFFFFF; width: 95%; margin-left: 0; margin-top: -10px; }
 </style>
 """, unsafe_allow_html=True)
 
