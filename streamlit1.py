@@ -38,11 +38,11 @@ st.markdown("""
 <style>
 html, body, .reportview-container, .main .block-container {
     margin: 0;
-    padding: 5;
+    padding: 0;
 }
 .reportview-container .main .block-container {
-    padding-right: 15% !important;
-    padding-left: 15px !important; /* Adjust this value as needed */
+    padding-right: 10% !important;
+    padding-left: 10px !important; /* Adjust this value as needed */
     padding-top: 0 !important;
 }
 </style>
