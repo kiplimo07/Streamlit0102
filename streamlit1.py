@@ -21,9 +21,9 @@ st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
 .reportview-container .main .block-container { padding-right: 10% !important; }
-.big-font { font-family: 'Bebas Neue', sans-serif; font-size: 90px !important; font-weight: 100; color: #3e4047; display: inline-block; margin: 0 auto; margin-top: -10px; } /* Adjusted */
-.big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 60px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: -1px; } /* Adjusted */
-.med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 30px !important; font-weight: 100; color: #D09E55; margin-top: -1px; } /* Adjusted */
+.big-font { font-family: 'Bebas Neue', sans-serif; font-size: 90px !important; font-weight: 100; color: #3e4047; display: inline-block; margin: 0 auto; margin-top: -30px; } /* Adjusted */
+.big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 60px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: -15px; } /* Adjusted */
+.med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 30px !important; font-weight: 100; color: #D09E55; margin-top: -10px; } /* Adjusted */
 .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 38px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
 .streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 30px !important; color: #282D33; }
