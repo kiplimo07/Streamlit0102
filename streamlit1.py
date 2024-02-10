@@ -36,14 +36,20 @@ st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_al
 
 st.markdown("""
 <style>
-/* Specifically target the main content block for padding adjustments */
+/* Target the main content block for padding adjustments */
 .reportview-container .main .block-container {
-    padding-top: 0 !important; /* Remove top padding */
-    padding-right: 20% !important; /* Maintain right padding */
-    padding-left: 20px !important; /* Adjust left padding as needed to ensure it doesn't shift content to the left */
+    padding-top: 0 !important; /* Aim to remove top padding to reduce space */
+    padding-right: 20% !important; /* Keep the right padding for layout consistency */
+    padding-left: 20px !important; /* Adjust left padding to avoid shifting content too far to the left */
+}
+
+/* Further refinement to target the first content element if necessary */
+.reportview-container .main .block-container > :first-child {
+    margin-top: 0 !important; /* Optionally remove top margin of the first element to reduce space */
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
