@@ -22,8 +22,8 @@ st.markdown("""
 <style>
 .reportview-container .main .block-container { padding-right: 20% !important; }
 .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 120px !important; font-weight: 100; color: #3e4047; display: inline-block; max-width: 80%; margin: 0 auto; margin-top: -100px; } /* Adjusted */
-.big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 70px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: -50px; } /* Adjusted */
-.med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 40px !important; font-weight: 100; color: #D09E55; margin-top: -20px; } /* Adjusted */
+.big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 70px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: -40px; } /* Adjusted */
+.med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 40px !important; font-weight: 100; color: #D09E55; margin-top: -10px; } /* Adjusted */
 .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 50px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
 .streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 40px !important; color: #282D33; }
