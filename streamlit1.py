@@ -287,7 +287,7 @@ if page == "SCOPE OF SKILLS":
 
 
 elif page == "CERTIFICATIONS":
-    st.header("*CERTIFICATIONS*")
+    st.header("**CERTIFICATIONS**")
     st.subheader(" Big Data Technology Fundamentals - AWS")
     st.subheader(" AWS Cloud Practitioner Essentials - AWS")
     st.subheader(" Analyzing and Visualizing Data with Power BI - EdX")
