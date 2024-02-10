@@ -26,7 +26,7 @@ st.markdown("""
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 10px; }
-hr { border-top: 2px solid #FFFFFF; width: 90%; margin-left: 0; margin-top: -20px; margin-bottom: 5px; }
+hr { border-top: 2px solid #FFFFFF; width: 100%; margin-left: 0; margin-top: -20px; margin-bottom: 5px; }
 </style>
 """, unsafe_allow_html=True)
 
