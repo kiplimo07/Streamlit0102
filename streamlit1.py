@@ -36,12 +36,17 @@ st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_al
 
 st.markdown("""
 <style>
+/* Adjust the top margin of the first element inside the main block container */
+.reportview-container .main .block-container > :first-child {
+    margin-top: -200px !important;
+}
+/* Adjust the right padding of the main block container */
 .reportview-container .main .block-container {
-    padding-top: 0 !important; /* Adjust the top padding to zero */
     padding-right: 20% !important;
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
