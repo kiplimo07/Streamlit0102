@@ -40,18 +40,10 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-def sidebar_navigation():
-    page_options = ["WELCOME", "DATA ANALYTICS / ENGAGEMENT & MONETIZATION", "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS", "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION", "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT", "SCOPE OF SKILLS", "CERTIFICATIONS", "LET'S CONNECT"]
-    if 'selected_page' not in st.session_state:
-        st.session_state.selected_page = page_options[0]
+with st.sidebar:
+    st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
+    page = st.radio("", ["WELCOME", "DATA ANALYTICS / ENGAGEMENT & MONETIZATION", "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS", "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION", "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT", "SCOPE OF SKILLS", "CERTIFICATIONS", "LET'S CONNECT"])
 
-    selected_page = st.sidebar.radio("Navigation", page_options, on_change=st.experimental_rerun, key='page_radio')
-    
-    # Update the session state
-    st.session_state.selected_page = selected_page
-    return selected_page
-
-selected_page = sidebar_navigation()
 
 @st.cache
 def load_data(url):
