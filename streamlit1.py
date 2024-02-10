@@ -21,12 +21,12 @@ st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
 .reportview-container .main .block-container { padding-right: 10% !important; }
-.big-font { font-family: 'Bebas Neue', sans-serif; font-size: 130px !important; font-weight: 100; color: #3e4047; display: inline-block; max-width: 80%; margin: 0 auto; margin-top: -65px; } /* Adjusted */
-.big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 80px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: -10px; } /* Adjusted */
-.med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 40px !important; font-weight: 100; color: #D09E55; margin-top: -35px; } /* Adjusted */
-.medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 50px !important; font-weight: 100; color: #D09E55; }
+.big-font { font-family: 'Bebas Neue', sans-serif; font-size: 100px !important; font-weight: 100; color: #3e4047; display: inline-block; max-width: 80%; margin: 0 auto; margin-top: -50px; } /* Adjusted */
+.big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 64px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: -8px; } /* Adjusted */
+.med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 32px !important; font-weight: 100; color: #D09E55; margin-top: -28px; } /* Adjusted */
+.medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 40px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
-.streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 40px !important; color: #282D33; }
+.streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 35px !important; color: #282D33; }
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 5px; }
@@ -88,13 +88,13 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     col1, col2 = st.columns([1, 1,])  # Adjust the ratio if needed
  
     with col1:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/333', width=550)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/333', width=450)
 
 
 
 
     with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/222', width=550)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/222', width=450)
 
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
@@ -103,10 +103,10 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     col1, col2 = st.columns([1, 1,])  # Adjust the ratio if needed
  
     with col1:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/777', caption='Distribution of Spending Across Skill Brackets', width=550)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/777', caption='Distribution of Spending Across Skill Brackets', width=450)
 
     with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/111', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=550)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/111', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=450)
 
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
@@ -116,9 +116,9 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
    
 
     # Adjusting the width for the last three images
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/444', width=1000)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/555', width=1000)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/666', width=1000)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/444', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/555', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/666', width=800)
 
 
 
@@ -178,7 +178,7 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     """)
     
     # Adding the final image at the correct indentation level
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=700)
 
 
 elif page == "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS":
@@ -189,15 +189,15 @@ elif page == "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS":
     Enhance strategic decision-making through a unified data ecosystem post-merger. Focus on leveraging analytics to drive stakeholder value and operational efficiency.
     """, unsafe_allow_html=True)
     
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/1111', width=1000)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/1111', width=800)
     
     st.subheader("Findings:")
     st.markdown("""
     Highlighted divisions and accounts showing promising performance, indicating opportunities for strategic realignment and resource optimization.
     """, unsafe_allow_html=True)
     
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/11', width=1000)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/44', width=1000)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/11', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/44', width=800)
     
     st.subheader("Methodology:")
     st.markdown("""
@@ -213,7 +213,7 @@ elif page == "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION":
     Identify cost-saving opportunities across logistics and warehouse operations to impact the bottom line positively.
     """, unsafe_allow_html=True)
     
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/3333', width=1000)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/3333', width=800)
     
     st.subheader("Findings:")
     st.markdown("""
@@ -237,11 +237,11 @@ Streamline the quarterly royalty management process, reducing time spent by fina
 
     # Python Section
     st.markdown("#### PYTHON", unsafe_allow_html=True)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/2222', width=900)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/2222', width=800)
 
     # VBA Section
     st.markdown("#### VBA", unsafe_allow_html=True)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/9999', width=900)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/9999', width=800)
     
     # Impact
     st.subheader("Impact:")
