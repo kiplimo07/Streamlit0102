@@ -29,8 +29,8 @@ st.markdown("""
 .streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 40px !important; color: #282D33; }
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
-.fa { padding-right: 10px; }
-hr { border-top: 2px solid #FFFFFF; width: 100%; margin-left: 0; margin-top: -20px; margin-bottom: 5px; }
+.fa { padding-right: 5px; }
+hr { border-top: 1px solid #FFFFFF; width: 95%; margin-left: 0; margin-top: -10px; margin-bottom: 5px; }
 </style>
 """, unsafe_allow_html=True)
 
