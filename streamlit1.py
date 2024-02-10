@@ -20,7 +20,7 @@ st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_al
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
-.reportview-container .main .block-container { padding-right: 1% !important; }
+.reportview-container .main .block-container { padding-right: 10% !important; }
 .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 130px !important; font-weight: 100; color: #3e4047; display: inline-block; max-width: 80%; margin: 0 auto; margin-top: -65px; } /* Adjusted */
 .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 80px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: -10px; } /* Adjusted */
 .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 40px !important; font-weight: 100; color: #D09E55; margin-top: -35px; } /* Adjusted */
