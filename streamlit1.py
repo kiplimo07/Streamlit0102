@@ -14,7 +14,7 @@ def layout_wrapper(content_func):
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 
 # Assuming direct image URL is obtained and replaced '<direct_image_url>'
-image_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/Picture/main.jpg"  # Update this line with the direct URL to your image
+image_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/Picture/main"  # Update this line with the direct URL to your image
 
 st.markdown(f"""
     <style>
