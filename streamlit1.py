@@ -35,9 +35,8 @@ st.markdown("""
     <style>
     /* Adjust the main content area padding and margins */
     .reportview-container .main .block-container {
-        padding-left: 20px !important; /* Left padding */
-        padding-right: 20px !important; /* Right padding */
-        padding-top: 1rem !important; /* Adjust top padding to reduce space, change as needed */
+      
+  
     }
     /* Sidebar padding for completeness */
     .sidebar .sidebar-content {
