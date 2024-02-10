@@ -21,7 +21,7 @@ st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
 .reportview-container .main .block-container { padding-right: 10% !important; }
-.big-font { font-family: 'Bebas Neue', sans-serif; font-size: 100px !important; font-weight: 100; color: #3e4047; display: inline-block; max-width: 80%; margin: 0 auto; margin-top: -50px; } /* Adjusted */
+.big-font { font-family: 'Bebas Neue', sans-serif; font-size: 100px !important; font-weight: 100; color: #3e4047; display: inline-block; max-width: 50%; margin: 0 auto; margin-top: -50px; } /* Adjusted */
 .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 64px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: -8px; } /* Adjusted */
 .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 32px !important; font-weight: 100; color: #D09E55; margin-top: -28px; } /* Adjusted */
 .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 40px !important; font-weight: 100; color: #D09E55; }
