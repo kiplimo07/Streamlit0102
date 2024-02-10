@@ -88,13 +88,13 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     col1, col2 = st.columns([1, 1,])  # Adjust the ratio if needed
  
     with col1:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/333', width=450)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/333', width=480)
 
 
 
 
     with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/222', width=450)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/222', width=480)
 
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
@@ -103,10 +103,10 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     col1, col2 = st.columns([1, 1,])  # Adjust the ratio if needed
  
     with col1:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/777', caption='Distribution of Spending Across Skill Brackets', width=450)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/777', caption='Distribution of Spending Across Skill Brackets', width=480)
 
     with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/111', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=450)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/111', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=480)
 
     st.subheader("Methodology/Analytical Proficiency:")
     st.write("""
@@ -116,9 +116,9 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
    
 
     # Adjusting the width for the last three images
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/444', width=800)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/555', width=800)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/666', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/444', width=900)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/555', width=900)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/666', width=900)
 
 
 
@@ -178,7 +178,7 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     """)
     
     # Adding the final image at the correct indentation level
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=700)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=800)
 
 
 elif page == "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS":
@@ -213,7 +213,7 @@ elif page == "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION":
     Identify cost-saving opportunities across logistics and warehouse operations to impact the bottom line positively.
     """, unsafe_allow_html=True)
     
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/3333', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/3333', width=950)
     
     st.subheader("Findings:")
     st.markdown("""
@@ -237,11 +237,11 @@ Streamline the quarterly royalty management process, reducing time spent by fina
 
     # Python Section
     st.markdown("#### PYTHON", unsafe_allow_html=True)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/2222', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/2222', width=950)
 
     # VBA Section
     st.markdown("#### VBA", unsafe_allow_html=True)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/9999', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/9999', width=950)
     
     # Impact
     st.subheader("Impact:")
