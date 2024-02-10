@@ -178,7 +178,7 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     """)
     
     # Adding the final image at the correct indentation level
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=850)
 
 
 elif page == "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS":
@@ -189,15 +189,15 @@ elif page == "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS":
     Enhance strategic decision-making through a unified data ecosystem post-merger. Focus on leveraging analytics to drive stakeholder value and operational efficiency.
     """, unsafe_allow_html=True)
     
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/1111', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/1111', width=950)
     
     st.subheader("Findings:")
     st.markdown("""
     Highlighted divisions and accounts showing promising performance, indicating opportunities for strategic realignment and resource optimization.
     """, unsafe_allow_html=True)
     
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/11', width=800)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/44', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/11', width=950)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/44', width=950)
     
     st.subheader("Methodology:")
     st.markdown("""
