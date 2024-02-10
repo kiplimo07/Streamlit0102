@@ -25,7 +25,7 @@ st.markdown("""
 .streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 40px !important; color: #282D33; }
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
-.fa { padding-right: 15px; }
+.fa { padding-right: 10px; }
 hr { border-top: 2px solid #FFFFFF; width: 90%; margin-left: 0; margin-top: -20px; margin-bottom: 5px; }
 </style>
 """, unsafe_allow_html=True)
@@ -41,7 +41,7 @@ html, body, .reportview-container, .main .block-container {
     padding: 0;
 }
 .reportview-container .main .block-container {
-    padding-right: 10% !important;
+    padding-right: 10px !important;
     padding-left: 10px !important; /* Adjust this value as needed */
     padding-top: 0 !important;
 }
