@@ -36,16 +36,18 @@ st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_al
 
 st.markdown("""
 <style>
-/* Target the main content block for padding adjustments */
-.reportview-container .main .block-container {
-    padding-top: 0 !important; /* Aim to remove top padding to reduce space */
-    padding-right: 20% !important; /* Keep the right padding for layout consistency */
-    padding-left: 20px !important; /* Adjust left padding to avoid shifting content too far to the left */
+/* Reset some default padding/margins */
+html, body, .reportview-container, .main, .block-container {
+    margin: 0px;
+    padding: 0px;
 }
-
-/* Further refinement to target the first content element if necessary */
+/* Adjust the top margin for the first element directly */
 .reportview-container .main .block-container > :first-child {
-    margin-top: 0 !important; /* Optionally remove top margin of the first element to reduce space */
+    margin-top: -50px !important;
+}
+/* Style adjustments */
+.big-font, .big2-font, .med2-font, .medium-font, .small-font {
+    margin: 10px 0px; /* Adjusted margin for custom classes */
 }
 </style>
 """, unsafe_allow_html=True)
