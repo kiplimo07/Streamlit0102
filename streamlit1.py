@@ -3,53 +3,59 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Function to wrap content in containers
 def layout_wrapper(content_func):
     main_container = st.container()
     right_space = st.sidebar.container()
     with main_container:
         content_func()
     with right_space:
-        st.write("Sidebar content here")
+        st.write("3")
 
-# Page configuration
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 
-# Custom header with HTML and CSS
 st.markdown("""
-<div class="custom-header">
-    <h1>JASON CHANG</h1>
-    <h2>PORTFOLIO</h2>
-    <h3>Full Stack Senior Data Analyst</h3>
-</div>
-
+<link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
-/* Custom CSS for the header block */
-.custom-header {
-    margin-top: -50px; /* Adjust this value to move the block upwards */
-}
-
-/* Additional styles for your headings to match Streamlit's style */
-.custom-header h1, .custom-header h2, .custom-header h3 {
-    color: #3e4047; /* Example color */
-    font-family: 'Bebas Neue', sans-serif; /* Example font */
-    text-align: center; /* Center align text */
-}
-
-/* Adjustments for the rest of the content to ensure proper spacing */
-.reportview-container .main .block-container {
-    padding-top: 1rem !important; /* Adjust the top padding as needed */
-    padding-right: 20% !important; /* Adjust the right padding as needed */
-}
-
-/* Sidebar customization */
-.sidebar .sidebar-content {
-    background-color: #1D262F; /* Sidebar background color */
-    color: white; /* Sidebar text color */
-}
+.reportview-container .main .block-container { padding-right: 20% !important; }
+.big-font { font-family: 'Bebas Neue', sans-serif; font-size: 120px !important; font-weight: 100; color: #3e4047; display: inline-block; max-width: 80%; margin: 0 auto; }
+.big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 70px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; }
+.med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 40px !important; font-weight: 100; color: #D09E55; }
+.medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 50px !important; font-weight: 100; color: #D09E55; }
+.small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
+.streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 40px !important; color: #282D33; }
+.reportview-container .main { background-color: #1D262F; }
+.sidebar .sidebar-content { background-color: #1D262F; color: white; }
+.fa { padding-right: 10px; }
+hr { border-top: 2px solid #FFFFFF; width: 100%; margin-left: 0; margin-top: -20px; margin-bottom: 5px; }
 </style>
 """, unsafe_allow_html=True)
 
+st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
+st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)
+st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
+
+
+
+st.markdown("""
+<style>
+/* Adjust the main content area padding and margins */
+.reportview-container .main .block-container {
+    padding-left: 20px !important; /* Left padding */
+    padding-right: 20px !important; /* Right padding */
+    padding-top: 1rem !important; /* Adjust top padding to reduce space, change as needed */
+}
+
+/* If the above does not sufficiently reduce top space, target the first child element */
+.reportview-container .main .block-container > :first-child {
+    margin-top: -50px !important; /* Negative margin to pull up the content, adjust as needed */
+}
+
+/* Sidebar padding for completeness */
+.sidebar .sidebar-content {
+    padding: 5px !important;
+}
+</style>
+""", unsafe_allow_html=True)
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
     page = st.radio("",["WELCOME", "DATA ANALYTICS / ENGAGEMENT & MONETIZATION", "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS", "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION", "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT", "SCOPE OF SKILLS", "CERTIFICATIONS", "LET'S CONNECT"])
