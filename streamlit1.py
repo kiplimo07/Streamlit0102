@@ -42,7 +42,7 @@ html, body, .reportview-container, .main .block-container {
 }
 .reportview-container .main .block-container {
     padding-right: 10px !important;
-    padding-left: 20px !important; /* Adjust this value as needed */
+    padding-left: 20% !important; /* Adjust this value as needed */
     padding-top: 0 !important;
 }
 </style>
