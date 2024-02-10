@@ -30,7 +30,7 @@ st.markdown("""
 .reportview-container .main { background-color: #1D262F; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 4px; }
-hr { border-top: 1px solid #FFFFFF; width: 95%; margin-left: 0;margin-top: 10px;}
+hr { border-top: 1px solid #FFFFFF; width: 95%; margin-left: 0;margin-top: 20px;}
 </style>
 """, unsafe_allow_html=True)
 
