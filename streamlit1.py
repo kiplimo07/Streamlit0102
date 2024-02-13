@@ -3,7 +3,8 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-st.set_theme('light')
+st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio", theme='light')
+
 
 def layout_wrapper(content_func):
     main_container = st.container()
