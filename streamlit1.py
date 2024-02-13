@@ -3,6 +3,8 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+st.set_theme('light')
+
 def layout_wrapper(content_func):
     main_container = st.container()
     right_space = st.sidebar.container()
