@@ -3,8 +3,8 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+# Set the theme to light mode and wide layout
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio", theme='light')
-
 
 def layout_wrapper(content_func):
     main_container = st.container()
@@ -13,8 +13,6 @@ def layout_wrapper(content_func):
         content_func()
     with right_space:
         st.write("3")
-
-st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)
@@ -30,7 +28,7 @@ st.markdown("""
 .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 38px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
 .streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 30px !important; color: #282D33; }
-.reportview-container .main { background-color: #1D262F; }
+.reportview-container .main { background-color: white; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 4px; }
 hr { border-top: 1px solid #FFFFFF; width: 95%; margin-left: 0;margin-top: 5px;}
@@ -51,15 +49,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-# Additional CSS to set the background color of the main content area to white
-st.markdown("""
-<style>
-.reportview-container .main {
-    background-color: white;
-}
-</style>
-""", unsafe_allow_html=True)
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
     page = st.radio("",["WELCOME", "DATA ANALYTICS / ENGAGEMENT & MONETIZATION", "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS", "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION", "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT", "SCOPE OF SKILLS", "CERTIFICATIONS", "LET'S CONNECT"])
