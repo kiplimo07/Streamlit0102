@@ -49,6 +49,14 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Additional CSS to set the background color of the main content area to white
+st.markdown("""
+<style>
+.reportview-container .main {
+    background-color: white;
+}
+</style>
+""", unsafe_allow_html=True)
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
     page = st.radio("",["WELCOME", "DATA ANALYTICS / ENGAGEMENT & MONETIZATION", "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS", "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION", "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT", "SCOPE OF SKILLS", "CERTIFICATIONS", "LET'S CONNECT"])
