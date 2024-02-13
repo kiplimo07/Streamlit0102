@@ -10,8 +10,11 @@ st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 def set_background_color_to_white():
     st.markdown("""
     <style>
+    body {
+        background-color: white !important;
+    }
     .reportview-container .main {
-        background-color: white;
+        background-color: white !important;
     }
     </style>
     """, unsafe_allow_html=True)
