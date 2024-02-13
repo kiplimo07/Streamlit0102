@@ -24,6 +24,9 @@ def layout_wrapper(content_func):
     with right_space:
         st.write("3")
 
+# Apply the custom CSS to set the background color to white
+set_background_color_to_white()
+
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)
 st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
@@ -59,10 +62,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-# Apply the custom CSS to set the background color to white
-set_background_color_to_white()
-
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
     page = st.radio("",["WELCOME", "DATA ANALYTICS / ENGAGEMENT & MONETIZATION", "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS", "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION", "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT", "SCOPE OF SKILLS", "CERTIFICATIONS", "LET'S CONNECT"])
