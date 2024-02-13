@@ -3,22 +3,23 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Set the wide layout
+# Set the wide layout and page title
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 
-# Function to set the background color of the main content area to white
-def set_background_color_to_white():
+# Function to set the background color of the main content area to a specific shade of light blue
+def set_background_color():
     st.markdown("""
     <style>
     body {
-        background-color: white !important;
+        background-color: #F2F9FF !important;
     }
     .reportview-container .main {
-        background-color: white !important;
+        background-color: #F2F9FF !important;
     }
     </style>
     """, unsafe_allow_html=True)
 
+# Define a layout wrapper for content
 def layout_wrapper(content_func):
     main_container = st.container()
     right_space = st.sidebar.container()
@@ -27,13 +28,15 @@ def layout_wrapper(content_func):
     with right_space:
         st.write("3")
 
-# Apply the custom CSS to set the background color to white
-set_background_color_to_white()
+# Apply the custom CSS to set the background color
+set_background_color()
 
+# Custom markdown for titles and subtitles
 st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
 st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)
 st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
+# Additional styles and fonts
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
@@ -44,14 +47,14 @@ st.markdown("""
 .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 38px !important; font-weight: 100; color: #D09E55; }
 .small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
 .streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 30px !important; color: #282D33; }
-.reportview-container .main { background-color: white; }
+.reportview-container .main { background-color: #F2F9FF; }
 .sidebar .sidebar-content { background-color: #1D262F; color: white; }
 .fa { padding-right: 4px; }
 hr { border-top: 1px solid #FFFFFF; width: 95%; margin-left: 0;margin-top: 5px;}
 </style>
 """, unsafe_allow_html=True)
 
-# JavaScript to scroll to the top of the page when a new page is selected
+# JavaScript for UI interaction
 st.markdown(
     """
     <script>
@@ -65,6 +68,9 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+
+
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
     page = st.radio("",["WELCOME", "DATA ANALYTICS / ENGAGEMENT & MONETIZATION", "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS", "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION", "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT", "SCOPE OF SKILLS", "CERTIFICATIONS", "LET'S CONNECT"])
