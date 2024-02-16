@@ -19,22 +19,8 @@ def set_background_color():
     </style>
     """, unsafe_allow_html=True)
 
-# Define a layout wrapper for content
-def layout_wrapper(content_func):
-    main_container = st.container()
-    right_space = st.sidebar.container()
-    with main_container:
-        content_func()
-    with right_space:
-        st.write("3")
-
 # Apply the custom CSS to set the background color
 set_background_color()
-
-# Custom markdown for titles and subtitles
-st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
-st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)
-st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
 
 # Additional styles and fonts
 st.markdown("""
@@ -54,7 +40,7 @@ hr { border-top: 1px solid #FFFFFF; width: 95%; margin-left: 0;margin-top: 5px;}
 </style>
 """, unsafe_allow_html=True)
 
-# JavaScript for UI interaction
+# JavaScript for UI interaction remains the same
 st.markdown(
     """
     <script>
@@ -69,12 +55,9 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
-
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
-    page = st.radio("",["WELCOME", "DATA ANALYTICS / ENGAGEMENT & MONETIZATION", "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS", "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION", "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT", "SCOPE OF SKILLS", "CERTIFICATIONS", "LET'S CONNECT"])
-
+    page = st.radio("", ["WELCOME", "DATA ANALYTICS / ENGAGEMENT & MONETIZATION", "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS", "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION", "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT", "SCOPE OF SKILLS", "CERTIFICATIONS", "LET'S CONNECT"])
 
 @st.cache
 def load_data(url):
@@ -93,14 +76,17 @@ def assign_correct_bucket(games_played):
 data_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/RAWBliz.csv"
 data = load_data(data_url)
 
-
-
-
 if page == "WELCOME":
+    # Custom markdown for titles and subtitles only on the WELCOME page
+    st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
+    st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)
+    st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
+
     content_col, spacer_col = st.columns([0.50, 0.50])  # Adjust the ratio based on your preference
     st.markdown("### Welcome to My Portfolio")
-    st.markdown("""    As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.
-    """)
+    st.markdown("""As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.""")
+
+# The rest of your code for other pages...
 
 elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
  
