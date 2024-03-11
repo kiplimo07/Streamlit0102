@@ -129,10 +129,7 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     with col2:
         st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/111', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=480)
 
-    st.subheader("Methodology/Analytical Proficiency:")
-    st.write("""
-    Leveraged Python, K-Means Clustering, and heatmap analysis for an in-depth comparative study of player engagement and spending. Implemented segmentation based on in-game behavior for a comprehensive analysis.
-    """)
+   
 
    
 
@@ -143,13 +140,10 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
 
 
 
-    # Continue with Methodology/Analytical Proficiency and further analysis
+    ##
 
 
-    st.subheader("Methodology/Analytical Proficiency:")
-    st.write("""
-    Leveraged Python, K-Means Clustering, and heatmap analysis for an in-depth comparative study of player engagement and spending. Implemented segmentation based on in-game behavior for a comprehensive analysis.
-    """)
+
 
     event_1_start, event_1_end = pd.Timestamp('2017-01-24'), pd.Timestamp('2017-02-14')
     event_2_start, event_2_end = pd.Timestamp('2017-02-28'), pd.Timestamp('2017-03-21')
