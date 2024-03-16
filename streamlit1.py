@@ -25,9 +25,6 @@ set_background_color()
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
-.reportview-container .main .block-container { 
-    padding-right: 16.666% !important; /* Adjusts right padding to be about 1/6 (or 16.666%) of the page width */
-}
 .reportview-container .main .block-container { padding-right: 10% !important; }
 .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 94px !important; font-weight: 100; color: #3e4047; display: inline-block; margin: 0 auto; margin-top: -40px; }
 .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 60px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: 20px; }
@@ -142,16 +139,9 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     # Heatmap and Graphs
     heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
     plt.figure(figsize=(8, 6))
-sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.4)
-plt.title("Average Dollars Spent per Player by Region and Platform")
-plt.subplots_adjust(right=0.9) # Adjust this value as needed to create space on the right
-st.pyplot(plt)
-
-# When using subplots
-fig, axes = plt.subplots(2, 2, figsize=(10, 8))
-# Your plotting code here
-plt.subplots_adjust(right=0.9) # Adjust this value to create space on the right
-st.pyplot(fig)
+    sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.4)
+    plt.title("Average Dollars Spent per Player by Region and Platform")
+    st.pyplot(plt)
     
     event_1_start, event_1_end = pd.Timestamp('2017-01-24'), pd.Timestamp('2017-02-14')
     event_2_start, event_2_end = pd.Timestamp('2017-02-28'), pd.Timestamp('2017-03-21')
