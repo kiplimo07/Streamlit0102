@@ -182,7 +182,6 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     st.write("""
     This analysis underscored the importance of leveraging advanced analytics to dissect player engagement and spending behaviors. By focusing on data-driven insights, we were able to develop targeted strategies that significantly enhanced player retention and increased revenue. Understanding the dynamics of player churn and spending across different segments and events provided a roadmap for more effective engagement strategies in future events, ensuring the continued success of Warcraft's in-game monetization efforts.
     """)
-    
 elif page == "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS":
     st.header("DASHBOARD / EXECUTIVE BUSINESS INSIGHTS")
     
@@ -191,7 +190,7 @@ elif page == "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS":
     Enhance strategic decision-making through a unified data ecosystem post-merger. Focus on leveraging analytics to drive stakeholder value and operational efficiency.
     """, unsafe_allow_html=True)
     
-     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=850)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/1111', width=950)
     
     st.subheader("Findings:")
     st.markdown("""
