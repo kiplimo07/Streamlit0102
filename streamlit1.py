@@ -151,26 +151,25 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     event_2_data = data[(data['Date'] >= event_2_start) & (data['Date'] <= event_2_end)]
 
     # Adjust the figsize parameter to make the graph smaller, thus increasing space on the right
-    fig, axes = plt.subplots(2, 2, figsize=(9, 7))  # Adjusted from (10, 8) to (9, 7) to create more space
+    fig, axes = plt.subplots(2, 2, figsize=(11, 7))  # Adjusted for empty space
     sns.kdeplot(event_1_data['games_played'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 0])
     sns.kdeplot(event_2_data['games_played'], shade=True, color="salmon", label="Event 2", ax=axes[0, 0])
     axes[0, 0].set_title('Distribution of Games Played')
-
+    
     sns.kdeplot(event_1_data['skill_last'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 1])
     sns.kdeplot(event_2_data['skill_last'], shade=True, color="salmon", label="Event 2", ax=axes[0, 1])
     axes[0, 1].set_title('Distribution of Skill Last')
-
+    
     sns.kdeplot(event_1_data['items_crafted'], shade=True, color="skyblue", label="Event 1", ax=axes[1, 0])
     sns.kdeplot(event_2_data['items_crafted'], shade=True, color="salmon", label="Event 2", ax=axes[1, 0])
     axes[1, 0].set_title('Distribution of Items Crafted')
-
+    
     sns.kdeplot(event_1_data['dollars_spent'], shade=True, color="skyblue", label="Event 1", ax=axes[1, 1])
     sns.kdeplot(event_2_data['dollars_spent'], shade=True, color="salmon", label="Event 2", ax=axes[1, 1])
     axes[1, 1].set_title('Distribution of Dollars Spent')
-
+    
     plt.tight_layout()
-    # Apply a more aggressive adjustment to plt.subplots_adjust() if necessary
-    plt.subplots_adjust(right=0.8)  # Adjust this value if you need more space on the right
+    plt.subplots_adjust(right=0.75)  # Adjust as needed based on the new figsize, but may not be necessary
     st.pyplot(fig)
 
     # Result
