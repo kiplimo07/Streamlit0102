@@ -98,17 +98,22 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
 
     st.subheader("Task")
     st.write("""
-    Performance Measurement and Reporting: Needed to gather business requirements for accurate performance measurement and dynamic reporting.
+    My task was to lead the data analytics process, focusing on:
+
+Identifying high-spending player segments for targeted promotions.
+Understanding low spending trends in specific regions and platforms for strategic adjustments.
+Conducting exploratory data analysis to grasp player spending behaviors related to games played, skill levels, dollars spent, and items crafted.
     """)
 
     st.subheader("Action")
     st.write("""
-  Data Gathering and Cleaning:
-Used SQL queries and existing reports to extract data.
-Cleaned data with deduplication, normalization, and error correction.
-Schema Development and Collaboration:
-Developed a dynamic schema for flexible reporting.
-Collaborated with management to identify key metrics and designed a user-friendly dashboard.
+ Data Exploration and Analysis:
+Conducted comprehensive exploratory data analysis to investigate player spending behavior, employing Python for data manipulation and analysis.
+Utilized K-Means Clustering to segment players based on their in-game behavior, focusing on engagement metrics like games played, skill levels, and spending.
+Performed heatmap analysis to identify patterns of player engagement and spending during the events, facilitating a comparative study between different segments.
+Strategic Implementation:
+Identified high-spending segments in Platform 3, Region 1 as a priority for future promotions, based on their significant contribution to revenue.
+Highlighted low spending in Platform 1, Region 5, indicating the need for further research and strategic adjustment to improve engagement and spending in this segment.
 
     """)
     # Displaying the third image with a wider width
