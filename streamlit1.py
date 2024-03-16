@@ -189,7 +189,6 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     st.pyplot(plt)
 
 
-st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=850)
 
 st.subheader("Result")
     st.write("""
