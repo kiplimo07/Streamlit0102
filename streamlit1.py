@@ -91,19 +91,25 @@ if page == "WELCOME":
 elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
  
     st.header("DATA ANALYTICS / ENGAGEMENT & MONETIZATION")
-    st.subheader("Executive Summary/Business Objective:")
+    st.subheader("Situation")
     st.write("""
-    Emphasized maximizing revenue and enhancing player engagement and satisfaction by analyzing behavior and spending patterns during Warcraft's two in-game events.
+    In an effort to maximize revenue and enhance player engagement and satisfaction in Warcraft, we identified the need to analyze player behavior and spending patterns during two key in-game events. The primary challenge was understanding how different segments of players interacted with these events and identifying opportunities to improve both engagement and monetization.
     """)
 
-    st.subheader("Findings/Strategic Implications:")
+    st.subheader("Task")
     st.write("""
-    Identified high-spending segments, especially in Platform 3, Region 1, signaling a priority for future promotions. Observed low spending in Platform 1, Region 5, highlighting the necessity for further research and adjustments to the strategy.
+    Performance Measurement and Reporting: Needed to gather business requirements for accurate performance measurement and dynamic reporting.
     """)
 
-    st.subheader("Research Question/Data Exploration:")
+    st.subheader("Action")
     st.write("""
-    Conducted exploratory data analysis to understand player spending behavior, emphasizing games played, skill levels, dollars spent, and items crafted.
+  Data Gathering and Cleaning:
+Used SQL queries and existing reports to extract data.
+Cleaned data with deduplication, normalization, and error correction.
+Schema Development and Collaboration:
+Developed a dynamic schema for flexible reporting.
+Collaborated with management to identify key metrics and designed a user-friendly dashboard.
+
     """)
     # Displaying the third image with a wider width
     col1, col2 = st.columns([1, 1,])  # Adjust the ratio if needed
@@ -187,9 +193,12 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
 
 
 
-    st.subheader("Conclusion and Strategic Insights:")
+    st.subheader("Result")
     st.write("""
-        The analysis provides actionable insights into how player engagement and spending behaviors vary across different segments. By focusing on the high-value segments identified, targeted strategies can be developed to enhance player retention and increase revenue. Additionally, understanding the factors driving player churn during event periods can inform more effective engagement strategies for future events.
+        Informed Decision-Making: Enhanced management's strategic planning and operational efficiency.
+Enhanced Reporting: Improved Finance's performance measurement and adaptability to business changes.
+Highlight the use of SQL and data cleaning processes.
+Measurable improvements, like reduced report generation time or increased efficiency.
     """)
     
     # Adding the final image at the correct indentation level
