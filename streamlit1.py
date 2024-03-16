@@ -124,8 +124,6 @@ sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.5)
 plt.title("Average Dollars Spent per Player by Region and Platform")
 st.pyplot(plt)
 
-# Inserting the requested image before distribution graphs
-st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=850)
 
 # Distribution Graphs
 event_1_start, event_1_end = pd.Timestamp('2017-01-24'), pd.Timestamp('2017-02-14')
