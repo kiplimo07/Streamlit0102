@@ -142,9 +142,16 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     # Heatmap and Graphs
     heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
     plt.figure(figsize=(8, 6))
-    sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.4)
-    plt.title("Average Dollars Spent per Player by Region and Platform")
-    st.pyplot(plt)
+sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.4)
+plt.title("Average Dollars Spent per Player by Region and Platform")
+plt.subplots_adjust(right=0.9) # Adjust this value as needed to create space on the right
+st.pyplot(plt)
+
+# When using subplots
+fig, axes = plt.subplots(2, 2, figsize=(10, 8))
+# Your plotting code here
+plt.subplots_adjust(right=0.9) # Adjust this value to create space on the right
+st.pyplot(fig)
     
     event_1_start, event_1_end = pd.Timestamp('2017-01-24'), pd.Timestamp('2017-02-14')
     event_2_start, event_2_end = pd.Timestamp('2017-02-28'), pd.Timestamp('2017-03-21')
