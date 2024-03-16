@@ -124,7 +124,8 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     st.pyplot(plt)
 
     # Inserting an image before distribution graphs as requested
- st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=850)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/1111', width=950)
+
     # Distribution Graphs
     event_1_start, event_1_end = pd.Timestamp('2017-01-24'), pd.Timestamp('2017-02-14')
     event_2_start, event_2_end = pd.Timestamp('2017-02-28'), pd.Timestamp('2017-03-21')
@@ -169,7 +170,7 @@ elif page == "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS":
     Enhance strategic decision-making through a unified data ecosystem post-merger. Focus on leveraging analytics to drive stakeholder value and operational efficiency.
     """, unsafe_allow_html=True)
     
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/1111', width=950)
+     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=850)
     
     st.subheader("Findings:")
     st.markdown("""
