@@ -151,7 +151,7 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     event_2_data = data[(data['Date'] >= event_2_start) & (data['Date'] <= event_2_end)]
 
     # Adjust the figsize parameter to make the graph smaller, thus increasing space on the right
-    fig, axes = plt.subplots(2, 2, figsize=(7, 5))  # Adjusted for empty space
+    fig, axes = plt.subplots(2, 2, figsize=(8, 6))  # Adjusted for empty space
     sns.kdeplot(event_1_data['games_played'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 0])
     sns.kdeplot(event_2_data['games_played'], shade=True, color="salmon", label="Event 2", ax=axes[0, 0])
     axes[0, 0].set_title('Distribution of Games Played')
