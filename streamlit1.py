@@ -136,40 +136,40 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/555', width=900)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/666', width=900)
 
-    # Heatmap and Graphs
-    heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
-    plt.figure(figsize=(8, 6))
-    sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.4)
-    plt.title("Average Dollars Spent per Player by Region and Platform")
-    st.pyplot(plt)
+heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
+plt.figure(figsize=(8, 6))
+sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.4)
+plt.title("Average Dollars Spent per Player by Region and Platform")
+st.pyplot(plt)
 
-  st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/1111', width=950)
-    
-    event_1_start, event_1_end = pd.Timestamp('2017-01-24'), pd.Timestamp('2017-02-14')
-    event_2_start, event_2_end = pd.Timestamp('2017-02-28'), pd.Timestamp('2017-03-21')
-    
-    event_1_data = data[(data['Date'] >= event_1_start) & (data['Date'] <= event_1_end)]
-    event_2_data = data[(data['Date'] >= event_2_start) & (data['Date'] <= event_2_end)]
-    
-    fig, axes = plt.subplots(2, 2, figsize=(10, 8))
-    sns.kdeplot(event_1_data['games_played'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 0])
-    sns.kdeplot(event_2_data['games_played'], shade=True, color="salmon", label="Event 2", ax=axes[0, 0])
-    axes[0, 0].set_title('Distribution of Games Played')
-    
-    sns.kdeplot(event_1_data['skill_last'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 1])
-    sns.kdeplot(event_2_data['skill_last'], shade=True, color="salmon", label="Event 2", ax=axes[0, 1])
-    axes[0, 1].set_title('Distribution of Skill Last')
-    
-    sns.kdeplot(event_1_data['items_crafted'], shade=True, color="skyblue", label="Event 1", ax=axes[1, 0])
-    sns.kdeplot(event_2_data['items_crafted'], shade=True, color="salmon", label="Event 2", ax=axes[1, 0])
-    axes[1, 0].set_title('Distribution of Items Crafted')
-    
-    sns.kdeplot(event_1_data['dollars_spent'], shade=True, color="skyblue", label="Event 1", ax=axes[1, 1])
-    sns.kdeplot(event_2_data['dollars_spent'], shade=True, color="salmon", label="Event 2", ax=axes[1, 1])
-    axes[1, 1].set_title('Distribution of Dollars Spent')
-    
-    plt.tight_layout()
-    st.pyplot(fig)
+# Including an image before the distribution graph
+st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/1111', width=950)
+
+event_1_start, event_1_end = pd.Timestamp('2017-01-24'), pd.Timestamp('2017-02-14')
+event_2_start, event_2_end = pd.Timestamp('2017-02-28'), pd.Timestamp('2017-03-21')
+
+event_1_data = data[(data['Date'] >= event_1_start) & (data['Date'] <= event_1_end)]
+event_2_data = data[(data['Date'] >= event_2_start) & (data['Date'] <= event_2_end)]
+
+fig, axes = plt.subplots(2, 2, figsize=(10, 8))
+sns.kdeplot(event_1_data['games_played'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 0])
+sns.kdeplot(event_2_data['games_played'], shade=True, color="salmon", label="Event 2", ax=axes[0, 0])
+axes[0, 0].set_title('Distribution of Games Played')
+
+sns.kdeplot(event_1_data['skill_last'], shade=True, color="skyblue", label="Event 1", ax=axes[0, 1])
+sns.kdeplot(event_2_data['skill_last'], shade=True, color="salmon", label="Event 2", ax=axes[0, 1])
+axes[0, 1].set_title('Distribution of Skill Last')
+
+sns.kdeplot(event_1_data['items_crafted'], shade=True, color="skyblue", label="Event 1", ax=axes[1, 0])
+sns.kdeplot(event_2_data['items_crafted'], shade=True, color="salmon", label="Event 2", ax=axes[1, 0])
+axes[1, 0].set_title('Distribution of Items Crafted')
+
+sns.kdeplot(event_1_data['dollars_spent'], shade=True, color="skyblue", label="Event 1", ax=axes[1, 1])
+sns.kdeplot(event_2_data['dollars_spent'], shade=True, color="salmon", label="Event 2", ax=axes[1, 1])
+axes[1, 1].set_title('Distribution of Dollars Spent')
+
+plt.tight_layout()
+st.pyplot(fig)
 
     # Result
     st.subheader("Result")
