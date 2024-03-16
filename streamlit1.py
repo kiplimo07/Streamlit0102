@@ -263,10 +263,11 @@ elif page == "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT":
     st.header("PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT")
     
     # Objective
-    st.subheader("Objective:")
+    st.subheader("Situation:")
     st.markdown("""
-Streamline the quarterly royalty management process, reducing time spent by financial analysts from a month-long task to a 2-hour automated process.
-    """, unsafe_allow_html=True)
+    Years of data were unorganized, with the quarterly royalty management process involving a lot of manual lookup in Excel. 
+    This was a month-long task for financial analysts, significantly affecting operational efficiency and increasing the risk 
+    of errors.    """, unsafe_allow_html=True)
 
     # Python Section
     st.markdown("#### PYTHON", unsafe_allow_html=True)
@@ -277,19 +278,38 @@ Streamline the quarterly royalty management process, reducing time spent by fina
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/9999', width=950)
     
     # Impact
-    st.subheader("Impact:")
+    st.subheader("Task:")
     st.markdown("""
-Achieved an 85% reduction in process time, significantly lowering operational costs and enhancing efficiency and accuracy in royalty management.
-    """, unsafe_allow_html=True)
+    The objective was to streamline the quarterly royalty management process, reducing the time spent by financial analysts 
+    from a month-long task to a 2-hour automated process. This involved supporting their operation by providing an efficient 
+    dashboard and improving operational efficiency.    """, unsafe_allow_html=True)
     
     # Methodology
-    st.subheader("Methodology:")
+    st.subheader("Action:")
     st.markdown("""
-Developed a custom Python script for data consolidation and utilized Excel VBA for automating data extraction and report generation.
-    """, unsafe_allow_html=True)
+    - **Understanding Historical Data:** Gained a hands-on understanding of historical data and royalty reporting.
+    - **Strategic Planning:** Provided a plan and roadmap for resource approval. Collaborated with field managers to identify 
+    historical data, perform data analysis and analytics.
+    - **Process Automation:** Developed a custom Python script for data consolidation and utilized Excel VBA for automating 
+    data extraction and report generation. This collaborative and strategic approach involved leveraging both technical skills 
+    and soft skills like communication, strategy, prudent curiosity, and humility.    """, unsafe_allow_html=True)
 
+     # Result
+    st.subheader("Result:")
+    st.markdown("""
+   - **Significant Time Reduction:** Shortened the process time for 2 senior financial analysts from a month's worth of 
+    overtime to just 8 hours of processing time, achieving an **85% reduction** in process time.
+    - **Operational Cost Savings:** This efficiency gain significantly lowered operational costs and enhanced the accuracy 
+    and efficiency of royalty management.
+    - **Enhanced Efficiency and Accuracy:** The automation not only saved time but also improved the overall accuracy and 
+    reliability of the royalty management process.   """, unsafe_allow_html=True)
 
-
+    st.subheader('Conclusion')
+    st.write("""
+    This project demonstrates the powerful impact of combining technical automation with strategic planning and collaboration. 
+    By automating the quarterly royalty management process, we significantly improved operational efficiency and accuracy, 
+    showcasing the value of integrating Python and VBA in financial processes.
+    """)
 
 
 if page == "SCOPE OF SKILLS":
