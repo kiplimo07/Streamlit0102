@@ -124,8 +124,7 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     st.pyplot(plt)
 
     # Inserting an image before distribution graphs as requested
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/1111', width=950)
-
+ st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=850)
     # Distribution Graphs
     event_1_start, event_1_end = pd.Timestamp('2017-01-24'), pd.Timestamp('2017-02-14')
     event_2_start, event_2_end = pd.Timestamp('2017-02-28'), pd.Timestamp('2017-03-21')
