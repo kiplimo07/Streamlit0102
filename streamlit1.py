@@ -171,6 +171,7 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     plt.tight_layout()
     plt.subplots_adjust(right=0.65)  # Adjust as needed based on the new figsize, but may not be necessary
     st.pyplot(fig)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=900)
 
     # Result
     st.subheader("Result")
