@@ -196,7 +196,8 @@ Highlighted low spending in Platform 1, Region 5, indicating the need for furthe
     st.pyplot(plt)
 
 
-
+ # Adding the final image at the correct indentation level
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=850)
 
     st.subheader("Result")
     st.write("""
@@ -206,8 +207,7 @@ A 21% increase in player engagement and spending in the identified high-value se
 Initiated a strategic review and adjustment for underperforming segments, resulting in a marked improvement in player satisfaction and reduced churn rate by 15% during subsequent events.
     """)
     
-    # Adding the final image at the correct indentation level
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=850)
+   
 
 
 elif page == "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS":
