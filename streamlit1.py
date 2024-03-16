@@ -142,6 +142,8 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.4)
     plt.title("Average Dollars Spent per Player by Region and Platform")
     st.pyplot(plt)
+
+  st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/1111', width=950)
     
     event_1_start, event_1_end = pd.Timestamp('2017-01-24'), pd.Timestamp('2017-02-14')
     event_2_start, event_2_end = pd.Timestamp('2017-02-28'), pd.Timestamp('2017-03-21')
@@ -168,7 +170,7 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     
     plt.tight_layout()
     st.pyplot(fig)
-  st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/1111', width=950)
+
     # Result
     st.subheader("Result")
     st.write("""
