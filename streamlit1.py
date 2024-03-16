@@ -168,7 +168,7 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     
     plt.tight_layout()
     st.pyplot(fig)
-
+  st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/1111', width=950)
     # Result
     st.subheader("Result")
     st.write("""
