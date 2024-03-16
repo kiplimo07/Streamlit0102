@@ -220,22 +220,43 @@ elif page == "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS":
 elif page == "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION":
     st.header("DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION")
     
-    st.subheader("Objective:")
+    st.subheader("Situation:")
     st.markdown("""
-    Identify cost-saving opportunities across logistics and warehouse operations to impact the bottom line positively.
-    """, unsafe_allow_html=True)
+    In the rapidly evolving logistics sector, maintaining operational efficiency and cost-effectiveness is paramount. 
+    Our company faced challenges with escalating costs in logistics and warehouse operations, directly impacting our bottom line. 
+    A comprehensive analysis was initiated to identify the root causes of these financial pressures, particularly focusing on 
+    the 'SKYLAB' and '3PL Logistics' divisions, known for their significant contribution to the logistics operations but also for potential inefficiencies.    """, unsafe_allow_html=True)
     
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/3333', width=950)
     
-    st.subheader("Findings:")
+    st.subheader("Task:")
     st.markdown("""
-    Revealed inefficiencies in 'SKYLAB' and '3PL Logistics', suggesting areas for cost optimization and process improvements.
-    """, unsafe_allow_html=True)
+    The primary objective was to conduct a detailed examination of the logistics and warehouse operations to uncover cost-saving 
+    opportunities. This task involved identifying areas of waste, inefficiencies, and potential for process optimizations that 
+    could lead to substantial cost reductions without compromising the quality of operations.    """, unsafe_allow_html=True)
     
-    st.subheader("Methodology:")
+    st.subheader("Action:")
     st.markdown("""
-    Analyzed financial data using Python, with a focus on dissecting spending patterns and identifying optimization opportunities.
-    """, unsafe_allow_html=True)
+    To tackle this task, a multifaceted approach was employed:
+    - **Financial Data Analysis:** Leveraged Python for in-depth analysis of financial records, focusing on expenditure patterns 
+    related to 'SKYLAB' and '3PL Logistics'.
+    - **Identification of Inefficiencies:** Through the analysis, pinpointed specific areas within 'SKYLAB' and '3PL Logistics' 
+    where inefficiencies were prevalent.
+    - **Optimization Opportunities:** Developed strategies for cost optimization and process improvements based on the identified 
+    inefficiencies. This involved proposing adjustments in operations, resource allocation, and possibly renegotiating contracts 
+    or seeking more cost-effective service providers.    """, unsafe_allow_html=True)
+
+    st.subheader("Result:")
+    st.markdown("""
+    The analysis and subsequent actions led to significant outcomes:
+    - **Cost-saving Opportunities Uncovered:** The deep dive into the financial data and operations of 'SKYLAB' and '3PL Logistics' 
+    revealed multiple inefficiencies. By addressing these, the company could optimize processes and significantly reduce costs.
+    - **Strategic Improvements Implemented:** Recommendations for process improvements were put into action, leading to a more 
+    streamlined operation. Preliminary estimates indicated potential savings in the logistics and warehouse operations, positively 
+    affecting the company's bottom line.
+    - **Foundation for Continuous Improvement:** Beyond immediate cost savings, the project established a framework for ongoing 
+    analysis and optimization. This proactive approach to identifying and addressing inefficiencies will serve as a cornerstone 
+    for future operational enhancements and cost management strategies.   """, unsafe_allow_html=True)
 
 
 elif page == "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT":
