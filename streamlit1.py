@@ -119,6 +119,8 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     - Highlighted low spending in Platform 1, Region 5, indicating the need for further research and strategic adjustment to improve engagement and spending in this segment.
     """)
 
+   st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=850)
+    
     # Visualization Section
     col1, col2 = st.columns([1, 1])
     with col1:
