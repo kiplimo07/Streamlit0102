@@ -25,6 +25,9 @@ set_background_color()
 st.markdown("""
 <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
 <style>
+.reportview-container .main .block-container { 
+    padding-right: 16.666% !important; /* Adjusts right padding to be about 1/6 (or 16.666%) of the page width */
+}
 .reportview-container .main .block-container { padding-right: 10% !important; }
 .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 94px !important; font-weight: 100; color: #3e4047; display: inline-block; margin: 0 auto; margin-top: -40px; }
 .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 60px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: 20px; }
