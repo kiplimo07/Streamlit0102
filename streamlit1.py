@@ -93,27 +93,22 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     st.header("DATA ANALYTICS / ENGAGEMENT & MONETIZATION")
     st.subheader("Situation")
     st.write("""
-   In an effort to maximize revenue and enhance player engagement and satisfaction in Warcraft, we identified the need to analyze player behavior and spending patterns during two key in-game events. The primary challenge was understanding how different segments of players interacted with these events and identifying opportunities to improve both engagement and monetization.
+    In an effort to maximize revenue and enhance player engagement and satisfaction in Warcraft, we identified the need to analyze player behavior and spending patterns during two key in-game events. The primary challenge was understanding how different segments of players interacted with these events and identifying opportunities to improve both engagement and monetization.
     """)
 
     st.subheader("Task")
     st.write("""
-    My task was to lead the data analytics process, focusing on:
-
-Identifying high-spending player segments for targeted promotions.
-Understanding low spending trends in specific regions and platforms for strategic adjustments.
-Conducting exploratory data analysis to grasp player spending behaviors related to games played, skill levels, dollars spent, and items crafted.
+    Performance Measurement and Reporting: Needed to gather business requirements for accurate performance measurement and dynamic reporting.
     """)
 
     st.subheader("Action")
     st.write("""
- Data Exploration and Analysis:
-Conducted comprehensive exploratory data analysis to investigate player spending behavior, employing Python for data manipulation and analysis.
-Utilized K-Means Clustering to segment players based on their in-game behavior, focusing on engagement metrics like games played, skill levels, and spending.
-Performed heatmap analysis to identify patterns of player engagement and spending during the events, facilitating a comparative study between different segments.
-Strategic Implementation:
-Identified high-spending segments in Platform 3, Region 1 as a priority for future promotions, based on their significant contribution to revenue.
-Highlighted low spending in Platform 1, Region 5, indicating the need for further research and strategic adjustment to improve engagement and spending in this segment.
+  Data Gathering and Cleaning:
+Used SQL queries and existing reports to extract data.
+Cleaned data with deduplication, normalization, and error correction.
+Schema Development and Collaboration:
+Developed a dynamic schema for flexible reporting.
+Collaborated with management to identify key metrics and designed a user-friendly dashboard.
 
     """)
     # Displaying the third image with a wider width
@@ -195,24 +190,19 @@ Highlighted low spending in Platform 1, Region 5, indicating the need for furthe
     plt.title("Average Dollars Spent per Player by Region and Platform")
     st.pyplot(plt)
 
-  st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=850)
+
 
 
     st.subheader("Result")
     st.write("""
-       The data-driven approach yielded actionable insights, enabling the development of targeted strategies to enhance player retention and increase revenue. Specifically:
-
-A 21% increase in player engagement and spending in the identified high-value segments through targeted promotions and tailored in-game events.
-Initiated a strategic review and adjustment for underperforming segments, resulting in a marked improvement in player satisfaction and reduced churn rate by 15% during subsequent events.
+        Informed Decision-Making: Enhanced management's strategic planning and operational efficiency.
+Enhanced Reporting: Improved Finance's performance measurement and adaptability to business changes.
+Highlight the use of SQL and data cleaning processes.
+Measurable improvements, like reduced report generation time or increased efficiency.
     """)
-      st.subheader("Conclusion and Strategic Insights")
-    st.write("""
-      This analysis underscored the importance of leveraging advanced analytics to dissect player engagement and spending behaviors. By focusing on data-driven insights, we were able to develop targeted strategies that significantly enhanced player retention and increased revenue. Understanding the dynamics of player churn and spending across different segments and events provided a roadmap for more effective engagement strategies in future events, ensuring the continued success of Warcraft's in-game monetization efforts.
-
-
-
-    """)
-  
+    
+    # Adding the final image at the correct indentation level
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=850)
 
 
 elif page == "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS":
