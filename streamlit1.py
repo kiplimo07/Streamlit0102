@@ -189,26 +189,32 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
 elif page == "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS":
     st.header("DASHBOARD / EXECUTIVE BUSINESS INSIGHTS")
     
-    st.subheader("Objective:")
+    st.subheader("Situation")
     st.markdown("""
-    Enhance strategic decision-making through a unified data ecosystem post-merger. Focus on leveraging analytics to drive stakeholder value and operational efficiency.
-    """, unsafe_allow_html=True)
+    Complex Data Landscape: Post-merger, the business faced challenges with unstructured data across systems, 
+    affecting the Finance department's performance measurement and IGM.    """, unsafe_allow_html=True)
     
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/1111', width=950)
     
-    st.subheader("Findings:")
+    st.subheader("Task")
     st.markdown("""
-    Highlighted divisions and accounts showing promising performance, indicating opportunities for strategic realignment and resource optimization.
-    """, unsafe_allow_html=True)
-    
+    Performance Measurement and Reporting: Needed to gather business requirements for accurate performance measurement 
+    and dynamic reporting.    """, unsafe_allow_html=True)
+        
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/11', width=950)
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/44', width=950)
     
-    st.subheader("Methodology:")
+    st.subheader("Action")
     st.markdown("""
-    Utilized Python for data manipulation and SQL for data querying. Employed Power BI for dynamic dashboards showcasing real-time business intelligence.
-    """, unsafe_allow_html=True)
-
+    - **Data Gathering and Cleaning:** Used SQL queries and existing reports to extract data. Cleaned data with deduplication, 
+    normalization, and error correction.
+    - **Schema Development and Collaboration:** Developed a dynamic schema for flexible reporting. Collaborated with management 
+    to identify key metrics and designed a user-friendly dashboard.    """, unsafe_allow_html=True)
+    
+    st.subheader("Result")
+    st.markdown("""
+    - **Informed Decision-Making:** Enhanced management's strategic planning and operational efficiency.
+    - **Enhanced Reporting:** Improved Finance's performance measurement and adaptability to business changes.   """, unsafe_allow_html=True)
 
 elif page == "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION":
     st.header("DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION")
