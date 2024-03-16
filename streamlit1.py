@@ -160,10 +160,6 @@ st.write("""
     - Initiated a strategic review and adjustment for underperforming segments, resulting in a marked improvement in player satisfaction and reduced churn rate by 15% during subsequent events.
 """)
 
-st.subheader("Conclusion and Strategic Insights")
-st.write("""
-    This analysis underscored the importance of leveraging advanced analytics to dissect player engagement and spending behaviors. By focusing on data-driven insights, we were able to develop targeted strategies that significantly enhanced player retention and increased revenue. Understanding the dynamics of player churn and spending across different segments and events provided a roadmap for more effective engagement strategies in future events, ensuring the continued success of Warcraft's in-game monetization efforts.
-""")
 
 elif page == "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS":
     st.header("DASHBOARD / EXECUTIVE BUSINESS INSIGHTS")
