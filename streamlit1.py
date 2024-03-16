@@ -166,9 +166,9 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     sns.kdeplot(event_2_data['dollars_spent'], shade=True, color="salmon", label="Event 2", ax=axes[1, 1])
     axes[1, 1].set_title('Distribution of Dollars Spent')
     
-plt.tight_layout()
-plt.subplots_adjust(right=0.75)  # Adjust the right parameter as needed
-st.pyplot(fig)
+    plt.tight_layout()
+    plt.subplots_adjust(right=0.75)  # Adjust the right parameter as needed
+    st.pyplot(fig)
 
     # Result
     st.subheader("Result")
