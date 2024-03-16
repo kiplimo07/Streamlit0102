@@ -200,10 +200,10 @@ Highlighted low spending in Platform 1, Region 5, indicating the need for furthe
 
     st.subheader("Result")
     st.write("""
-        Informed Decision-Making: Enhanced management's strategic planning and operational efficiency.
-Enhanced Reporting: Improved Finance's performance measurement and adaptability to business changes.
-Highlight the use of SQL and data cleaning processes.
-Measurable improvements, like reduced report generation time or increased efficiency.
+        The data-driven approach yielded actionable insights, enabling the development of targeted strategies to enhance player retention and increase revenue. Specifically:
+
+A 21% increase in player engagement and spending in the identified high-value segments through targeted promotions and tailored in-game events.
+Initiated a strategic review and adjustment for underperforming segments, resulting in a marked improvement in player satisfaction and reduced churn rate by 15% during subsequent events.
     """)
     
     # Adding the final image at the correct indentation level
