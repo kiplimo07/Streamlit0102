@@ -3,53 +3,55 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Set the page configuration and title
+# Set the wide layout and page title
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 
-# Function to apply custom CSS for background color
+# Function to set the background color of the main content area
 def set_background_color():
     st.markdown("""
+        <style>
+        body {
+            background-color: #F2F9FF !important;
+        }
+        .reportview-container .main {
+            background-color: #F2F9FF !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+
+# Apply the custom CSS to set the background color
+set_background_color()
+
+# Additional styles and fonts
+st.markdown("""
+    <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
     <style>
-    body {
-        background-color: #F2F9FF !important;
-    }
-    .reportview-container .main {
-        background-color: #F2F9FF !important;
-    }
+    .reportview-container .main .block-container { padding-right: 10% !important; }
+    .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 94px !important; font-weight: 100; color: #3e4047; display: inline-block; margin: 0 auto; margin-top: -40px; }
+    .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 60px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: 20px; }
+    .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 26px !important; font-weight: 100; color: #D09E55; margin-top: -20px; }
+    .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 38px !important; font-weight: 100; color: #D09E55; }
+    .small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
+    .streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 30px !important; color: #282D33; }
+    .reportview-container .main { background-color: #F2F9FF; }
+    .sidebar .sidebar-content { background-color: #1D262F; color: white; }
+    .fa { padding-right: 4px; }
+    hr { border-top: 1px solid #FFFFFF; width: 95%; margin-left: 0;margin-top: 5px;}
     </style>
     """, unsafe_allow_html=True)
 
-set_background_color()
-
-# Additional CSS for fonts and sidebar styling
-st.markdown("""
-<link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
-<style>
-.reportview-container .main .block-container { padding-right: 10% !important; }
-.big-font { font-family: 'Bebas Neue', sans-serif; font-size: 94px !important; font-weight: 100; color: #3e4047; display: inline-block; margin: 0 auto; margin-top: -40px; }
-.big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 60px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: 20px; }
-.med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 26px !important; font-weight: 100; color: #D09E55; margin-top: -20px; }
-.medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 38px !important; font-weight: 100; color: #D09E55; }
-.small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
-.streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 30px !important; color: #282D33; }
-.reportview-container .main { background-color: #F2F9FF; }
-.sidebar .sidebar-content { background-color: #1D262F; color: white; }
-.fa { padding-right: 4px; }
-hr { border-top: 1px solid #FFFFFF; width: 95%; margin-left: 0;margin-top: 5px;}
-</style>
-""", unsafe_allow_html=True)
-
-# JavaScript for smooth scrolling in the sidebar navigation
-st.markdown("""
-<script>
-const navButtons = document.querySelectorAll('.stRadio > div');
-navButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        window.scrollTo(0, 0);
+# JavaScript for UI interaction
+st.markdown(
+    """
+    <script>
+    const navButtons = document.querySelectorAll('.stRadio > div');
+    navButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            window.scrollTo(0, 0);
+        });
     });
-});
-</script>
-""", unsafe_allow_html=True)
+    </script>
+    """, unsafe_allow_html=True)
 
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
@@ -57,77 +59,54 @@ with st.sidebar:
 
 @st.cache
 def load_data(url):
-    # Function to load and preprocess data
     data = pd.read_csv(url)
     data['Date'] = pd.to_datetime(data['Date'])
-    # Assigning bucket based on games played
-    def assign_correct_bucket(games_played):
-        if games_played >= 1 and games_played <= 3:
-            return 'Very Low'
-        elif games_played >= 4 and games_played <= 5:
-            return 'Low'
-        elif games_played >= 6 and games_played <= 9:
-            return 'Medium'
-        elif games_played >= 10 and games_played <= 68:
-            return 'High'
-        else:
-            return 'Unknown'
-    data['games_played_bucket'] = data['games_played'].apply(assign_correct_bucket)
+    data['games_played_bucket'] = pd.cut(data['games_played'], bins=[0, 3, 5, 9, 68, float('inf')], labels=['Very Low', 'Low', 'Medium', 'High', 'Unknown'], right=False)
     return data
 
-# URL to the CSV data
 data_url = "https://raw.githubusercontent.com/jasonchang0102/Streamlit0102/main/RAWBliz.csv"
 data = load_data(data_url)
 
 if page == "WELCOME":
-    # WELCOME page content
     st.markdown('<p class="big-font">JASON CHANG</p>', unsafe_allow_html=True)
     st.markdown('<div><p class="big2-font">PORTFOLIO</p><hr></div>', unsafe_allow_html=True)
     st.markdown('<p class="med2-font">Full Stack Senior Data Analyst</p>', unsafe_allow_html=True)
     st.markdown("### Welcome to My Portfolio")
     st.markdown("""
-    As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.
+        As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.
     """)
 
 elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
-    # Situation
     st.header("DATA ANALYTICS / ENGAGEMENT & MONETIZATION")
     st.subheader("Situation")
     st.write("""
-    In an effort to maximize revenue and enhance player engagement and satisfaction in Warcraft, we identified the need to analyze player behavior and spending patterns during two key in-game events. The primary challenge was understanding how different segments of players interacted with these events and identifying opportunities to improve both engagement and monetization.
+        In an effort to maximize revenue and enhance player engagement and satisfaction in Warcraft, we identified the need to analyze player behavior and spending patterns during two key in-game events. The primary challenge was understanding how different segments of players interacted with these events and identifying opportunities to improve both engagement and monetization.
     """)
-
-    # Task
     st.subheader("Task")
     st.write("""
-    My task was to lead the data analytics process, focusing on:
-    - Identifying high-spending player segments for targeted promotions.
-    - Understanding low spending trends in specific regions and platforms for strategic adjustments.
-    - Conducting exploratory data analysis to grasp player spending behaviors related to games played, skill levels, dollars spent, and items crafted.
+        My task was to lead the data analytics process, focusing on:
+        - Identifying high-spending player segments for targeted promotions.
+        - Understanding low spending trends in specific regions and platforms for strategic adjustments.
+        - Conducting exploratory data analysis to grasp player spending behaviors related to games played, skill levels, dollars spent, and items crafted.
     """)
-
-    # Action
     st.subheader("Action")
     st.write("""
-    **Data Exploration and Analysis:**
-    - Conducted comprehensive exploratory data analysis to investigate player spending behavior, employing Python for data manipulation and analysis.
-    - Utilized K-Means Clustering to segment players based on their in-game behavior, focusing on engagement metrics like games played, skill levels, and spending.
-    - Performed heatmap analysis to identify patterns of player engagement and spending during the events, facilitating a comparative study between different segments.
-    
-    **Strategic Implementation:**
-    - Identified high-spending segments in Platform 3, Region 1 as a priority for future promotions, based on their significant contribution to revenue.
-    - Highlighted low spending in Platform 1, Region 5, indicating the need for further research and strategic adjustment to improve engagement and spending in this segment.
+        **Data Exploration and Analysis:**
+        - Conducted comprehensive exploratory data analysis to investigate player spending behavior, employing Python for data manipulation and analysis.
+        - Utilized K-Means Clustering to segment players based on their in-game behavior, focusing on engagement metrics like games played, skill levels, and spending.
+        - Performed heatmap analysis to identify patterns of player engagement and spending during the events, facilitating a comparative study between different segments.
+        
+        **Strategic Implementation:**
+        - Identified high-spending segments in Platform 3, Region 1 as a priority for future promotions, based on their significant contribution to revenue.
+        - Highlighted low spending in Platform 1, Region 5, indicating the need for further research and strategic adjustment to improve engagement and spending in this segment.
     """)
-
-    
-    # Visualization Section
-    col1, col2 = st.columns([1, 1])
+    col1, col2 = st.columns(2)
     with col1:
         st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/333', width=480)
     with col2:
         st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/222', width=480)
-    
-    col1, col2 = st.columns([1, 1])
+
+    col1, col2 = st.columns(2)
     with col1:
         st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/777', caption='Distribution of Spending Across Skill Brackets', width=480)
     with col2:
@@ -160,7 +139,7 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     axes[0, 1].set_title('Distribution of Skill Last')
     
     sns.kdeplot(event_1_data['items_crafted'], shade=True, color="skyblue", label="Event 1", ax=axes[1, 0])
-    sns.kdeplot(event_2_data['items_crafted'], shade=True, color="salmon", label="Event 2", ax=axes[1, 0])
+    sns.kdeplot(event_2_data['items_crafted'], shade=True, color "salmon", label="Event 2", ax=axes[1, 0])
     axes[1, 0].set_title('Distribution of Items Crafted')
     
     sns.kdeplot(event_1_data['dollars_spent'], shade=True, color="skyblue", label="Event 1", ax=axes[1, 1])
