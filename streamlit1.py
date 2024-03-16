@@ -6,50 +6,52 @@ import matplotlib.pyplot as plt
 # Set the page configuration and title
 st.set_page_config(layout="wide", page_title="Jason Chang's Portfolio")
 
-# Function to apply custom CSS for background color
-def set_background_color():
+# Function to apply custom CSS for background color and right-side space
+def set_background_color_and_right_space():
     st.markdown("""
-    <style>
-    body {
-        background-color: #F2F9FF !important;
-    }
-    .reportview-container .main {
-        background-color: #F2F9FF !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
+        <style>
+        body {
+            background-color: #F2F9FF !important;
+        }
+        .reportview-container .main {
+            background-color: #F2F9FF !important;
+        }
+        /* Custom CSS for right-side empty space */
+        .reportview-container .main .block-container{
+            padding-right: 16.666% !important; /* Adjusts right padding to be about 1/6 of the page width */
+        }
+        </style>
+        """, unsafe_allow_html=True)
 
-set_background_color()
+set_background_color_and_right_space()
 
 # Additional CSS for fonts and sidebar styling
 st.markdown("""
-<link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
-<style>
-.reportview-container .main .block-container { padding-right: 10% !important; }
-.big-font { font-family: 'Bebas Neue', sans-serif; font-size: 94px !important; font-weight: 100; color: #3e4047; display: inline-block; margin: 0 auto; margin-top: -40px; }
-.big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 60px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: 20px; }
-.med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 26px !important; font-weight: 100; color: #D09E55; margin-top: -20px; }
-.medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 38px !important; font-weight: 100; color: #D09E55; }
-.small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
-.streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 30px !important; color: #282D33; }
-.reportview-container .main { background-color: #F2F9FF; }
-.sidebar .sidebar-content { background-color: #1D262F; color: white; }
-.fa { padding-right: 4px; }
-hr { border-top: 1px solid #FFFFFF; width: 95%; margin-left: 0;margin-top: 5px;}
-</style>
-""", unsafe_allow_html=True)
+    <link href='https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap' rel='stylesheet'>
+    <style>
+    .big-font { font-family: 'Bebas Neue', sans-serif; font-size: 94px !important; font-weight: 100; color: #3e4047; display: inline-block; margin: 0 auto; margin-top: -40px; }
+    .big2-font { font-family: 'Bebas Neue', sans-serif; font-size: 60px !important; font-weight: 100; color: #3e4047; display: inline-block; margin-bottom: 0px; margin-top: 20px; }
+    .med2-font { font-family: 'Bebas Neue', sans-serif; font-size: 26px !important; font-weight: 100; color: #D09E55; margin-top: -20px; }
+    .medium-font { font-family: 'Bebas Neue', sans-serif; font-size: 38px !important; font-weight: 100; color: #D09E55; }
+    .small-font { font-family: 'Lato', sans-serif; font-size: 30px !important; color: #282D33; }
+    .streamlit-container .markdown-text-container, .streamlit-container .markdown-text-container p, .streamlit-container .markdown-text-container li { font-family: 'Lato', sans-serif !important; font-size: 30px !important; color: #282D33; }
+    .sidebar .sidebar-content { background-color: #1D262F; color: white; }
+    .fa { padding-right: 4px; }
+    hr { border-top: 1px solid #FFFFFF; width: 95%; margin-left: 0;margin-top: 5px;}
+    </style>
+    """, unsafe_allow_html=True)
 
 # JavaScript for smooth scrolling in the sidebar navigation
 st.markdown("""
-<script>
-const navButtons = document.querySelectorAll('.stRadio > div');
-navButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        window.scrollTo(0, 0);
+    <script>
+    const navButtons = document.querySelectorAll('.stRadio > div');
+    navButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            window.scrollTo(0, 0);
+        });
     });
-});
-</script>
-""", unsafe_allow_html=True)
+    </script>
+    """, unsafe_allow_html=True)
 
 with st.sidebar:
     st.markdown('<p class="medium-font">Navigation</p>', unsafe_allow_html=True)
