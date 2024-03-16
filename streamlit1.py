@@ -140,7 +140,7 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
 
     heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
     plt.figure(figsize=(7, 5))
-    sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.4)
+    sns.heatmap(heatmap_data, annot=True, cmap="YlGnBu", fmt=".2f", linewidths=.2)
     plt.title("Average Dollars Spent per Player by Region and Platform")
     st.pyplot(plt)
 
