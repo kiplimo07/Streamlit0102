@@ -86,36 +86,29 @@ if page == "WELCOME":
     st.markdown("### Welcome to My Portfolio")
     st.markdown("""As a Senior Data Analyst with a strong focus on integrating business strategy and transforming complex data into strategic assets, I have evolved from intricate statistical analysis to advanced predictive modeling. My expertise lies in turning vast datasets into actionable insights. Committed to pioneering data-driven research, I aim to lead innovative strategies in a dynamic corporate setting. My goal is to drive organizational success and innovation by leveraging data intelligence for business growth and collaborative leadership.""")
 
-# The rest of your code for other pages...
-
 elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
- 
     st.header("DATA ANALYTICS / ENGAGEMENT & MONETIZATION")
-    st.subheader("Situation")
-    st.write("""
-    In an effort to maximize revenue and enhance player engagement and satisfaction in Warcraft, we identified the need to analyze player behavior and spending patterns during two key in-game events. The primary challenge was understanding how different segments of players interacted with these events and identifying opportunities to improve both engagement and monetization.
-    """)
-
     st.subheader("Task")
     st.write("""
     My task was to lead the data analytics process, focusing on:
-
-Identifying high-spending player segments for targeted promotions.
-Understanding low spending trends in specific regions and platforms for strategic adjustments.
-Conducting exploratory data analysis to grasp player spending behaviors related to games played, skill levels, dollars spent, and items crafted.
+    - Identifying high-spending player segments for targeted promotions.
+    - Understanding low spending trends in specific regions and platforms for strategic adjustments.
+    - Conducting exploratory data analysis to grasp player spending behaviors related to games played, skill levels, dollars spent, and items crafted.
     """)
 
     st.subheader("Action")
     st.write("""
- Data Exploration and Analysis:
-Conducted comprehensive exploratory data analysis to investigate player spending behavior, employing Python for data manipulation and analysis.
-Utilized K-Means Clustering to segment players based on their in-game behavior, focusing on engagement metrics like games played, skill levels, and spending.
-Performed heatmap analysis to identify patterns of player engagement and spending during the events, facilitating a comparative study between different segments.
-Strategic Implementation:
-Identified high-spending segments in Platform 3, Region 1 as a priority for future promotions, based on their significant contribution to revenue.
-Highlighted low spending in Platform 1, Region 5, indicating the need for further research and strategic adjustment to improve engagement and spending in this segment.
-
+    **Data Exploration and Analysis:**
+    - Conducted comprehensive exploratory data analysis to investigate player spending behavior, employing Python for data manipulation and analysis.
+    - Utilized K-Means Clustering to segment players based on their in-game behavior, focusing on engagement metrics like games played, skill levels, and spending.
+    - Performed heatmap analysis to identify patterns of player engagement and spending during the events, facilitating a comparative study between different segments.
+    
+    **Strategic Implementation:**
+    - Identified high-spending segments in Platform 3, Region 1 as a priority for future promotions, based on their significant contribution to revenue.
+    - Highlighted low spending in Platform 1, Region 5, indicating the need for further research and strategic adjustment to improve engagement and spending in this segment.
     """)
+
+    
     # Displaying the third image with a wider width
     col1, col2 = st.columns([1, 1,])  # Adjust the ratio if needed
  
@@ -199,12 +192,16 @@ Highlighted low spending in Platform 1, Region 5, indicating the need for furthe
 st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=850)
 
 st.subheader("Result")
-st.write("""
+    st.write("""
     The data-driven approach yielded actionable insights, enabling the development of targeted strategies to enhance player retention and increase revenue. Specifically:
-
     - A 21% increase in player engagement and spending in the identified high-value segments through targeted promotions and tailored in-game events.
     - Initiated a strategic review and adjustment for underperforming segments, resulting in a marked improvement in player satisfaction and reduced churn rate by 15% during subsequent events.
-""")
+    """)
+
+    st.subheader("Conclusion and Strategic Insights")
+    st.write("""
+    This analysis underscored the importance of leveraging advanced analytics to dissect player engagement and spending behaviors. By focusing on data-driven insights, we were able to develop targeted strategies that significantly enhanced player retention and increased revenue. Understanding the dynamics of player churn and spending across different segments and events provided a roadmap for more effective engagement strategies in future events, ensuring the continued success of Warcraft's in-game monetization efforts.
+    """)
 
 elif page == "DASHBOARD / EXECUTIVE BUSINESS INSIGHTS":
     st.header("DASHBOARD / EXECUTIVE BUSINESS INSIGHTS")
