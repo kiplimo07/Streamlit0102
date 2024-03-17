@@ -348,6 +348,7 @@ elif page == "CERTIFICATIONS":
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/AWS1', width=800)
 
     st.subheader(" Analyzing and Visualizing Data with Power BI - EdX")
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/edx', width=800)
 
 elif page == "LET'S CONNECT":
     st.header("LET'S CONNECT!!")
