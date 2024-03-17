@@ -351,6 +351,15 @@ elif page == "CERTIFICATIONS":
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/edx', width=800)
 
 elif page == "LET'S CONNECT":
+    st.header("" I N G O D W E T R U S T ; F O R A L L
+    E L S E , W E T U R N T O T H E
+    V A L I D A T I O N O F D A T A . W I T H
+    D A T A S C I E N C E A S O U R
+    C O M P A S S , W E ' R E S E T T O
+    R E V E A L H I D D E N I N S I G H T S
+    T H A T O U R D A T A I S J U S T
+    D Y I N G T O T E L L . "
+    J . C H A N G")
     st.header("LET'S CONNECT!!")
     st.markdown("""
     Feel free to connect with me for any inquiries or opportunities.
