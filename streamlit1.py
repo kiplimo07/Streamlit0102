@@ -353,8 +353,7 @@ elif page == "CERTIFICATIONS":
  elif page == "LET'S CONNECT":
   
      st.header("LET'S CONNECT!!")
-        st.markdown("""
-     Feel free to connect with me for any inquiries or opportunities.
+     st.markdown("""Feel free to connect with me for any inquiries or opportunities.
      <br><br>
      <img src="https://img.icons8.com/material-rounded/48/000000/phone--v1.png" alt="phone_icon" style="vertical-align:middle; width:35px; height:35px;"> <span style="font-size:20px; vertical-align:middle;">**Phone:** (626) 203 – 3319</span>
      <br>
