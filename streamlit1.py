@@ -124,19 +124,19 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     # Visualization Section
     col1, col2 = st.columns([1, 1])
     with col1:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/333', width=480)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/333', width=520)
     with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/222', width=480)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/222', width=520)
     
     col1, col2 = st.columns([1, 1])
     with col1:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/777', caption='Distribution of Spending Across Skill Brackets', width=480)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/777', caption='Distribution of Spending Across Skill Brackets', width=520)
     with col2:
-        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/111', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=480)
+        st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/111', caption='Day-by-Day Churn Rate: Event 1 vs Event 2', width=520)
 
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/444', width=900)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/555', width=900)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/666', width=900)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/444', width=1000)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/555', width=1000)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/666', width=1000)
 
     heatmap_data = data.groupby(['region', 'platform']).dollars_spent.mean().unstack()
     plt.figure(figsize=(7, 5))
@@ -171,7 +171,7 @@ elif page == "DATA ANALYTICS / ENGAGEMENT & MONETIZATION":
     plt.tight_layout()
     plt.subplots_adjust(right=0.65)  # Adjust as needed based on the new figsize, but may not be necessary
     st.pyplot(fig)
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=900)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/999', width=1000)
 
     # Result
     st.subheader("Result")
