@@ -313,9 +313,8 @@ elif page == "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT":
 
 
 elif page == "SCOPE OF SKILLS":
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/logo', width=700)
-
     st.header("SCOPE OF SKILLS")
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/logo', width=700)
     st.markdown("#### Programming Languages:", unsafe_allow_html=True)
     st.markdown("*Proficient in Python and VBA.*", unsafe_allow_html=True)
     st.markdown("#### Data Engineering Tools:", unsafe_allow_html=True)
