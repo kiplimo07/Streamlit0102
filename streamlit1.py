@@ -342,6 +342,8 @@ if page == "SCOPE OF SKILLS":
 elif page == "CERTIFICATIONS":
     st.header("**CERTIFICATIONS**")
     st.subheader(" Big Data Technology Fundamentals - AWS")
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/big1', width=480)
+
     st.subheader(" AWS Cloud Practitioner Essentials - AWS")
     st.subheader(" Analyzing and Visualizing Data with Power BI - EdX")
 
