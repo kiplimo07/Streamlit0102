@@ -340,7 +340,7 @@ elif page == "CERTIFICATIONS":
 
 elif page == "LET'S CONNECT":
     st.header("IN GOD WE TRUST; FOR ALL ELSE, WE TURN TO THE VALIDATION OF DATA.  WITH DATA SCIENCE AS OUR COMPASS, WE'RE SET TO REVEAL HIDDEN INSIGHTS THAT OUR DATA IS JUST DYING TO TELL." 
-    J. CHANG")
+    J. CHANG)
     st.header("LET'S CONNECT!!")
     st.markdown("""
     Feel free to connect with me for any inquiries or opportunities.
