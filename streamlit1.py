@@ -312,46 +312,34 @@ elif page == "PROCESS AUTOMATION / QUARTERLY ROYALTY MANAGEMENT":
     """)
 
 
-if page == "SCOPE OF SKILLS":
+elif page == "SCOPE OF SKILLS":
     st.header("SCOPE OF SKILLS")
-    
     st.markdown("#### Programming Languages:", unsafe_allow_html=True)
     st.markdown("*Proficient in Python and VBA.*", unsafe_allow_html=True)
-    
     st.markdown("#### Data Engineering Tools:", unsafe_allow_html=True)
     st.markdown("*Experienced in ETL, SSMS, AS400, Snowflakes, Power Query, System Integration Analysis.*", unsafe_allow_html=True)
-    
     st.markdown("#### Data Analysis Libraries:", unsafe_allow_html=True)
     st.markdown("*Skilled in using Pandas, NumPy, Seaborn, Matplotlib, Openpyxl, SciPy, TensorFlow.*", unsafe_allow_html=True)
-    
     st.markdown("#### Statistical Analysis:", unsafe_allow_html=True)
     st.markdown("*Descriptive/Inferential Statistics, A/B Testing, Predictive Modeling, Forecasting, Regression Analysis, Hypothesis Testing, & Time Series Analysis.*", unsafe_allow_html=True)
-    
     st.markdown("#### BI Tools:", unsafe_allow_html=True)
     st.markdown("*Proficient in Power BI, Google Analytics, and Data Studio.*", unsafe_allow_html=True)
-    
     st.markdown("#### Digital Marketing:", unsafe_allow_html=True)
     st.markdown("*Facebook, Google Ads, Shopify, Google Analytics, Data Studio, Campaign Management, Performance and Content Optimization.*", unsafe_allow_html=True)
-    
     st.markdown("#### Data Modeling:", unsafe_allow_html=True)
     st.markdown("*STAR/ER/DAG diagrams, and Normalization.*", unsafe_allow_html=True)
-
-
-
 
 elif page == "CERTIFICATIONS":
     st.header("**CERTIFICATIONS**")
     st.subheader(" Big Data Technology Fundamentals - AWS - 2019")
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/big1', width=800)
-
     st.subheader(" AWS Cloud Practitioner Essentials - AWS - 2019")
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/AWS1', width=800)
-
     st.subheader(" Analyzing and Visualizing Data with Power BI - EdX - 2019")
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/edx', width=800)
 
- elif page == "LET'S CONNECT":
-       st.header("""LET'S CONNECT!!""")
+elif page == "LET'S CONNECT":
+    st.header("LET'S CONNECT!!")
     st.markdown("""
     Feel free to connect with me for any inquiries or opportunities.
     <br><br>
