@@ -227,8 +227,6 @@ elif page == "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION":
     A comprehensive analysis was initiated to identify the root causes of these financial pressures, particularly focusing on 
     the 'SKYLAB' and '3PL Logistics' divisions, known for their significant contribution to the logistics operations but also for potential inefficiencies.    """, unsafe_allow_html=True)
     
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/3333', width=950)
-    
     st.subheader("Task:")
     st.markdown("""
     The primary objective was to conduct a detailed examination of the logistics and warehouse operations to uncover cost-saving 
@@ -245,6 +243,8 @@ elif page == "DATA ANALYSIS / WAREHOUSE & GL ACCOUNT OPTIMIZATION":
     - **Optimization Opportunities:** Developed strategies for cost optimization and process improvements based on the identified 
     inefficiencies. This involved proposing adjustments in operations, resource allocation, and possibly renegotiating contracts 
     or seeking more cost-effective service providers.    """, unsafe_allow_html=True)
+
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/3333', width=950)
 
     st.subheader("Result:")
     st.markdown("""
