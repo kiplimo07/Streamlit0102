@@ -351,15 +351,13 @@ elif page == "CERTIFICATIONS":
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/edx', width=800)
 
    elif page == "LET'S CONNECT":
-    st.header("""LET'S CONNECT!!
 
-
-    
-    IN GOD WE TRUST; FOR ALL ELSE, WE TURN TO THE VALIDATION OF DATA. WITH DATA SCIENCE AS OUR COMPASS, WE'RE SET TO REVEAL HIDDEN INSIGHTS THAT OUR DATA IS JUST DYING TO TELL. 
+    st.header("""IN GOD WE TRUST; FOR ALL ELSE, WE TURN TO THE VALIDATION OF DATA. WITH DATA SCIENCE AS OUR COMPASS, WE'RE SET TO REVEAL HIDDEN INSIGHTS THAT OUR DATA IS JUST DYING TO TELL. 
     J. CHANG
     """)
-    
-        st.markdown("""
+
+    st.header("""LET'S CONNECT!!""")
+    st.markdown("""
     Feel free to connect with me for any inquiries or opportunities.
     <br><br>
     <img src="https://img.icons8.com/material-rounded/48/000000/phone--v1.png" alt="phone_icon" style="vertical-align:middle; width:35px; height:35px;"> <span style="font-size:20px; vertical-align:middle;">**Phone:** (626) 203 – 3319</span>
