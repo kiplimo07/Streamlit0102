@@ -333,7 +333,7 @@ elif page == "SCOPE OF SKILLS":
 elif page == "CERTIFICATIONS":
     st.header("**CERTIFICATIONS**")
     st.subheader(" Neural Networks and Deep Learning - DeepLearning.AI - 2024")
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/ Coursera P3MNNDS44DLL.pdf', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/DeepAI', width=800)
     st.subheader(" Analyzing and Visualizing Data with Power BI - EdX - 2019")
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/edx', width=800)
     st.subheader(" AWS Cloud Practitioner Essentials - AWS - 2019")
