@@ -338,6 +338,8 @@ elif page == "CERTIFICATIONS":
     
     st.subheader(" Analyzing and Visualizing Data with Power BI - EdX - 2019")
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/edx', width=800)
+    st.markdown("<a href='https://courses.edx.org/certificates/c05a356504164e2babb5e6c3ee54ec79?_gl=1*1cfx8u5*_ga*MjAyMzYwNzAyNy4xNzEwNjM1MzM2*_ga_D3KS4KMDT0*MTcxMzI0NDM4OC4zLjEuMTcxMzI0NDQ5NC4wLjAuMA..' target='_blank'>Certificate Link</a>", unsafe_allow_html=True)
+    
     st.subheader(" AWS Cloud Practitioner Essentials - AWS - 2019")
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/AWS1', width=800)
     st.subheader(" Big Data Technology Fundamentals - AWS - 2019")
