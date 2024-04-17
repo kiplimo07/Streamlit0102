@@ -334,6 +334,8 @@ elif page == "CERTIFICATIONS":
     st.header("**CERTIFICATIONS**")
     st.subheader(" Neural Networks and Deep Learning - DeepLearning.AI - 2024")
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/DeepAI', width=800)
+    st.markdown("<a href='https://www.coursera.org/account/accomplishments/verify/P3MNNDS44DLL' target='_blank'>Certificate Link</a>", unsafe_allow_html=True)
+    
     st.subheader(" Analyzing and Visualizing Data with Power BI - EdX - 2019")
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/edx', width=800)
     st.subheader(" AWS Cloud Practitioner Essentials - AWS - 2019")
