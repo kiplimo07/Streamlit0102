@@ -348,9 +348,6 @@ elif page == "CERTIFICATIONS":
     st.subheader(" AWS Cloud Practitioner Essentials - AWS - 2019")
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/AWS1', width=800)
     
-    st.subheader(" Big Data Technology Fundamentals - AWS - 2019")
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/big1', width=800)
-    
     st.subheader(" SQL - Sololearn - 2017")
     st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/SQLsololearn', width=800)
     st.markdown("<a href='https://www.sololearn.com/en/certificates/CT-YUFRJBUH' target='_blank'>Certificate Link</a>", unsafe_allow_html=True)
