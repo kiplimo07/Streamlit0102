@@ -333,7 +333,7 @@ elif page == "SCOPE OF SKILLS":
 elif page == "CERTIFICATIONS":
     st.header("**CERTIFICATIONS**")
     st.subheader(" Supervised Machine Learning: Regression and Classification - 2024")
-    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/STANDFORD/PNG', width=800)
+    st.image('https://github.com/jasonchang0102/Streamlit0102/raw/main/Picture/STANDFORD.PNG', width=800)
     st.markdown("<a href='https://www.coursera.org/account/accomplishments/verify/YHLXRW3TL569' target='_blank'>Certificate Link</a>", unsafe_allow_html=True)
 
     st.header("**CERTIFICATIONS**")
